@@ -40,5 +40,5 @@ const StyledNav = styled.nav`
   background-color: #f3e8e8;
   margin-top: 5px;
   position: sticky;
-  bottom: 0px;
+  bottom: 5px;
 `;

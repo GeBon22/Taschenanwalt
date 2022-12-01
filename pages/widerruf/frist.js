@@ -3,29 +3,47 @@ import Link from "next/link";
 
 export default function FristWiderruf() {
   return (
-    <StyledBody>
-      <StyledBreadcrumb>
-        <StyledLink href="/widerruf">/Widerruf und Retoure</StyledLink>/Wie
-        lange kann ich widerrufen?
-      </StyledBreadcrumb>
-      <h3>Wie lange kann ich widerrufen?</h3>
-      <StyledArticle>
-        Der Widerruf muss binnen 14 Tagen nach Erhalt der Ware erklärt werden. Das bedeutet nicht, dass 
-        binnen dieser Zeit auch die Ware zurück an den Verkäufer gesendet werden muss. Geht die Erklärung 
-        dem Verkäufer innerhalb der 14 Tage zu, bleibt für die Rücksendung der Ware ein Zeitraum von XYZ.
-        <br/>
-        Achte auf die Widerrufsregelungen im Shop des Verkäufers. Dort ist meist der Zeitraum für die Rücksendung der
-        Ware explizit geregelt. Meistens liegt dieser bei 30 Tagen.
-        <br/>
-        <br/>
-        TLDR: binnen 14 Tagen erklären, je nach Widerrufsregelung des Verkäufers binnen 30 Tagen zurück senden 
+    <>
+      <StyledBody>
+        <StyledBreadcrumb>
+          <StyledLink href="/widerruf">/Widerruf und Retoure</StyledLink>/Wie
+          lange kann ich widerrufen?
+        </StyledBreadcrumb>
+        <StyledArticle>
+          <Styledh3>Wie lange kann ich widerrufen?</Styledh3>
+          Der Widerruf muss binnen 14 Tagen nach Erhalt der Ware erklärt werden.
+          Das bedeutet nicht, dass binnen dieser Zeit auch die Ware zurück an
+          den Verkäufer gesendet werden muss.
+          <br />
+          Die Ware muss innerhalb weiterer 14 Tage ab Erklärung des Widerrufs
+          versendet werden.
+          <br />
+          Achte auf die Widerrufsregelungen im Shop des Verkäufers. Dort ist
+          meist der Zeitraum für die Rücksendung der Ware explizit geregelt.
+          Meistens liegt dieser bei 30 Tagen.
+          <br />
+          <br />
+          TLDR: binnen 14 Tagen erklären, je nach Widerrufsregelung des
+          Verkäufers zwischen 14 und 30 Tagen ab Erklärung zurück senden
         </StyledArticle>
-{/*     <StyledNuLi>
-    Nützliche Links zum Them Widerrufsfristen findest Du hier:
-    </StyledNuLi> */}
-      
-        <StyledLink href="/widerruf"><StyledZurueckButton>zurück</StyledZurueckButton></StyledLink>
-    </StyledBody>
+        <StyledNuLi>
+          Nützliche Links zum Thema Widerrufsfrist:
+          <StyledUL>
+            <StyledListItem>
+              <Link
+                href="https://www.it-recht-kanzlei.de/ruecksendung-waren-neues-widerrufsrecht.html#abschnitt_1"
+                legacyBehavior
+              >
+                <a target="_blank">IT-Recht Kanzlei zur Frist</a>
+              </Link>
+            </StyledListItem>
+          </StyledUL>
+        </StyledNuLi>
+        <StyledLink href="/widerruf">
+          <StyledZurueckButton>zurück</StyledZurueckButton>
+        </StyledLink>
+      </StyledBody>
+    </>
   );
 }
 
@@ -35,6 +53,7 @@ const StyledBody = styled.div`
   align-items: center;
   flex-direction: column;
   gap: 20px;
+  overflow: auto;
   background-color: #f3e8e8;
   color: #572887;
   border-radius: 10px;
@@ -70,6 +89,7 @@ const StyledZurueckButton = styled.button`
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   height: 5vh;
   width: 30vw;
+  margin-bottom: 10vh;
   position: relative;
   top: 40px;
   cursor: pointer;
@@ -83,19 +103,40 @@ const StyledArticle = styled.article`
   font-style: normal;
   text-decoration: none;
   padding: 10px;
+  margin-top: 15vh;
 `;
 
-/* const StyledNuLi = styled.section`
+const Styledh3 = styled.h3`
+  text-align: center;
+  color: #572887;
+  font-size: 18px;
+  font-weight: 300;
+  font-style: normal;
+  padding: 10px;
+  margin-top: 15vh;
+`;
+
+const StyledNuLi = styled.section`
   color: #572887;
   font-size: 18px;
   font-weight: 300;
   font-style: normal;
   text-decoration: none;
+  text-align: center;
   padding: 10px;
   background-color: #e6ceee;
   border-radius: 10px;
   border: 1px solid rgba(163, 134, 182, 0.5);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  /*   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+ */
   height: 30vh;
   width: 70vw;
-`; */
+`;
+
+const StyledUL = styled.ul`
+  list-style: none;
+`;
+
+const StyledListItem = styled.li`
+  text-align: center;
+`;

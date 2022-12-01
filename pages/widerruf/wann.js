@@ -10,10 +10,12 @@ export default function WannWiderruf() {
       </StyledBreadcrumb>
       <h3>Wann kann ich widerrufen?</h3>
       <StyledArticle>
-        Jeder Verbraucher kann sich auf das Widerrufsrecht berufen.
-        Einem Unternehmer steht dagegen kein Widerrufsrecht zu. 
+        Jeder Verbraucher kann sich auf das Widerrufsrecht berufen. Einem
+        Unternehmer steht dagegen kein Widerrufsrecht zu.
       </StyledArticle>
-        <StyledLink href="/widerruf"><StyledZurueckButton>zurück</StyledZurueckButton></StyledLink>
+      <StyledLink href="/widerruf">
+        <StyledZurueckButton>zurück</StyledZurueckButton>
+      </StyledLink>
     </StyledBody>
   );
 }
@@ -65,8 +67,8 @@ const StyledZurueckButton = styled.button`
 `;
 
 const StyledArticle = styled.article`
-text-align: center;
-color: #572887;
+  text-align: center;
+  color: #572887;
   font-size: 18px;
   font-weight: 300;
   font-style: normal;

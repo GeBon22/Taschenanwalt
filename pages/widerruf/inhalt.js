@@ -17,7 +17,9 @@ export default function WannWiderruf() {
         <br />
         Es muss außerdem kein Grund für den Widerruf angegeben werden.
       </StyledArticle>
-        <StyledLink href="/widerruf"><StyledZurueckButton>zurück</StyledZurueckButton></StyledLink> 
+      <StyledLink href="/widerruf">
+        <StyledZurueckButton>zurück</StyledZurueckButton>
+      </StyledLink>
     </StyledBody>
   );
 }
@@ -60,8 +62,7 @@ const StyledZurueckButton = styled.button`
   background-color: #e6ceee;
   border-radius: 10px;
   border: 1px solid rgba(163, 134, 182, 0.5);
-  /*   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
- */
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   height: 5vh;
   width: 30vw;
   position: relative;

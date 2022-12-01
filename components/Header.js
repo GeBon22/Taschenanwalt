@@ -14,7 +14,7 @@ export default function Header() {
       autoplay: true,
       animationData: require("/public/HeaderAnimation.json"),
     });
- }, []);
+  }, []);
 
   return (
     <StyledLink href="/">
