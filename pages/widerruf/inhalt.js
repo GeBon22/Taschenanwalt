@@ -10,14 +10,14 @@ export default function WannWiderruf() {
       </StyledBreadcrumb>
       <h3>Was muss in einem Widerruf stehen?</h3>
       <StyledArticle>
-        In einem Widerruf muss nicht ausdrücklich das Wort Widerruf verwendet werden. 
-        Es empfiehlt sicher aber, ausdrücklich klar zu machen, dass man vom Vertrag Abstand nehmen möchte und den Kaufpreis
-        zurück erstattet verlangt. 
+        In einem Widerruf muss nicht ausdrücklich das Wort Widerruf verwendet
+        werden. Es empfiehlt sicher aber, ausdrücklich klar zu machen, dass man
+        vom Vertrag Abstand nehmen möchte und den Kaufpreis zurück erstattet
+        verlangt.
+        <br />
         Es muss außerdem kein Grund für den Widerruf angegeben werden.
       </StyledArticle>
-      <StyledZurueckButton>
-        <StyledLink href="/widerruf">zurück</StyledLink>
-      </StyledZurueckButton>
+        <StyledLink href="/widerruf"><StyledZurueckButton>zurück</StyledZurueckButton></StyledLink> 
     </StyledBody>
   );
 }
@@ -60,19 +60,21 @@ const StyledZurueckButton = styled.button`
   background-color: #e6ceee;
   border-radius: 10px;
   border: 1px solid rgba(163, 134, 182, 0.5);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  /*   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+ */
   height: 5vh;
   width: 30vw;
   position: relative;
   top: 40px;
+  cursor: pointer;
 `;
 
 const StyledArticle = styled.article`
-text-align: center;
-color: #572887;
+  text-align: center;
+  color: #572887;
   font-size: 18px;
   font-weight: 300;
   font-style: normal;
   text-decoration: none;
-
+  padding: 10px;
 `;

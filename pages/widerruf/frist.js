@@ -9,9 +9,22 @@ export default function FristWiderruf() {
         lange kann ich widerrufen?
       </StyledBreadcrumb>
       <h3>Wie lange kann ich widerrufen?</h3>
-      <StyledZurueckButton>
-        <StyledLink href="/widerruf">zurück</StyledLink>
-      </StyledZurueckButton>
+      <StyledArticle>
+        Der Widerruf muss binnen 14 Tagen nach Erhalt der Ware erklärt werden. Das bedeutet nicht, dass 
+        binnen dieser Zeit auch die Ware zurück an den Verkäufer gesendet werden muss. Geht die Erklärung 
+        dem Verkäufer innerhalb der 14 Tage zu, bleibt für die Rücksendung der Ware ein Zeitraum von XYZ.
+        <br/>
+        Achte auf die Widerrufsregelungen im Shop des Verkäufers. Dort ist meist der Zeitraum für die Rücksendung der
+        Ware explizit geregelt. Meistens liegt dieser bei 30 Tagen.
+        <br/>
+        <br/>
+        TLDR: binnen 14 Tagen erklären, je nach Widerrufsregelung des Verkäufers binnen 30 Tagen zurück senden 
+        </StyledArticle>
+{/*     <StyledNuLi>
+    Nützliche Links zum Them Widerrufsfristen findest Du hier:
+    </StyledNuLi> */}
+      
+        <StyledLink href="/widerruf"><StyledZurueckButton>zurück</StyledZurueckButton></StyledLink>
     </StyledBody>
   );
 }
@@ -59,4 +72,30 @@ const StyledZurueckButton = styled.button`
   width: 30vw;
   position: relative;
   top: 40px;
+  cursor: pointer;
 `;
+
+const StyledArticle = styled.article`
+  text-align: center;
+  color: #572887;
+  font-size: 20px;
+  font-weight: 300;
+  font-style: normal;
+  text-decoration: none;
+  padding: 10px;
+`;
+
+/* const StyledNuLi = styled.section`
+  color: #572887;
+  font-size: 18px;
+  font-weight: 300;
+  font-style: normal;
+  text-decoration: none;
+  padding: 10px;
+  background-color: #e6ceee;
+  border-radius: 10px;
+  border: 1px solid rgba(163, 134, 182, 0.5);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  height: 30vh;
+  width: 70vw;
+`; */

@@ -15,9 +15,7 @@ export default function WiderrufPage() {
         <StyledLink href="/widerruf/inhalt">
           <StyledButton>Was muss in meinem Widerruf stehen?</StyledButton>
         </StyledLink>
-        <StyledZurueckButton>
-          <StyledLink href="/">zurück</StyledLink>
-        </StyledZurueckButton>
+          <StyledLink href="/"><StyledZurueckButton>zurück</StyledZurueckButton></StyledLink>
       </StyledBody>
     </div>
   );
@@ -56,10 +54,11 @@ const StyledButton = styled.button`
   text-decoration: none;
   background-color: #e6ceee;
   border-radius: 10px;
-  border: 1px solid rgba(163, 134, 182, 0.5);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  height: 10vh;
+  border: 1px solid #e6ceee/* rgba(163, 134, 182, 0.5) */;
+/*   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+ */  height: 10vh;
   width: 80vw;
+  cursor: pointer;
 `;
 
 const StyledLink = styled(Link)`
@@ -80,4 +79,5 @@ const StyledZurueckButton = styled.button`
   width: 30vw;
   position: relative;
   top: 40px;
+  cursor: pointer;
 `;
