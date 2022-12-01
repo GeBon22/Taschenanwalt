@@ -6,10 +6,18 @@ export default function WiderrufPage() {
     <div>
       <StyledBody>
         <StyledBreadcrumb>/Widerruf und Retoure</StyledBreadcrumb>
-        <StyledLink href="/widerruf/wann"><StyledButton>Wann kann ich widerrufen?</StyledButton></StyledLink>
-        <StyledLink href="/widerruf/frist"><StyledButton>Wie lange kann ich widerrufen?</StyledButton></StyledLink>
-        <StyledLink href="/widerruf/inhalt"><StyledButton>Was muss in meinem Widerruf stehen?</StyledButton></StyledLink>
-        <StyledZurueckButton><StyledLink href="/">zurück</StyledLink></StyledZurueckButton>
+        <StyledLink href="/widerruf/wann">
+          <StyledButton>Wann kann ich widerrufen?</StyledButton>
+        </StyledLink>
+        <StyledLink href="/widerruf/frist">
+          <StyledButton>Wie lange kann ich widerrufen?</StyledButton>
+        </StyledLink>
+        <StyledLink href="/widerruf/inhalt">
+          <StyledButton>Was muss in meinem Widerruf stehen?</StyledButton>
+        </StyledLink>
+        <StyledZurueckButton>
+          <StyledLink href="/">zurück</StyledLink>
+        </StyledZurueckButton>
       </StyledBody>
     </div>
   );

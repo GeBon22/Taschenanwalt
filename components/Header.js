@@ -14,8 +14,8 @@ export default function Header() {
       autoplay: true,
       animationData: require("/public/HeaderAnimation.json"),
     });
-    return () => lottie.destroy();
-  }, []);
+/*     return () => lottie.destroy();
+ */  }, []);
 
   return (
     <StyledLink href="/">
@@ -28,7 +28,7 @@ export default function Header() {
   );
 }
 
-const AnimationContainer = styled.section`
+const AnimationContainer = styled.div`
   width: 70px;
   height: 90px;
 `;
