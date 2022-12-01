@@ -11,7 +11,8 @@ export default function FristWiderruf() {
         </StyledBreadcrumb>
         <StyledArticle>
           <Styledh3>Wie lange kann ich widerrufen?</Styledh3>
-          {`
+          <p>
+            {`
     Der Widerruf muss binnen 14 Tagen nach Erhalt der Ware erklärt werden. Das bedeutet nicht, dass binnen dieser Zeit auch die Ware zurück an
     den Verkäufer gesendet werden muss. Die Ware muss innerhalb weiterer 14 Tage ab Erklärung des Widerrufs
     versendet werden. 
@@ -22,6 +23,7 @@ export default function FristWiderruf() {
     TLDR: binnen 14 Tagen erklären, je nach Widerrufsregelung des
     Verkäufers zwischen 14 und 30 Tagen ab Erklärung zurück senden
       `}
+          </p>
         </StyledArticle>
         <StyledNuLi>
           Nützliche Links zum Thema Widerrufsfrist:

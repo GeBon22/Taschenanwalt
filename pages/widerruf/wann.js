@@ -10,8 +10,10 @@ export default function WannWiderruf() {
       </StyledBreadcrumb>
       <h3>Wann kann ich widerrufen?</h3>
       <StyledArticle>
-        Jeder Verbraucher kann sich auf das Widerrufsrecht berufen. Einem
-        Unternehmer steht dagegen kein Widerrufsrecht zu.
+        <p>
+          Jeder Verbraucher kann sich auf das Widerrufsrecht berufen. Einem
+          Unternehmer steht dagegen kein Widerrufsrecht zu.
+        </p>
       </StyledArticle>
       <StyledLink href="/widerruf">
         <StyledZurueckButton>zurück</StyledZurueckButton>
