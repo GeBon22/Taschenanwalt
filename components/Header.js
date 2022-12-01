@@ -14,7 +14,6 @@ export default function Header() {
       autoplay: true,
       animationData: require("/public/HeaderAnimation.json"),
     });
-    return () => lottie.destroy();
   }, []);
 
   return (
@@ -28,7 +27,7 @@ export default function Header() {
   );
 }
 
-const AnimationContainer = styled.section`
+const AnimationContainer = styled.div`
   width: 70px;
   height: 90px;
 `;
@@ -41,6 +40,7 @@ const StyledHeader = styled.div`
   padding: 5px;
   border-radius: 10px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  background-color: #f3e8e8;
   margin: 5px;
   color: #572887;
   text-decoration: none;

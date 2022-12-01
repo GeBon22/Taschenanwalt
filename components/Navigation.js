@@ -37,8 +37,8 @@ const StyledNav = styled.nav`
   padding: 10px;
   border-radius: 10px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  background-color: white;
+  background-color: #f3e8e8;
   margin-top: 5px;
   position: sticky;
-  bottom: 0px;
+  bottom: 5px;
 `;

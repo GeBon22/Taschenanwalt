@@ -104,7 +104,7 @@ const StyledWiderufButton = styled.button`
   align-items: center;
 `;
 
-const Animation = styled.section`
+const Animation = styled.div`
   width: 190px;
   height: 220px;
 `;
