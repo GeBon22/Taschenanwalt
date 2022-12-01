@@ -11,20 +11,17 @@ export default function FristWiderruf() {
         </StyledBreadcrumb>
         <StyledArticle>
           <Styledh3>Wie lange kann ich widerrufen?</Styledh3>
-          Der Widerruf muss binnen 14 Tagen nach Erhalt der Ware erklärt werden.
-          Das bedeutet nicht, dass binnen dieser Zeit auch die Ware zurück an
-          den Verkäufer gesendet werden muss.
-          <br />
-          Die Ware muss innerhalb weiterer 14 Tage ab Erklärung des Widerrufs
-          versendet werden.
-          <br />
-          Achte auf die Widerrufsregelungen im Shop des Verkäufers. Dort ist
-          meist der Zeitraum für die Rücksendung der Ware explizit geregelt.
-          Meistens liegt dieser bei 30 Tagen.
-          <br />
-          <br />
-          TLDR: binnen 14 Tagen erklären, je nach Widerrufsregelung des
-          Verkäufers zwischen 14 und 30 Tagen ab Erklärung zurück senden
+          {`
+    Der Widerruf muss binnen 14 Tagen nach Erhalt der Ware erklärt werden. Das bedeutet nicht, dass binnen dieser Zeit auch die Ware zurück an
+    den Verkäufer gesendet werden muss. Die Ware muss innerhalb weiterer 14 Tage ab Erklärung des Widerrufs
+    versendet werden. 
+    Achte auf die Widerrufsregelungen im Shop des Verkäufers. Dort ist
+    meist der Zeitraum für die Rücksendung der Ware explizit geregelt.
+    Meistens liegt dieser bei 30 Tagen.
+
+    TLDR: binnen 14 Tagen erklären, je nach Widerrufsregelung des
+    Verkäufers zwischen 14 und 30 Tagen ab Erklärung zurück senden
+      `}
         </StyledArticle>
         <StyledNuLi>
           Nützliche Links zum Thema Widerrufsfrist:
@@ -96,14 +93,16 @@ const StyledZurueckButton = styled.button`
 `;
 
 const StyledArticle = styled.article`
-  text-align: center;
+  text-align: justify;
+  text-align-last: none;
   color: #572887;
   font-size: 20px;
   font-weight: 300;
   font-style: normal;
   text-decoration: none;
-  padding: 10px;
+  padding: 15px;
   margin-top: 15vh;
+  white-space: pre-line;
 `;
 
 const Styledh3 = styled.h3`
