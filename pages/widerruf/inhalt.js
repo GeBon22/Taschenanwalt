@@ -13,20 +13,21 @@ export default function WannWiderruf() {
       <StyledArticle>
         <p>
           {`In einem Widerruf muss nicht ausdrücklich das Wort Widerruf verwendet
-        werden. Es empfiehlt sicher aber, ausdrücklich klar zu machen, dass man
+        werden. Es empfiehlt sicher aber, klar zu machen, dass man
         vom Vertrag Abstand nehmen möchte und den Kaufpreis zurück erstattet
         verlangt.
-
-        Es muss außerdem kein Grund für den Widerruf angegeben werden.`}
+        Es muss außerdem kein Grund für den Widerruf angegeben werden.
+        
+        Möchtest Du ein vorgefertigtes Anschreiben verwenden, drücke den Button und Fülle die eckigen Klammern mit dem zutreffenden Inhalt aus.`}
         </p>
       </StyledArticle>
 
       <CopyToClipboard
         text="Sehr geehrte Damen und Herren. Hiermit widerrufe/n ich/wir den abgeschlossenen Vertrag über den Kauf folgender Waren/Einbringung
      folgender Dienstleistungen:[]. Bestellt am [] und erhalten am []. [Name und Anschrift des Verbrauchers] [Datum] [Unterschrift]."
-        onCopy={() => alert("Muster kopiert!")}
+        onCopy={() => alert("Anschreiben in die Zwischenablage kopiert!")}
       >
-        <StyledKopierenButton>Muster kopieren</StyledKopierenButton>
+        <StyledKopierenButton>Anschreiben kopieren</StyledKopierenButton>
       </CopyToClipboard>
 
       <StyledLink href="/widerruf">
@@ -78,6 +79,7 @@ const StyledZurueckButton = styled.button`
   height: 5vh;
   width: 30vw;
   cursor: pointer;
+  margin-bottom: 20px;
 `;
 
 const StyledKopierenButton = styled.button`
@@ -93,7 +95,6 @@ const StyledKopierenButton = styled.button`
   height: 8vh;
   width: 40vw;
   position: relative;
-  top: 10px;
   cursor: pointer;
 `;
 
