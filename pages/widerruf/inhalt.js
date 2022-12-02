@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import Link from "next/link";
+import {CopyToClipboard} from "react-copy-to-clipboard";
 
 export default function WannWiderruf() {
   return (
@@ -19,6 +20,15 @@ export default function WannWiderruf() {
         Es muss außerdem kein Grund für den Widerruf angegeben werden.`}
         </p>
       </StyledArticle>
+
+      <CopyToClipboard
+        text="Sehr geehrte Damen und Herren. Hiermit widerrufe/n ich/wir den abgeschlossenen Vertrag über den Kauf folgender Waren/Einbringung
+     folgender Dienstleistungen:[]. Bestellt am [] und erhalten am []. [Name und Anschrift des Verbrauchers] [Datum] [Unterschrift]."
+        onCopy={() => alert("Muster kopiert!")}
+      >
+        <StyledKopierenButton>Muster kopieren</StyledKopierenButton>
+      </CopyToClipboard>
+
       <StyledLink href="/widerruf">
         <StyledZurueckButton>zurück</StyledZurueckButton>
       </StyledLink>
@@ -67,8 +77,23 @@ const StyledZurueckButton = styled.button`
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   height: 5vh;
   width: 30vw;
+  cursor: pointer;
+`;
+
+const StyledKopierenButton = styled.button`
+  color: #572887;
+  font-size: 18px;
+  font-weight: 300;
+  font-style: normal;
+  text-decoration: none;
+  background-color: #e6ceee;
+  border-radius: 10px;
+  border: 1px solid rgba(163, 134, 182, 0.5);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  height: 8vh;
+  width: 40vw;
   position: relative;
-  top: 40px;
+  top: 10px;
   cursor: pointer;
 `;
 
