@@ -9,8 +9,8 @@ export default function WannWiderruf() {
         <StyledLink href="/widerruf">/Widerruf und Retoure</StyledLink>/Was muss
         in einem Widerruf stehen?
       </StyledBreadcrumb>
-      <h3>Was muss in einem Widerruf stehen?</h3>
       <StyledArticle>
+        <h3>Was muss in einem Widerruf stehen?</h3>
         <p>
           {`In einem Widerruf muss nicht ausdrücklich das Wort Widerruf verwendet
         werden. Es empfiehlt sicher aber, klar zu machen, dass man
@@ -51,6 +51,7 @@ const StyledBody = styled.div`
   height: 75vh;
   margin-top: 10px;
   margin-bottom: 10px;
+  overflow: auto;
 `;
 
 const StyledBreadcrumb = styled.h3`
