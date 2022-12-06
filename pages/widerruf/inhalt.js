@@ -1,8 +1,41 @@
 import styled from "styled-components";
 import Link from "next/link";
 import {CopyToClipboard} from "react-copy-to-clipboard";
-
+import { useState, useEffect } from "react";
+/* import { useRouter } from 'next/router';
+ */
 export default function WannWiderruf() {
+ 
+/*   const router = useRouter();
+  const location = router.pathname */
+
+  const [isBookmarked, setIsBookmarked] = useState(
+    JSON.parse(localStorage.getItem('is-bookmarked')) || false
+  );
+
+  const handleToggle = () => {
+    setIsBookmarked(!isBookmarked);
+  };
+
+  useEffect(() => {
+    const data = localStorage.getItem('is-bookmarked');
+    if ( data !== null) setIsBookmarked(JSON.parse(data))
+  }, []);
+
+  
+  useEffect(() => {
+    localStorage.setItem('is-bookmarked', JSON.stringify(isBookmarked));
+  }, [isBookmarked]);
+
+
+
+/* const usePathname = () => {
+    const location = router.pathname
+    console.log(location);
+  }
+  usePathname(); */
+
+
   return (
     <StyledBody>
       <StyledBreadcrumb>
@@ -11,6 +44,7 @@ export default function WannWiderruf() {
       </StyledBreadcrumb>
       <StyledArticle>
         <h3>Was muss in einem Widerruf stehen?</h3>
+        <button onClick={handleToggle}>Merken</button>
         <p>
           {`In einem Widerruf muss nicht ausdrücklich das Wort Widerruf verwendet
         werden. Es empfiehlt sicher aber, klar zu machen, dass man
