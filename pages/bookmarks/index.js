@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export default function BookmarksPage(/* {isBookmarked} */) {
+export default function BookmarksPage() {
   return (
     <StyledBody>
       <h3>This is the bookmarks page</h3>
