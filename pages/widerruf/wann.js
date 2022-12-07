@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import Link from "next/link";
-import { Icon } from "@iconify/react";
+import {Icon} from "@iconify/react";
 
 export default function WannWiderruf() {
   return (
@@ -11,7 +11,10 @@ export default function WannWiderruf() {
       </StyledBreadcrumb>
       <h3>Wann kann ich widerrufen?</h3>
       <StyledArticle>
-      <StyledIcon icon="mingcute:bookmark-fill" color="#572887" /* onClick={handleToggle} *//>
+        <StyledIcon
+          icon="mingcute:bookmark-fill"
+          color="#572887" /* onClick={handleToggle} */
+        />
         <p>
           Jeder Verbraucher kann sich auf das Widerrufsrecht berufen. Einem
           Unternehmer steht dagegen kein Widerrufsrecht zu.
@@ -54,11 +57,11 @@ const StyledLink = styled(Link)`
 `;
 
 const StyledIcon = styled(Icon)`
-width: 40px;
-height: 50px;
-position: absolute;
-top: 100px;
-right: 30px;
+  width: 40px;
+  height: 50px;
+  position: absolute;
+  top: 100px;
+  right: 30px;
 `;
 
 const StyledZurueckButton = styled.button`
