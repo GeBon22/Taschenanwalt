@@ -11,10 +11,7 @@ export default function FristWiderruf() {
           lange kann ich widerrufen?
         </StyledBreadcrumb>
         <StyledArticle>
-          <StyledIcon
-            icon="mingcute:bookmark-fill"
-            color="#572887"
-          />
+          <StyledIcon icon="mingcute:bookmark-fill" color="#572887" />
           <p>
             {`Wie lange kann ich widerrufen?
 

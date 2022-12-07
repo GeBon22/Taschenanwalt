@@ -4,7 +4,6 @@ import {CopyToClipboard} from "react-copy-to-clipboard";
 import {Icon} from "@iconify/react";
 
 export default function WannWiderruf() {
-
   return (
     <StyledBody>
       <StyledBreadcrumb>
@@ -12,10 +11,7 @@ export default function WannWiderruf() {
         in einem Widerruf stehen?
       </StyledBreadcrumb>
       <StyledArticle>
-        <StyledIcon
-          icon="mingcute:bookmark-fill"
-          color="#572887"
-        />
+        <StyledIcon icon="mingcute:bookmark-fill" color="#572887" />
         <p>
           {`Was muss in einem Widerruf stehen?
 

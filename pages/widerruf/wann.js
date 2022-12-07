@@ -11,10 +11,7 @@ export default function WannWiderruf() {
       </StyledBreadcrumb>
       <h3>Wann kann ich widerrufen?</h3>
       <StyledArticle>
-        <StyledIcon
-          icon="mingcute:bookmark-fill"
-          color="#572887"
-        />
+        <StyledIcon icon="mingcute:bookmark-fill" color="#572887" />
         <p>
           Jeder Verbraucher kann sich auf das Widerrufsrecht berufen. Einem
           Unternehmer steht dagegen kein Widerrufsrecht zu.
