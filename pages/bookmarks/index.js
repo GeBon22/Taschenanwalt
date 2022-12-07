@@ -1,10 +1,10 @@
 /* import { set } from "mongoose"; */
 import styled from "styled-components";
-import { useState, useEffect } from "react";
+/* import { useState, useEffect } from "react"; */
 
 export default function BookmarksPage({isBookmarked}) {
 
-  const [markedPage, setMarkedPage] = useState([]);
+/*   const [markedPage, setMarkedPage] = useState([]);
 
   useEffect(() => {
     if (isBookmarked.length === 0) {
@@ -14,19 +14,19 @@ export default function BookmarksPage({isBookmarked}) {
         .then((response) => response.json())
         .then((markedPage) => setMarkedPage(markedPage));
     }
-  }, [isBookmarked]);
+  }, [isBookmarked]); */
 
   return (
       <StyledBody>
         <h3>This is the bookmarks page</h3>
 
-      {markedPage?.map((markedPage) => {
+ {/*      {markedPage?.map((markedPage) => {
         return (
           <article key={markedPage.pathname}>
             <h2>{markedPage.pathname}</h2>
           </article>
               );
-            })}
+            })} */}
       </StyledBody>
   );
 }

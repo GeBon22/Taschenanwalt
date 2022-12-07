@@ -1,13 +1,14 @@
 import styled from "styled-components";
 import Link from "next/link";
 import {CopyToClipboard} from "react-copy-to-clipboard";
-import { useState, useEffect } from "react";
+import { Icon } from '@iconify/react';
+/* import { useState, useEffect } from "react"; */
 /* import { useRouter } from 'next/router';
  */
 export default function WannWiderruf() {
  
 /*   const router = useRouter();
-  const location = router.pathname */
+  const location = router.pathname 
 
   const [isBookmarked, setIsBookmarked] = useState(
     JSON.parse(localStorage.getItem('is-bookmarked')) || false
@@ -29,7 +30,7 @@ export default function WannWiderruf() {
 
 
 
-/* const usePathname = () => {
+const usePathname = () => {
     const location = router.pathname
     console.log(location);
   }
@@ -43,10 +44,11 @@ export default function WannWiderruf() {
         in einem Widerruf stehen?
       </StyledBreadcrumb>
       <StyledArticle>
-        <h3>Was muss in einem Widerruf stehen?</h3>
-        <button onClick={handleToggle}>Merken</button>
+        <StyledIcon icon="mingcute:bookmark-fill" color="#572887" /* onClick={handleToggle} *//>
         <p>
-          {`In einem Widerruf muss nicht ausdrücklich das Wort Widerruf verwendet
+          {`Was muss in einem Widerruf stehen?
+
+          In einem Widerruf muss nicht ausdrücklich das Wort Widerruf verwendet
         werden. Es empfiehlt sicher aber, klar zu machen, dass man
         vom Vertrag Abstand nehmen möchte und den Kaufpreis zurück erstattet
         verlangt.
@@ -99,6 +101,14 @@ const StyledBreadcrumb = styled.h3`
 
 const StyledLink = styled(Link)`
   text-decoration: none;
+`;
+
+const StyledIcon = styled(Icon)`
+width: 40px;
+height: 50px;
+position: absolute;
+top: 100px;
+right: 30px;
 `;
 
 const StyledZurueckButton = styled.button`
