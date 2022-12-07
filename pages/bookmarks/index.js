@@ -2,7 +2,7 @@
 import styled from "styled-components";
 /* import { useState, useEffect } from "react"; */
 
-export default function BookmarksPage({isBookmarked}) {
+export default function BookmarksPage(/* {isBookmarked} */) {
   /*   const [markedPage, setMarkedPage] = useState([]);
 
   useEffect(() => {
