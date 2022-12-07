@@ -48,8 +48,8 @@ const StyledBreadcrumb = styled.h3`
   font-size: 15px;
   font-weight: 400;
   position: absolute;
-  top: 125px;
-  left: 37px;
+  top: 8rem;
+  left: 2rem;
 `;
 
 const StyledLink = styled(Link)`
@@ -60,8 +60,8 @@ const StyledIcon = styled(Icon)`
   width: 40px;
   height: 50px;
   position: absolute;
-  top: 100px;
-  right: 30px;
+  top: 6.5rem;
+  right: 2rem;
 `;
 
 const StyledZurueckButton = styled.button`
@@ -76,8 +76,6 @@ const StyledZurueckButton = styled.button`
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   height: 5vh;
   width: 30vw;
-  position: relative;
-  top: 40px;
   cursor: pointer;
 `;
 
