@@ -2,11 +2,9 @@ import styled from "styled-components";
 
 export default function BookmarksPage() {
   return (
-    <div>
-      <StyledBody>
-        <h3>This is the bookmarks page</h3>
-      </StyledBody>
-    </div>
+    <StyledBody>
+      <h3>This is the bookmarks page</h3>
+    </StyledBody>
   );
 }
 

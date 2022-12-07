@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import Link from "next/link";
+import {Icon} from "@iconify/react";
 
 export default function FristWiderruf() {
   return (
@@ -10,9 +11,10 @@ export default function FristWiderruf() {
           lange kann ich widerrufen?
         </StyledBreadcrumb>
         <StyledArticle>
-          <Styledh3>Wie lange kann ich widerrufen?</Styledh3>
+          <StyledIcon icon="mingcute:bookmark-fill" color="#572887" />
           <p>
-            {`
+            {`Wie lange kann ich widerrufen?
+
     Der Widerruf muss binnen 14 Tagen nach Erhalt der Ware erklärt werden. Das bedeutet nicht, dass binnen dieser Zeit auch die Ware zurück an
     den Verkäufer gesendet werden muss. Die Ware muss innerhalb weiterer 14 Tage ab Erklärung des Widerrufs
     versendet werden. 
@@ -51,7 +53,7 @@ const StyledBody = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  gap: 20px;
+  gap: 1rem;
   overflow: auto;
   background-color: #f3e8e8;
   color: #572887;
@@ -59,8 +61,8 @@ const StyledBody = styled.div`
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   width: 90vw;
   height: 75vh;
-  margin-top: 10px;
-  margin-bottom: 10px;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 `;
 
 const StyledBreadcrumb = styled.h3`
@@ -68,12 +70,20 @@ const StyledBreadcrumb = styled.h3`
   font-size: 15px;
   font-weight: 400;
   position: absolute;
-  top: 125px;
-  left: 37px;
+  top: 8rem;
+  left: 2rem;
 `;
 
 const StyledLink = styled(Link)`
   text-decoration: none;
+`;
+
+const StyledIcon = styled(Icon)`
+  width: 40px;
+  height: 50px;
+  position: absolute;
+  top: 6.5rem;
+  right: 2rem;
 `;
 
 const StyledZurueckButton = styled.button`
@@ -90,7 +100,7 @@ const StyledZurueckButton = styled.button`
   width: 30vw;
   margin-bottom: 10vh;
   position: relative;
-  top: 40px;
+  top: 2rem;
   cursor: pointer;
 `;
 
@@ -103,18 +113,8 @@ const StyledArticle = styled.article`
   font-style: normal;
   text-decoration: none;
   padding: 15px;
-  margin-top: 15vh;
+  margin-top: 20rem;
   white-space: pre-line;
-`;
-
-const Styledh3 = styled.h3`
-  text-align: center;
-  color: #572887;
-  font-size: 18px;
-  font-weight: 300;
-  font-style: normal;
-  padding: 10px;
-  margin-top: 15vh;
 `;
 
 const StyledNuLi = styled.section`
@@ -128,8 +128,7 @@ const StyledNuLi = styled.section`
   background-color: #e6ceee;
   border-radius: 10px;
   border: 1px solid rgba(163, 134, 182, 0.5);
-  /*   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
- */
+
   height: 30vh;
   width: 70vw;
 `;
