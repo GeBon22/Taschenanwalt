@@ -13,7 +13,7 @@ export default function FristWiderruf() {
         <StyledArticle>
           <StyledIcon
             icon="mingcute:bookmark-fill"
-            color="#572887" /* onClick={handleToggle} */
+            color="#572887"
           />
           <p>
             {`Wie lange kann ich widerrufen?
@@ -131,8 +131,7 @@ const StyledNuLi = styled.section`
   background-color: #e6ceee;
   border-radius: 10px;
   border: 1px solid rgba(163, 134, 182, 0.5);
-  /*   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
- */
+
   height: 30vh;
   width: 70vw;
 `;

@@ -13,7 +13,7 @@ export default function WannWiderruf() {
       <StyledArticle>
         <StyledIcon
           icon="mingcute:bookmark-fill"
-          color="#572887" /* onClick={handleToggle} */
+          color="#572887"
         />
         <p>
           Jeder Verbraucher kann sich auf das Widerrufsrecht berufen. Einem

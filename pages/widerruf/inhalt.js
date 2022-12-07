@@ -2,38 +2,8 @@ import styled from "styled-components";
 import Link from "next/link";
 import {CopyToClipboard} from "react-copy-to-clipboard";
 import {Icon} from "@iconify/react";
-/* import { useState, useEffect } from "react"; */
-/* import { useRouter } from 'next/router';
- */
+
 export default function WannWiderruf() {
-  /*   const router = useRouter();
-  const location = router.pathname 
-
-  const [isBookmarked, setIsBookmarked] = useState(
-    JSON.parse(localStorage.getItem('is-bookmarked')) || false
-  );
-
-  const handleToggle = () => {
-    setIsBookmarked(!isBookmarked);
-  };
-
-  useEffect(() => {
-    const data = localStorage.getItem('is-bookmarked');
-    if ( data !== null) setIsBookmarked(JSON.parse(data))
-  }, []);
-
-  
-  useEffect(() => {
-    localStorage.setItem('is-bookmarked', JSON.stringify(isBookmarked));
-  }, [isBookmarked]);
-
-
-
-const usePathname = () => {
-    const location = router.pathname
-    console.log(location);
-  }
-  usePathname(); */
 
   return (
     <StyledBody>
@@ -44,7 +14,7 @@ const usePathname = () => {
       <StyledArticle>
         <StyledIcon
           icon="mingcute:bookmark-fill"
-          color="#572887" /* onClick={handleToggle} */
+          color="#572887"
         />
         <p>
           {`Was muss in einem Widerruf stehen?
