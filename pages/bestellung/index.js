@@ -6,16 +6,16 @@ export default function BestellungPage() {
     <div>
       <StyledBody>
         <StyledBreadcrumb>/online bestellen und kaufen</StyledBreadcrumb>
-        <StyledLink href="/bestellung">
+        <StyledLink href="/bestellung/verzug">
           <StyledButton>Meine Ware kommt nicht an</StyledButton>
         </StyledLink>
-        <StyledLink href="/bestellung">
+        <StyledLink href="/bestellung/verlust">
           <StyledButton>Mein Paket ist verloren gegangen</StyledButton>
         </StyledLink>
-        <StyledLink href="/bestellung">
+        <StyledLink href="/bestellung/schaden">
           <StyledButton>Meine Bestellung ist beschädigt</StyledButton>
         </StyledLink>
-        <StyledLink href="/bestellung">
+        <StyledLink href="/bestellung/irrtum">
           <StyledButton>Ich habe die falsche Ware/falsche Stückzahl bestellt</StyledButton>
         </StyledLink>
         <StyledLink href="/">

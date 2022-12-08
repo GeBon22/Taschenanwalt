@@ -1,9 +1,9 @@
 import styled from "styled-components";
 
-export default function VerlustPage() {
+export default function FalschPage() {
   return (
     <StyledBody>
-      <h3>Mein Paket ist verloren gegangen!</h3>
+      <h3>Ich habe die falsche Ware oder Stückzahl bestellt!</h3>
     </StyledBody>
   );
 }
