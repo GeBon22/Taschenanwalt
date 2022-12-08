@@ -8,6 +8,9 @@ export default function IrrtumPage() {
         <StyledLink href="/bestellung">/online bestellen u. kaufen</StyledLink>/falsche Ware o. Stückzahl
       </StyledBreadcrumb>
       <h3>Ich habe die falsche Ware oder Stückzahl bestellt!</h3>
+      <StyledLink href="/bestellung">
+        <StyledZurueckButton>zurück</StyledZurueckButton>
+      </StyledLink>
     </StyledBody>
   );
 }
@@ -16,6 +19,7 @@ const StyledBody = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   background-color: #f3e8e8;
   color: #572887;
   border-radius: 10px;
@@ -38,4 +42,21 @@ const StyledBreadcrumb = styled.h3`
 
 const StyledLink = styled(Link)`
   text-decoration: none;
+`;
+
+const StyledZurueckButton = styled.button`
+  color: #572887;
+  font-size: 18px;
+  font-weight: 300;
+  font-style: normal;
+  text-decoration: none;
+  background-color: #e6ceee;
+  border-radius: 10px;
+  border: 1px solid rgba(163, 134, 182, 0.5);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  height: 5vh;
+  width: 30vw;
+  position: relative;
+  top: 40px;
+  cursor: pointer;
 `;
