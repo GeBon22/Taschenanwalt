@@ -7,10 +7,7 @@ export default function BestellungPage() {
       <StyledBody>
         <StyledBreadcrumb>/online bestellen und kaufen</StyledBreadcrumb>
         <StyledLink href="/bestellung/verzug">
-          <StyledButton>Meine Ware kommt nicht an</StyledButton>
-        </StyledLink>
-        <StyledLink href="/bestellung/verlust">
-          <StyledButton>Mein Paket ist verloren gegangen</StyledButton>
+          <StyledButton>Meine Ware kommt nicht an / Mein Paket ist verloren gegangen</StyledButton>
         </StyledLink>
         <StyledLink href="/bestellung/schaden">
           <StyledButton>Meine Bestellung ist beschädigt</StyledButton>
@@ -19,6 +16,9 @@ export default function BestellungPage() {
           <StyledButton>
             Ich habe die falsche Ware/falsche Stückzahl bestellt
           </StyledButton>
+        </StyledLink>
+        <StyledLink href="/bestellung/ruecktritt">
+          <StyledButton>Ich möchte vom Kaufvertrag zurück treten</StyledButton>
         </StyledLink>
         <StyledLink href="/">
           <StyledZurueckButton>zurück</StyledZurueckButton>

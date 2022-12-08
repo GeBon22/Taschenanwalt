@@ -5,7 +5,7 @@ export default function VerzugPage() {
   return (
     <StyledBody>
       <StyledBreadcrumb>
-        <StyledLink href="/bestellung">/online bestellen u. kaufen</StyledLink>/Ware kommt nicht an
+        <StyledLink href="/bestellung">/online bestellen u. kaufen</StyledLink>/Ware kommt nicht o. Paket verloren
       </StyledBreadcrumb>
       <h3>Meine Ware kommt nicht an!</h3>
       <StyledLink href="/bestellung">

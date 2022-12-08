@@ -1,13 +1,13 @@
 import styled from "styled-components";
 import Link from "next/link";
 
-export default function VerlustPage() {
+export default function RuecktrittPage() {
   return (
     <StyledBody>
       <StyledBreadcrumb>
-        <StyledLink href="/bestellung">/online bestellen u. kaufen</StyledLink>/Paket verloren gegangen
+        <StyledLink href="/bestellung">/online bestellen u. kaufen</StyledLink>/Rücktritt
       </StyledBreadcrumb>
-      <h3>Mein Paket ist verloren gegangen!</h3>
+      <h3>Ich möchte von meinem Kaufvertrag zurück treten</h3>
       <StyledLink href="/bestellung">
         <StyledZurueckButton>zurück</StyledZurueckButton>
       </StyledLink>
