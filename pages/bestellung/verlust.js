@@ -1,8 +1,12 @@
 import styled from "styled-components";
+import Link from "next/link";
 
 export default function VerlustPage() {
   return (
     <StyledBody>
+      <StyledBreadcrumb>
+        <StyledLink href="/bestellung">/online bestellen u. kaufen</StyledLink>/Paket verloren gegangen
+      </StyledBreadcrumb>
       <h3>Mein Paket ist verloren gegangen!</h3>
     </StyledBody>
   );
@@ -21,4 +25,17 @@ const StyledBody = styled.div`
   gap: 20px;
   margin-top: 10px;
   margin-bottom: 10px;
+`;
+
+const StyledBreadcrumb = styled.h3`
+  color: #572887;
+  font-size: 15px;
+  font-weight: 400;
+  position: absolute;
+  top: 8rem;
+  left: 2rem;
+`;
+
+const StyledLink = styled(Link)`
+  text-decoration: none;
 `;

@@ -16,7 +16,9 @@ export default function BestellungPage() {
           <StyledButton>Meine Bestellung ist beschädigt</StyledButton>
         </StyledLink>
         <StyledLink href="/bestellung/irrtum">
-          <StyledButton>Ich habe die falsche Ware/falsche Stückzahl bestellt</StyledButton>
+          <StyledButton>
+            Ich habe die falsche Ware/falsche Stückzahl bestellt
+          </StyledButton>
         </StyledLink>
         <StyledLink href="/">
           <StyledZurueckButton>zurück</StyledZurueckButton>
