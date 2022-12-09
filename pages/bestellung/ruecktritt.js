@@ -26,20 +26,19 @@ Auch ausgeschlossen ist, wenn die Ware nur in einem unerheblichen Maß beschädi
 Für weitere Infos dazu, klicke auf die jeweiligen Links weiter unten.
 `}
         </p>
-        </StyledArticle>
-        <CopyToClipboard
-          text="Sehr geehrte Damen und Herren. Hiermit trete/n ich/wir von dem abgeschlossenen Vertrag über den Kauf folgender Waren/Einbringung
+      </StyledArticle>
+      <CopyToClipboard
+        text="Sehr geehrte Damen und Herren. Hiermit trete/n ich/wir von dem abgeschlossenen Vertrag über den Kauf folgender Waren/Einbringung
      folgender Dienstleistungen:[] zurück. Bestellt am [] und erhalten am []. Grund dafür ist []. Die Voraussetzungen des Rücktritts liegen hier vor.
      Bitte bestätigen Sie mir den Erhalt des Schreibens. 
      [Name und Anschrift des Verbrauchers] [Datum] [Unterschrift]."
-          onCopy={() => alert("Anschreiben in die Zwischenablage kopiert!")}
-        >
-          <StyledKopierenButton>Anschreiben kopieren</StyledKopierenButton>
-        </CopyToClipboard>
-        <StyledLink href="/bestellung">
-          <StyledZurueckButton>zurück</StyledZurueckButton>
-        </StyledLink>
- 
+        onCopy={() => alert("Anschreiben in die Zwischenablage kopiert!")}
+      >
+        <StyledKopierenButton>Anschreiben kopieren</StyledKopierenButton>
+      </CopyToClipboard>
+      <StyledLink href="/bestellung">
+        <StyledZurueckButton>zurück</StyledZurueckButton>
+      </StyledLink>
     </StyledBody>
   );
 }
