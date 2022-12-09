@@ -74,7 +74,7 @@ const StyledIcon = styled(Icon)`
   width: 40px;
   height: 50px;
   position: absolute;
-  top: 6.5rem;
+  top: 7.5rem;
   right: 2rem;
 `;
 
