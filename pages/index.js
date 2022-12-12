@@ -70,7 +70,7 @@ const StyledBody = styled.div`
 
 const StyledBestellungButton = styled.button`
   color: #572887;
-  font-size: 18px;
+  font-size: 1.2rem;
   font-weight: 300;
   font-style: normal;
   text-decoration: none;
@@ -88,7 +88,7 @@ const StyledBestellungButton = styled.button`
 
 const StyledWiderufButton = styled.button`
   color: #572887;
-  font-size: 18px;
+  font-size: 1.2rem;
   font-weight: 300;
   font-style: normal;
   text-decoration: none;

@@ -44,7 +44,7 @@ const StyledBody = styled.div`
 
 const StyledBreadcrumb = styled.h3`
   color: #572887;
-  font-size: 15px;
+  font-size: 1rem;
   font-weight: 400;
   position: absolute;
   top: 8rem;
@@ -54,7 +54,7 @@ const StyledBreadcrumb = styled.h3`
 const StyledArticle = styled.article`
   text-align: center;
   color: #572887;
-  font-size: 18px;
+  font-size: 1.2rem;
   font-weight: 300;
   font-style: normal;
   text-decoration: none;
@@ -67,7 +67,7 @@ const StyledLink = styled(Link)`
 
 const StyledZurueckButton = styled.button`
   color: #572887;
-  font-size: 18px;
+  font-size: 1.2rem;
   font-weight: 300;
   font-style: normal;
   text-decoration: none;
