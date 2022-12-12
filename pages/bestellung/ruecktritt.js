@@ -1,39 +1,42 @@
 import styled from "styled-components";
 import Link from "next/link";
-import {CopyToClipboard} from "react-copy-to-clipboard";
 import {Icon} from "@iconify/react";
+import {CopyToClipboard} from "react-copy-to-clipboard";
 
-export default function WannWiderruf() {
+export default function RuecktrittPage() {
   return (
     <StyledBody>
       <StyledBreadcrumb>
-        <StyledLink href="/widerruf">/Widerruf und Retoure</StyledLink>/Was muss
-        in einem Widerruf stehen?
+        <StyledLink href="/bestellung">/online bestellen u. kaufen</StyledLink>
+        /Rücktritt
       </StyledBreadcrumb>
+      <StyledIcon icon="mingcute:bookmark-fill" color="#572887" />
       <StyledArticle>
-        <StyledIcon icon="mingcute:bookmark-fill" color="#572887" />
+        <h3>Ich möchte vom Kaufvertrag zurück treten</h3>
         <p>
-          {`Was muss in einem Widerruf stehen?
+          {`Für den Rücktritt vom Kaufvertrag sind mehrere Bedingungen zu erfüllen. 
+Als Käufer musst Du dem Verkäufer zunächst eine angemessene Frist zur Nacherfüllung geben (zB. 7-10 Werktage). 
 
-          In einem Widerruf muss nicht ausdrücklich das Wort Widerruf verwendet
-        werden. Es empfiehlt sicher aber, klar zu machen, dass man
-        vom Vertrag Abstand nehmen möchte und den Kaufpreis zurück erstattet
-        verlangt.
-        Es muss außerdem kein Grund für den Widerruf angegeben werden.
-        
-        Möchtest Du ein vorgefertigtes Anschreiben verwenden, drücke den Button und Fülle die eckigen Klammern mit dem zutreffenden Inhalt aus.`}
+Die Frist ist entbehrlich, wenn der Verkäufer die Nacherfüllung endgültig verweigert, die Nacherfüllung bis zu einer gesetzten Frist nicht erfolgt ist, oder besondere Umstände vorliegen, die im beiderseitigen Interesse einen Rücktritt rechtfertigen.
+
+Des Weiteren muss ein Rücktrittsgrund vorliegen. Das kann das fehlende Liefern der Ware oder einer beschädigten Ware sein – aber nur, wenn der Verkäufer seine Frist zur Nachbesserung/Neulieferung hat verstreichen lassen oder er eine Nacherfüllung vollständig verweigert.
+
+Ein  Rücktritt ist außerdem ausgeschlossen, wenn eine Teilleistung erfolgt ist und Du nicht nachweisen kannst, dass Du kein Interesse an der teilweisen Leistungserbringung hast.
+Auch ausgeschlossen ist, wenn die Ware nur in einem unerheblichen Maß beschädigt war. 
+Für weitere Infos dazu, klicke auf die jeweiligen Links weiter unten.
+`}
         </p>
       </StyledArticle>
-
       <CopyToClipboard
-        text="Sehr geehrte Damen und Herren. Hiermit widerrufe/n ich/wir den abgeschlossenen Vertrag über den Kauf folgender Waren/Einbringung
-     folgender Dienstleistungen:[]. Bestellt am [] und erhalten am []. [Name und Anschrift des Verbrauchers] [Datum] [Unterschrift]."
+        text="Sehr geehrte Damen und Herren. Hiermit trete/n ich/wir von dem abgeschlossenen Vertrag über den Kauf folgender Waren/Einbringung
+     folgender Dienstleistungen:[] zurück. Bestellt am [] und erhalten am []. Grund dafür ist []. Die Voraussetzungen des Rücktritts liegen hier vor.
+     Bitte bestätigen Sie mir den Erhalt des Schreibens. 
+     [Name und Anschrift des Verbrauchers] [Datum] [Unterschrift]."
         onCopy={() => alert("Anschreiben in die Zwischenablage kopiert!")}
       >
         <StyledKopierenButton>Anschreiben kopieren</StyledKopierenButton>
       </CopyToClipboard>
-
-      <StyledLink href="/widerruf">
+      <StyledLink href="/bestellung">
         <StyledZurueckButton>zurück</StyledZurueckButton>
       </StyledLink>
     </StyledBody>
@@ -52,7 +55,7 @@ const StyledBody = styled.div`
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   width: 90vw;
   height: 75vh;
-  margin-top: 2rem;
+  margin-top: 1rem;
   margin-bottom: 10px;
   overflow: auto;
 `;
@@ -104,7 +107,7 @@ const StyledKopierenButton = styled.button`
   border-radius: 10px;
   border: 1px solid rgba(163, 134, 182, 0.5);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  height: 8vh;
+  height: 15vh;
   width: 40vw;
   position: relative;
   cursor: pointer;
@@ -118,6 +121,6 @@ const StyledArticle = styled.article`
   font-weight: 300;
   font-style: normal;
   text-decoration: none;
-  padding: 15px;
+  padding: 1rem;
   white-space: pre-line;
 `;
