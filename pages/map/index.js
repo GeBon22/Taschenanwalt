@@ -1,11 +1,11 @@
-import StyledBody from "../../components/StyledBody";
+import Body from "../../components/Body";
 
 export default function MapPage() {
   return (
     <div>
-      <StyledBody>
+      <Body>
         <h3>This is the map page</h3>
-      </StyledBody>
+      </Body>
     </div>
   );
 }

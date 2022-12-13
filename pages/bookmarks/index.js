@@ -1,9 +1,9 @@
-import StyledBody from "../../components/StyledBody";
+import Body from "../../components/Body";
 
 export default function BookmarksPage() {
   return (
-    <StyledBody>
+    <Body>
       <h3>This is the bookmarks page</h3>
-    </StyledBody>
+    </Body>
   );
 }
