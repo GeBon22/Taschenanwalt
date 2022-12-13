@@ -1,14 +1,16 @@
 import styled from "styled-components";
 import Link from "next/link";
 import {Icon} from "@iconify/react";
+import Breadcrumb from "../../components/Breadcrumb";
+import ZurueckButton from "../../components/Zurueckbutton";
 
 export default function WannWiderruf() {
+  const path = "/Widerruf und Retoure/Wann kann ich widerrufen?";
   return (
     <StyledBody>
-      <StyledBreadcrumb>
-        <StyledLink href="/widerruf">/Widerruf und Retoure</StyledLink>/Wann
-        kann ich widerrufen?
-      </StyledBreadcrumb>
+      <StyledLink href="/widerruf">
+        <Breadcrumb path={path} />
+      </StyledLink>
       <h3>Wann kann ich widerrufen?</h3>
       <StyledArticle>
         <StyledIcon icon="mingcute:bookmark-fill" color="#572887" />
@@ -18,7 +20,7 @@ export default function WannWiderruf() {
         </p>
       </StyledArticle>
       <StyledLink href="/widerruf">
-        <StyledZurueckButton>zurück</StyledZurueckButton>
+        <ZurueckButton />
       </StyledLink>
     </StyledBody>
   );
@@ -40,15 +42,6 @@ const StyledBody = styled.div`
   margin-bottom: 10px;
 `;
 
-const StyledBreadcrumb = styled.h3`
-  color: #572887;
-  font-size: 1rem;
-  font-weight: 400;
-  position: absolute;
-  top: 8rem;
-  left: 2rem;
-`;
-
 const StyledLink = styled(Link)`
   text-decoration: none;
 `;
@@ -59,21 +52,6 @@ const StyledIcon = styled(Icon)`
   position: absolute;
   top: 6.5rem;
   right: 2rem;
-`;
-
-const StyledZurueckButton = styled.button`
-  color: #572887;
-  font-size: 1.2rem;
-  font-weight: 300;
-  font-style: normal;
-  text-decoration: none;
-  background-color: #e6ceee;
-  border-radius: 10px;
-  border: 1px solid rgba(163, 134, 182, 0.5);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  height: 5vh;
-  width: 30vw;
-  cursor: pointer;
 `;
 
 const StyledArticle = styled.article`

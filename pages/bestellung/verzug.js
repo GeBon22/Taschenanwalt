@@ -1,14 +1,16 @@
 import styled from "styled-components";
 import Link from "next/link";
 import {Icon} from "@iconify/react";
+import Breadcrumb from "../../components/Breadcrumb";
+import ZurueckButton from "../../components/Zurueckbutton";
 
 export default function VerzugPage() {
+  const path = "/online bestellen und kaufen/Ware o. Paket verloren";
   return (
     <StyledBody>
-      <StyledBreadcrumb>
-        <StyledLink href="/bestellung">/online bestellen u. kaufen</StyledLink>
-        /Ware kommt nicht o. Paket verloren
-      </StyledBreadcrumb>
+      <StyledLink href="/bestellung">
+        <Breadcrumb path={path} />
+      </StyledLink>
       <StyledArticle>
         <h3>Meine Ware kommt nicht an!</h3>
         <StyledIcon icon="mingcute:bookmark-fill" color="#572887" />
@@ -19,7 +21,7 @@ export default function VerzugPage() {
       Auch hier ist es ratsam, eine angemessene Frist (zB. 7-10 Werktage) zu setzen, um dem Verkäufer ausreichend Zeit zu geben, eine Lösung anzubieten und seiner Pflicht aus dem Vertrag nachzukommen.`}{" "}
         </p>
         <StyledLink href="/bestellung">
-          <StyledZurueckButton>zurück</StyledZurueckButton>
+          <ZurueckButton />
         </StyledLink>
       </StyledArticle>
     </StyledBody>
@@ -42,15 +44,6 @@ const StyledBody = styled.div`
   margin-bottom: 10px;
 `;
 
-const StyledBreadcrumb = styled.h3`
-  color: #572887;
-  font-size: 1rem;
-  font-weight: 400;
-  position: absolute;
-  top: 8rem;
-  left: 2rem;
-`;
-
 const StyledArticle = styled.article`
   text-align: center;
   color: #572887;
@@ -63,23 +56,6 @@ const StyledArticle = styled.article`
 
 const StyledLink = styled(Link)`
   text-decoration: none;
-`;
-
-const StyledZurueckButton = styled.button`
-  color: #572887;
-  font-size: 1.2rem;
-  font-weight: 300;
-  font-style: normal;
-  text-decoration: none;
-  background-color: #e6ceee;
-  border-radius: 10px;
-  border: 1px solid rgba(163, 134, 182, 0.5);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  height: 5vh;
-  width: 30vw;
-  position: relative;
-  top: 40px;
-  cursor: pointer;
 `;
 
 const StyledIcon = styled(Icon)`

@@ -1,14 +1,16 @@
 import styled from "styled-components";
 import Link from "next/link";
 import {Icon} from "@iconify/react";
+import Breadcrumb from "../../components/Breadcrumb";
+import ZurueckButton from "../../components/Zurueckbutton";
 
 export default function SchadenPage() {
+  const path = "/online bestellen und kaufen/Ware beschädigt";
   return (
     <StyledBody>
-      <StyledBreadcrumb>
-        <StyledLink href="/bestellung">/online bestellen u. kaufen</StyledLink>
-        /Ware beschädigt
-      </StyledBreadcrumb>
+      <StyledLink href="/bestellung">
+        <Breadcrumb path={path} />
+      </StyledLink>
       <StyledIcon icon="mingcute:bookmark-fill" color="#572887" />
       <StyledArticle>
         <h3>Meine Bestellung ist beschädigt</h3>
@@ -20,7 +22,7 @@ Entscheidest Du Dich für eine Reparatur, bist du seit 2022 nun auch ausdrückli
 `}
         </p>
         <StyledLink href="/bestellung">
-          <StyledZurueckButton>zurück</StyledZurueckButton>
+          <ZurueckButton />
         </StyledLink>
       </StyledArticle>
     </StyledBody>
@@ -54,35 +56,8 @@ const StyledArticle = styled.article`
   padding: 10px;
 `;
 
-const StyledBreadcrumb = styled.h3`
-  color: #572887;
-  font-size: 1rem;
-  font-weight: 400;
-  position: absolute;
-  top: 8rem;
-  left: 2rem;
-`;
-
 const StyledLink = styled(Link)`
   text-decoration: none;
-`;
-
-const StyledZurueckButton = styled.button`
-  color: #572887;
-  font-size: 1.2rem;
-  font-weight: 300;
-  font-style: normal;
-  text-decoration: none;
-  background-color: #e6ceee;
-  border-radius: 10px;
-  border: 1px solid rgba(163, 134, 182, 0.5);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  height: 5vh;
-  width: 30vw;
-  position: relative;
-  top: 2rem;
-  cursor: pointer;
-  margin-bottom: 4rem;
 `;
 
 const StyledIcon = styled(Icon)`
