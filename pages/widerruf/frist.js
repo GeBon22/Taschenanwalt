@@ -1,9 +1,9 @@
 import styled from "styled-components";
 import Link from "next/link";
-import {Icon} from "@iconify/react";
 import Breadcrumb from "../../components/Breadcrumb";
 import ZurueckButton from "../../components/Zurueckbutton";
 import StyledBody from "../../components/StyledBody";
+import StyledIcon from "../../components/BookmarkIcon";
 
 export default function FristWiderruf() {
   const path = "/Widerruf und Retoure/Wie lang kann ich widerrufen?";
@@ -54,14 +54,6 @@ export default function FristWiderruf() {
 
 const StyledLink = styled(Link)`
   text-decoration: none;
-`;
-
-const StyledIcon = styled(Icon)`
-  width: 40px;
-  height: 50px;
-  position: absolute;
-  top: 6.5rem;
-  right: 2rem;
 `;
 
 const StyledArticle = styled.article`

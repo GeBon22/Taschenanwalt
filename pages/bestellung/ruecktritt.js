@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import Link from "next/link";
-import {Icon} from "@iconify/react";
+import StyledIcon from "../../components/BookmarkIcon";
 import {CopyToClipboard} from "react-copy-to-clipboard";
 import Breadcrumb from "../../components/Breadcrumb";
 import ZurueckButton from "../../components/Zurueckbutton";
@@ -48,14 +48,6 @@ Für weitere Infos dazu, klicke auf die jeweiligen Links weiter unten.
 
 const StyledLink = styled(Link)`
   text-decoration: none;
-`;
-
-const StyledIcon = styled(Icon)`
-  width: 40px;
-  height: 50px;
-  position: absolute;
-  top: 7.5rem;
-  right: 2rem;
 `;
 
 const StyledKopierenButton = styled.button`

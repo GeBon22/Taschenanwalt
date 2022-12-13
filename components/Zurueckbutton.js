@@ -20,4 +20,5 @@ const StyledZurueckButton = styled.button`
   position: relative;
   top: 40px;
   cursor: pointer;
+  margin-bottom: 2rem;
 `;

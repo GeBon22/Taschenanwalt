@@ -1,10 +1,10 @@
 import styled from "styled-components";
 import Link from "next/link";
 import {CopyToClipboard} from "react-copy-to-clipboard";
-import {Icon} from "@iconify/react";
 import Breadcrumb from "../../components/Breadcrumb";
 import ZurueckButton from "../../components/Zurueckbutton";
 import StyledBody from "../../components/StyledBody";
+import StyledIcon from "../../components/BookmarkIcon";
 
 
 export default function WannWiderruf() {
@@ -46,14 +46,6 @@ export default function WannWiderruf() {
 
 const StyledLink = styled(Link)`
   text-decoration: none;
-`;
-
-const StyledIcon = styled(Icon)`
-  width: 40px;
-  height: 50px;
-  position: absolute;
-  top: 7.5rem;
-  right: 2rem;
 `;
 
 const StyledKopierenButton = styled.button`

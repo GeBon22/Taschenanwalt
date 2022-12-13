@@ -16,8 +16,8 @@ const Body = styled.div`
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   width: 90vw;
   height: 75vh;
-  margin-top: 10px;
-  margin-bottom: 10px;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
   overflow: auto;
   padding-top: 2rem;
   padding-bottom: 2rem;
