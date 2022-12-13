@@ -5,6 +5,8 @@ import {CopyToClipboard} from "react-copy-to-clipboard";
 import Breadcrumb from "../../components/Breadcrumb";
 import ZurueckButton from "../../components/Zurueckbutton";
 import StyledBody from "../../components/StyledBody";
+import StyledKopierenButton from "../../components/KopierenButton";
+import StyledArticle from "../../components/Article";
 
 export default function RuecktrittPage() {
   const path = "/online bestellen und kaufen/Rücktritt";
@@ -48,32 +50,4 @@ Für weitere Infos dazu, klicke auf die jeweiligen Links weiter unten.
 
 const StyledLink = styled(Link)`
   text-decoration: none;
-`;
-
-const StyledKopierenButton = styled.button`
-  color: #572887;
-  font-size: 1.2rem;
-  font-weight: 300;
-  font-style: normal;
-  text-decoration: none;
-  background-color: #e6ceee;
-  border-radius: 10px;
-  border: 1px solid rgba(163, 134, 182, 0.5);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  height: 15vh;
-  width: 40vw;
-  position: relative;
-  cursor: pointer;
-`;
-
-const StyledArticle = styled.article`
-  text-align: justify;
-  text-align-last: none;
-  color: #572887;
-  font-size: 1.2rem;
-  font-weight: 300;
-  font-style: normal;
-  text-decoration: none;
-  padding: 1rem;
-  white-space: pre-line;
 `;
