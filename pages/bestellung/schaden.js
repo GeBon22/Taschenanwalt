@@ -4,6 +4,7 @@ import StyledIcon from "../../components/BookmarkIcon";
 import Breadcrumb from "../../components/Breadcrumb";
 import ZurueckButton from "../../components/Zurueckbutton";
 import StyledBody from "../../components/StyledBody";
+import StyledArticle from "../../components/Article";
 
 export default function SchadenPage() {
   const path = "/online bestellen und kaufen/Ware beschädigt";
@@ -30,16 +31,6 @@ Entscheidest Du Dich für eine Reparatur, bist du seit 2022 nun auch ausdrückli
     </StyledBody>
   );
 }
-
-const StyledArticle = styled.article`
-  text-align: center;
-  color: #572887;
-  font-size: 1.2rem;
-  font-weight: 300;
-  font-style: normal;
-  text-decoration: none;
-  padding: 10px;
-`;
 
 const StyledLink = styled(Link)`
   text-decoration: none;

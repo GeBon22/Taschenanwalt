@@ -4,6 +4,7 @@ import Breadcrumb from "../../components/Breadcrumb";
 import ZurueckButton from "../../components/Zurueckbutton";
 import StyledBody from "../../components/StyledBody";
 import StyledIcon from "../../components/BookmarkIcon";
+import StyledArticle from "../../components/Article";
 
 export default function WannWiderruf() {
   const path = "/Widerruf und Retoure/Wann kann ich widerrufen?";
@@ -16,7 +17,7 @@ export default function WannWiderruf() {
         <StyledIcon icon="mingcute:bookmark-fill" color="#572887" />
         <p>
           {`Wann kann ich widerrufen?
-          
+
           Jeder Verbraucher kann sich auf das Widerrufsrecht berufen. Einem
           Unternehmer steht dagegen kein Widerrufsrecht zu.`}
         </p>
@@ -30,14 +31,4 @@ export default function WannWiderruf() {
 
 const StyledLink = styled(Link)`
   text-decoration: none;
-`;
-
-const StyledArticle = styled.article`
-  text-align: center;
-  color: #572887;
-  font-size: 1.2rem;
-  font-weight: 300;
-  font-style: normal;
-  text-decoration: none;
-  padding: 10px;
 `;

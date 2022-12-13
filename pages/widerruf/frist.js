@@ -4,6 +4,7 @@ import Breadcrumb from "../../components/Breadcrumb";
 import ZurueckButton from "../../components/Zurueckbutton";
 import StyledBody from "../../components/StyledBody";
 import StyledIcon from "../../components/BookmarkIcon";
+import StyledArticle from "../../components/Article";
 
 export default function FristWiderruf() {
   const path = "/Widerruf und Retoure/Wie lang kann ich widerrufen?";
@@ -54,19 +55,6 @@ export default function FristWiderruf() {
 
 const StyledLink = styled(Link)`
   text-decoration: none;
-`;
-
-const StyledArticle = styled.article`
-  text-align: justify;
-  text-align-last: none;
-  color: #572887;
-  font-size: 1.2rem;
-  font-weight: 300;
-  font-style: normal;
-  text-decoration: none;
-  padding: 15px;
-  margin-top: 20rem;
-  white-space: pre-line;
 `;
 
 const StyledNuLi = styled.section`
