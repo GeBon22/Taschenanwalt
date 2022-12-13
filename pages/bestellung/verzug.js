@@ -3,6 +3,7 @@ import Link from "next/link";
 import {Icon} from "@iconify/react";
 import Breadcrumb from "../../components/Breadcrumb";
 import ZurueckButton from "../../components/Zurueckbutton";
+import StyledBody from "../../components/StyledBody";
 
 export default function VerzugPage() {
   const path = "/online bestellen und kaufen/Ware o. Paket verloren";
@@ -27,22 +28,6 @@ export default function VerzugPage() {
     </StyledBody>
   );
 }
-
-const StyledBody = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  background-color: #f3e8e8;
-  color: #572887;
-  border-radius: 10px;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  width: 90vw;
-  height: 75vh;
-  gap: 20px;
-  margin-top: 10px;
-  margin-bottom: 10px;
-`;
 
 const StyledArticle = styled.article`
   text-align: center;

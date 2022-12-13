@@ -3,6 +3,8 @@ import Link from "next/link";
 import {Icon} from "@iconify/react";
 import Breadcrumb from "../../components/Breadcrumb";
 import ZurueckButton from "../../components/Zurueckbutton";
+import StyledBody from "../../components/StyledBody";
+
 
 export default function WannWiderruf() {
   const path = "/Widerruf und Retoure/Wann kann ich widerrufen?";
@@ -25,22 +27,6 @@ export default function WannWiderruf() {
     </StyledBody>
   );
 }
-
-const StyledBody = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  gap: 20px;
-  background-color: #f3e8e8;
-  color: #572887;
-  border-radius: 10px;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  width: 90vw;
-  height: 75vh;
-  margin-top: 10px;
-  margin-bottom: 10px;
-`;
 
 const StyledLink = styled(Link)`
   text-decoration: none;

@@ -3,6 +3,7 @@ import Link from "next/link";
 import {Icon} from "@iconify/react";
 import Breadcrumb from "../../components/Breadcrumb";
 import ZurueckButton from "../../components/Zurueckbutton";
+import StyledBody from "../../components/StyledBody";
 
 export default function FristWiderruf() {
   const path = "/Widerruf und Retoure/Wie lang kann ich widerrufen?";
@@ -50,23 +51,6 @@ export default function FristWiderruf() {
     </>
   );
 }
-
-const StyledBody = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  gap: 1rem;
-  overflow: auto;
-  background-color: #f3e8e8;
-  color: #572887;
-  border-radius: 10px;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  width: 90vw;
-  height: 75vh;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-`;
 
 const StyledLink = styled(Link)`
   text-decoration: none;

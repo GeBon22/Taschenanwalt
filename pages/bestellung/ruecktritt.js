@@ -4,6 +4,7 @@ import {Icon} from "@iconify/react";
 import {CopyToClipboard} from "react-copy-to-clipboard";
 import Breadcrumb from "../../components/Breadcrumb";
 import ZurueckButton from "../../components/Zurueckbutton";
+import StyledBody from "../../components/StyledBody";
 
 export default function RuecktrittPage() {
   const path = "/online bestellen und kaufen/Rücktritt";
@@ -44,23 +45,6 @@ Für weitere Infos dazu, klicke auf die jeweiligen Links weiter unten.
     </StyledBody>
   );
 }
-
-const StyledBody = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  gap: 20px;
-  background-color: #f3e8e8;
-  color: #572887;
-  border-radius: 10px;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  width: 90vw;
-  height: 75vh;
-  margin-top: 1rem;
-  margin-bottom: 10px;
-  overflow: auto;
-`;
 
 const StyledLink = styled(Link)`
   text-decoration: none;
