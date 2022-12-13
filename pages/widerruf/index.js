@@ -3,6 +3,7 @@ import Link from "next/link";
 import Breadcrumb from "../../components/Breadcrumb";
 import ZurueckButton from "../../components/Zurueckbutton";
 import StyledBody from "../../components/StyledBody";
+import DefaultButton from "../../components/DefaultButton";
 
 
 
@@ -13,13 +14,13 @@ export default function WiderrufPage() {
       <StyledBody>
       <Breadcrumb path={path} />
         <StyledLink href="/widerruf/wann">
-          <StyledButton>Wann kann ich widerrufen?</StyledButton>
+          <DefaultButton>Wann kann ich widerrufen?</DefaultButton>
         </StyledLink>
         <StyledLink href="/widerruf/frist">
-          <StyledButton>Wie lange kann ich widerrufen?</StyledButton>
+          <DefaultButton>Wie lange kann ich widerrufen?</DefaultButton>
         </StyledLink>
         <StyledLink href="/widerruf/inhalt">
-          <StyledButton>Was muss in meinem Widerruf stehen?</StyledButton>
+          <DefaultButton>Was muss in meinem Widerruf stehen?</DefaultButton>
         </StyledLink>
         <StyledLink href="/">
           <ZurueckButton />
@@ -28,20 +29,6 @@ export default function WiderrufPage() {
     </div>
   );
 }
-
-const StyledButton = styled.button`
-  color: #572887;
-  font-size: 1.2rem;
-  font-weight: 300;
-  font-style: normal;
-  text-decoration: none;
-  background-color: #e6ceee;
-  border-radius: 10px;
-  border: 1px solid #e6ceee /* rgba(163, 134, 182, 0.5) */;
-  height: 10vh;
-  width: 80vw;
-  cursor: pointer;
-`;
 
 const StyledLink = styled(Link)`
   text-decoration: none;
