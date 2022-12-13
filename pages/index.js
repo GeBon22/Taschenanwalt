@@ -2,6 +2,7 @@ import styled from "styled-components";
 import Link from "next/link";
 import lottie from "lottie-web";
 import {useEffect, useRef} from "react";
+import Body from "/components/Body";
 
 export default function HomePage() {
   const widerrufContainer = useRef(null);
@@ -30,8 +31,8 @@ export default function HomePage() {
   }, []);
 
   return (
-    <div>
-      <StyledBody>
+    <>
+      <Body>
         <h3>Wo drückt der Schuh?</h3>
 
         <StyledLink href="/bestellung">
@@ -47,26 +48,10 @@ export default function HomePage() {
             Widerruf und Retoure
           </StyledWiderufButton>
         </StyledLink>
-      </StyledBody>
-    </div>
+      </Body>
+    </>
   );
 }
-
-const StyledBody = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
-  background-color: #f3e8e8;
-  color: #572887;
-  border-radius: 10px;
-  border: 1px solid rgba(163, 134, 182, 0.5);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  width: 90vw;
-  height: 75vh;
-  margin-top: 10px;
-  margin-bottom: 10px;
-`;
 
 const StyledBestellungButton = styled.button`
   color: #572887;
