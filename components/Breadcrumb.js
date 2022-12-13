@@ -1,8 +1,7 @@
 import styled from "styled-components";
 
-export default function Breadcrumb(props){
-
-    return <StyledBreadcrumb>{props.path}</StyledBreadcrumb>
+export default function Breadcrumb(props) {
+  return <StyledBreadcrumb>{props.path}</StyledBreadcrumb>;
 }
 
 const StyledBreadcrumb = styled.h3`
@@ -12,4 +11,4 @@ const StyledBreadcrumb = styled.h3`
   position: absolute;
   top: 125px;
   left: 37px;
-  `;
+`;

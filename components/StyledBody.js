@@ -1,7 +1,7 @@
-import styled from "styled-components"
+import styled from "styled-components";
 
 export default function StyledBody(props) {
-return <Body>{props.children}</Body>
+  return <Body>{props.children}</Body>;
 }
 
 const Body = styled.div`

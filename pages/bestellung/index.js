@@ -25,7 +25,9 @@ export default function BestellungPage() {
           </DefaultButton>
         </StyledLink>
         <StyledLink href="/bestellung/ruecktritt">
-          <DefaultButton>Ich möchte vom Kaufvertrag zurück treten</DefaultButton>
+          <DefaultButton>
+            Ich möchte vom Kaufvertrag zurück treten
+          </DefaultButton>
         </StyledLink>
         <StyledLink href="/">
           <ZurueckButton />

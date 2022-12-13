@@ -1,8 +1,7 @@
 import styled from "styled-components";
 
 export default function ZurueckButton() {
-
-    return <StyledZurueckButton>zurück</StyledZurueckButton>
+  return <StyledZurueckButton>zurück</StyledZurueckButton>;
 }
 
 const StyledZurueckButton = styled.button`

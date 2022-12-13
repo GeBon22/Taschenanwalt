@@ -5,14 +5,12 @@ import ZurueckButton from "../../components/Zurueckbutton";
 import StyledBody from "../../components/StyledBody";
 import DefaultButton from "../../components/DefaultButton";
 
-
-
 export default function WiderrufPage() {
   const path = "/Widerruf und Retoure";
   return (
     <div>
       <StyledBody>
-      <Breadcrumb path={path} />
+        <Breadcrumb path={path} />
         <StyledLink href="/widerruf/wann">
           <DefaultButton>Wann kann ich widerrufen?</DefaultButton>
         </StyledLink>

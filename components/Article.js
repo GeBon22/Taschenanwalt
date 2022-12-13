@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export default function StyledArticle(props) {
-return <Article>{props.children}</Article>
+  return <Article>{props.children}</Article>;
 }
 
 const Article = styled.article`

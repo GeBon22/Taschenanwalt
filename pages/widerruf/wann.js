@@ -5,7 +5,6 @@ import ZurueckButton from "../../components/Zurueckbutton";
 import StyledBody from "../../components/StyledBody";
 import StyledIcon from "../../components/BookmarkIcon";
 
-
 export default function WannWiderruf() {
   const path = "/Widerruf und Retoure/Wann kann ich widerrufen?";
   return (
