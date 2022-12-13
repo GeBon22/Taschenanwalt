@@ -1,8 +1,8 @@
 import styled from "styled-components";
 import Link from "next/link";
 import Breadcrumb from "../../components/Breadcrumb";
-import ZurueckButton from "../../components/Zurueckbutton";
-import StyledBody from "../../components/StyledBody";
+import ReturnButton from "../../components/ReturnButton";
+import Body from "../../components/Body";
 import StyledIcon from "../../components/BookmarkIcon";
 import StyledArticle from "../../components/Article";
 
@@ -10,7 +10,7 @@ export default function FristWiderruf() {
   const path = "/Widerruf und Retoure/Wie lang kann ich widerrufen?";
   return (
     <>
-      <StyledBody>
+      <Body>
         <StyledLink href="/widerruf">
           <Breadcrumb path={path} />
         </StyledLink>
@@ -46,9 +46,9 @@ export default function FristWiderruf() {
           </StyledUL>
         </StyledNuLi>
         <StyledLink href="/widerruf">
-          <ZurueckButton />
+          <ReturnButton />
         </StyledLink>
-      </StyledBody>
+      </Body>
     </>
   );
 }

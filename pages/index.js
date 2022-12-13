@@ -2,7 +2,7 @@ import styled from "styled-components";
 import Link from "next/link";
 import lottie from "lottie-web";
 import {useEffect, useRef} from "react";
-import StyledBody from "/components/StyledBody";
+import Body from "/components/Body";
 
 export default function HomePage() {
   const widerrufContainer = useRef(null);
@@ -31,8 +31,8 @@ export default function HomePage() {
   }, []);
 
   return (
-    <div>
-      <StyledBody>
+    <>
+      <Body>
         <h3>Wo drückt der Schuh?</h3>
 
         <StyledLink href="/bestellung">
@@ -48,8 +48,8 @@ export default function HomePage() {
             Widerruf und Retoure
           </StyledWiderufButton>
         </StyledLink>
-      </StyledBody>
-    </div>
+      </Body>
+    </>
   );
 }
 

@@ -2,14 +2,14 @@ import styled from "styled-components";
 import Link from "next/link";
 import StyledIcon from "../../components/BookmarkIcon";
 import Breadcrumb from "../../components/Breadcrumb";
-import ZurueckButton from "../../components/Zurueckbutton";
-import StyledBody from "../../components/StyledBody";
+import ReturnButton from "../../components/ReturnButton";
+import Body from "../../components/Body";
 import StyledArticle from "../../components/Article";
 
 export default function IrrtumPage() {
   const path = "/online bestellen und kaufen/falsche Ware o. Stückzahl";
   return (
-    <StyledBody>
+    <Body>
       <StyledLink href="/bestellung">
         <Breadcrumb path={path}></Breadcrumb>
       </StyledLink>
@@ -30,10 +30,10 @@ Solltest Du mehr Waren erhalten haben, als Du bestellt hast, bist Du verpflichte
 Solltest Du zu wenig Waren erhalten haben, hast Du natürlich immer die Möglichkeit, Waren nachzubestellen. `}
         </p>
         <StyledLink href="/bestellung">
-          <ZurueckButton />
+          <ReturnButton />
         </StyledLink>
       </StyledArticle>
-    </StyledBody>
+    </Body>
   );
 }
 

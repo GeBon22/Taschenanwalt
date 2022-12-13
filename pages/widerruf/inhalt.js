@@ -2,16 +2,16 @@ import styled from "styled-components";
 import Link from "next/link";
 import {CopyToClipboard} from "react-copy-to-clipboard";
 import Breadcrumb from "../../components/Breadcrumb";
-import ZurueckButton from "../../components/Zurueckbutton";
-import StyledBody from "../../components/StyledBody";
+import ReturnButton from "../../components/ReturnButton";
+import Body from "../../components/Body";
 import StyledIcon from "../../components/BookmarkIcon";
-import StyledKopierenButton from "../../components/KopierenButton";
+import CopyButton from "../../components/CopyButton";
 import StyledArticle from "../../components/Article";
 
 export default function WannWiderruf() {
   const path = "/Widerruf und Retoure/Was muss im Widerruf stehen?";
   return (
-    <StyledBody>
+    <Body>
       <StyledLink href="/widerruf">
         <Breadcrumb path={path} />
       </StyledLink>
@@ -35,13 +35,13 @@ export default function WannWiderruf() {
      folgender Dienstleistungen:[]. Bestellt am [] und erhalten am []. [Name und Anschrift des Verbrauchers] [Datum] [Unterschrift]."
         onCopy={() => alert("Anschreiben in die Zwischenablage kopiert!")}
       >
-        <StyledKopierenButton>Anschreiben kopieren</StyledKopierenButton>
+        <CopyButton>Anschreiben kopieren</CopyButton>
       </CopyToClipboard>
 
       <StyledLink href="/widerruf">
-        <ZurueckButton />
+        <ReturnButton />
       </StyledLink>
-    </StyledBody>
+    </Body>
   );
 }
 

@@ -2,14 +2,14 @@ import styled from "styled-components";
 import Link from "next/link";
 import StyledIcon from "../../components/BookmarkIcon";
 import Breadcrumb from "../../components/Breadcrumb";
-import ZurueckButton from "../../components/Zurueckbutton";
-import StyledBody from "../../components/StyledBody";
+import ReturnButton from "../../components/ReturnButton";
+import Body from "../../components/Body";
 import StyledArticle from "../../components/Article";
 
 export default function VerzugPage() {
   const path = "/online bestellen und kaufen/Ware o. Paket verloren";
   return (
-    <StyledBody>
+    <Body>
       <StyledLink href="/bestellung">
         <Breadcrumb path={path} />
       </StyledLink>
@@ -24,10 +24,10 @@ export default function VerzugPage() {
       Auch hier ist es ratsam, eine angemessene Frist (zB. 7-10 Werktage) zu setzen, um dem Verkäufer ausreichend Zeit zu geben, eine Lösung anzubieten und seiner Pflicht aus dem Vertrag nachzukommen.`}{" "}
         </p>
         <StyledLink href="/bestellung">
-          <ZurueckButton />
+          <ReturnButton />
         </StyledLink>
       </StyledArticle>
-    </StyledBody>
+    </Body>
   );
 }
 

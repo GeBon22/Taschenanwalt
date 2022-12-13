@@ -3,15 +3,15 @@ import Link from "next/link";
 import StyledIcon from "../../components/BookmarkIcon";
 import {CopyToClipboard} from "react-copy-to-clipboard";
 import Breadcrumb from "../../components/Breadcrumb";
-import ZurueckButton from "../../components/Zurueckbutton";
-import StyledBody from "../../components/StyledBody";
-import StyledKopierenButton from "../../components/KopierenButton";
+import ReturnButton from "../../components/ReturnButton";
+import Body from "../../components/Body";
+import CopyButton from "../../components/CopyButton";
 import StyledArticle from "../../components/Article";
 
 export default function RuecktrittPage() {
   const path = "/online bestellen und kaufen/Rücktritt";
   return (
-    <StyledBody>
+    <Body>
       <StyledLink href="/bestellung">
         <Breadcrumb path={path} />
       </StyledLink>
@@ -40,12 +40,12 @@ Für weitere Infos dazu, klicke auf die jeweiligen Links weiter unten.
      [Name und Anschrift des Verbrauchers] [Datum] [Unterschrift]."
         onCopy={() => alert("Anschreiben in die Zwischenablage kopiert!")}
       >
-        <StyledKopierenButton>Anschreiben kopieren</StyledKopierenButton>
+        <CopyButton>Anschreiben kopieren</CopyButton>
       </CopyToClipboard>
       <StyledLink href="/bestellung">
-        <ZurueckButton />
+        <ReturnButton />
       </StyledLink>
-    </StyledBody>
+    </Body>
   );
 }
 

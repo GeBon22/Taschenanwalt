@@ -1,15 +1,15 @@
 import styled from "styled-components";
 import Link from "next/link";
 import Breadcrumb from "../../components/Breadcrumb";
-import ZurueckButton from "../../components/Zurueckbutton";
-import StyledBody from "../../components/StyledBody";
+import ZurueckButton from "../../components/ReturnButton";
+import Body from "../../components/Body";
 import DefaultButton from "../../components/DefaultButton";
 
 export default function WiderrufPage() {
   const path = "/Widerruf und Retoure";
   return (
-    <div>
-      <StyledBody>
+    <>
+      <Body>
         <Breadcrumb path={path} />
         <StyledLink href="/widerruf/wann">
           <DefaultButton>Wann kann ich widerrufen?</DefaultButton>
@@ -23,8 +23,8 @@ export default function WiderrufPage() {
         <StyledLink href="/">
           <ZurueckButton />
         </StyledLink>
-      </StyledBody>
-    </div>
+      </Body>
+    </>
   );
 }
 

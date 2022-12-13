@@ -1,15 +1,15 @@
 import styled from "styled-components";
 import Link from "next/link";
 import Breadcrumb from "../../components/Breadcrumb";
-import ZurueckButton from "../../components/Zurueckbutton";
-import StyledBody from "../../components/StyledBody";
+import ReturnButton from "../../components/ReturnButton";
+import Body from "../../components/Body";
 import DefaultButton from "../../components/DefaultButton";
 
 export default function BestellungPage() {
   const path = "/online bestellen und kaufen";
   return (
-    <div>
-      <StyledBody>
+    <>
+      <Body>
         <Breadcrumb path={path} />
         <StyledLink href="/bestellung/verzug">
           <DefaultButton>
@@ -30,10 +30,10 @@ export default function BestellungPage() {
           </DefaultButton>
         </StyledLink>
         <StyledLink href="/">
-          <ZurueckButton />
+          <ReturnButton />
         </StyledLink>
-      </StyledBody>
-    </div>
+      </Body>
+    </>
   );
 }
 

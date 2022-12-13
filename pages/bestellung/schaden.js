@@ -2,14 +2,14 @@ import styled from "styled-components";
 import Link from "next/link";
 import StyledIcon from "../../components/BookmarkIcon";
 import Breadcrumb from "../../components/Breadcrumb";
-import ZurueckButton from "../../components/Zurueckbutton";
-import StyledBody from "../../components/StyledBody";
+import ReturnButton from "../../components/ReturnButton";
+import Body from "../../components/Body";
 import StyledArticle from "../../components/Article";
 
 export default function SchadenPage() {
   const path = "/online bestellen und kaufen/Ware beschädigt";
   return (
-    <StyledBody>
+    <Body>
       <StyledLink href="/bestellung">
         <Breadcrumb path={path} />
       </StyledLink>
@@ -25,10 +25,10 @@ Entscheidest Du Dich für eine Reparatur, bist du seit 2022 nun auch ausdrückli
 `}
         </p>
         <StyledLink href="/bestellung">
-          <ZurueckButton />
+          <ReturnButton />
         </StyledLink>
       </StyledArticle>
-    </StyledBody>
+    </Body>
   );
 }
 

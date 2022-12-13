@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export default function ZurueckButton() {
+export default function ReturnButton() {
   return <StyledZurueckButton>zurück</StyledZurueckButton>;
 }
 

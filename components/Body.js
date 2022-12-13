@@ -1,10 +1,10 @@
 import styled from "styled-components";
 
-export default function StyledBody(props) {
-  return <Body>{props.children}</Body>;
+export default function Body(props) {
+  return <StyledBody>{props.children}</StyledBody>;
 }
 
-const Body = styled.div`
+const StyledBody = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
