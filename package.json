@@ -16,6 +16,7 @@
   },
   "dependencies": {
     "@next/font": "^13.0.5",
+    "google-maps-react": "^2.0.6",
     "lottie-web": "^5.10.0",
     "mongoose": "^6.7.3",
     "next": "^13.0.5",
