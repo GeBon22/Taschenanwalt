@@ -1,7 +1,7 @@
 import {Icon} from "@iconify/react";
 import styled from "styled-components";
 
-const StyledIcon = styled(Icon)`
+const BookmarkIcon = styled(Icon)`
   width: 40px;
   height: 50px;
   position: absolute;
@@ -9,4 +9,4 @@ const StyledIcon = styled(Icon)`
   right: 1.5rem;
 `;
 
-export default StyledIcon;
+export default BookmarkIcon;
