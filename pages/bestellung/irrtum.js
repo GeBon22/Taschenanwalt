@@ -14,9 +14,10 @@ export default function IrrtumPage() {
       </StyledLink>
       <StyledIcon icon="mingcute:bookmark-fill" color="#572887" />
       <StyledArticle>
-        <h3>Ich habe die falsche Ware oder Stückzahl bestellt</h3>
         <p>
-          {`Solltest du die falsche Ware bestellt haben, kannst du innerhalb von 14 Tagen nach Erhalt der Ware den Vertrag widerrufen. 
+          {`Ich habe die falsche Ware oder Stückzahl bestellt.
+          
+          Solltest du die falsche Ware bestellt haben, kannst du innerhalb von 14 Tagen nach Erhalt der Ware den Vertrag widerrufen. 
 Nach dieser Frist ist es ratsam, den Verkäufer zu kontaktieren und die Situation zu schildern. 
 Mache ihn darauf aufmerksam, dass Du die Ware aufgrund eines Irrtums gekauft hast. 
 Sollte auch hier keine Einigung mit dem Verkäufer erreicht werden können, bleibt noch die Möglichkeit der Anfechtung. Beachte hierbei aber, dass Du gegebenenfalls für Verluste oder Aufwendungen, die dem Verkäufer entstanden sein könnten, ggf. haften kannst.

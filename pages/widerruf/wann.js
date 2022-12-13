@@ -13,12 +13,13 @@ export default function WannWiderruf() {
       <StyledLink href="/widerruf">
         <Breadcrumb path={path} />
       </StyledLink>
-      <h3>Wann kann ich widerrufen?</h3>
       <StyledArticle>
         <StyledIcon icon="mingcute:bookmark-fill" color="#572887" />
         <p>
+          {`Wann kann ich widerrufen?
+          
           Jeder Verbraucher kann sich auf das Widerrufsrecht berufen. Einem
-          Unternehmer steht dagegen kein Widerrufsrecht zu.
+          Unternehmer steht dagegen kein Widerrufsrecht zu.`}
         </p>
       </StyledArticle>
       <StyledLink href="/widerruf">

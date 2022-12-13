@@ -19,6 +19,6 @@ const Body = styled.div`
   margin-top: 1rem;
   margin-bottom: 1rem;
   overflow: auto;
-  padding-top: 2rem;
-  padding-bottom: 2rem;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
 `;

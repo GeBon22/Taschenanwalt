@@ -17,9 +17,10 @@ export default function RuecktrittPage() {
       </StyledLink>
       <StyledIcon icon="mingcute:bookmark-fill" color="#572887" />
       <StyledArticle>
-        <h3>Ich möchte vom Kaufvertrag zurück treten</h3>
         <p>
-          {`Für den Rücktritt vom Kaufvertrag sind mehrere Bedingungen zu erfüllen. 
+          {`Ich möchte vom Kaufvertrag zurück treten.
+          
+          Für den Rücktritt vom Kaufvertrag sind mehrere Bedingungen zu erfüllen. 
 Als Käufer musst Du dem Verkäufer zunächst eine angemessene Frist zur Nacherfüllung geben (zB. 7-10 Werktage). 
 
 Die Frist ist entbehrlich, wenn der Verkäufer die Nacherfüllung endgültig verweigert, die Nacherfüllung bis zu einer gesetzten Frist nicht erfolgt ist, oder besondere Umstände vorliegen, die im beiderseitigen Interesse einen Rücktritt rechtfertigen.
