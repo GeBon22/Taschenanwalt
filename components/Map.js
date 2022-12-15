@@ -1,33 +1,57 @@
-import { GoogleMap, withScriptjs, withGoogleMap, Marker } from 'react-google-maps';
+import { GoogleMap, LoadScript, Marker } from '@react-google-maps/api';
+import { useEffect, useState, React } from "react";
 
-function Map() {
-  return (
-    <GoogleMap
-      defaultZoom={12}
-      defaultCenter={{ lat: userLat, lng: userLng }}
-    >
-      <Marker position={{ lat: userLat, lng: userLng }} />
-    </GoogleMap>
-  );
+const containerStyle = {
+  width: '75vw',
+  height: '50vh',
+  borderRadius: '10px',
+};
+
+export default function Map() {
+  const [status, setStatus] = useState(null);
+  const [center, setCenter] = useState(null);
+  const ApiKey = process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY;
+
+  useEffect(() => {
+    if (!navigator.geolocation) {
+      setStatus("It seems your browser does not support geolocation. Switch to another browser.");
+    } else {
+      setStatus("Locating...");
+      navigator.geolocation.getCurrentPosition(
+        position => {
+          setStatus(null);
+          setCenter({
+            lat: position.coords.latitude,
+            lng: position.coords.longitude,
+          });
+        },
+        () => {
+          setStatus("Locating failed");
+        }
+      );
+    }
+  }, []);
+
+  if (status === "Locating failed") {
+    return <h3>{status}</h3>;
+  } else {
+    return (
+      <>
+        {status === "Locating..." && <h3>Loading...</h3>}
+        <LoadScript
+          googleMapsApiKey={ApiKey}
+        >
+          <GoogleMap
+            mapContainerStyle={containerStyle}
+            center={center}
+            zoom={12}
+          >
+            <Marker position={center} />
+            { /* Child components, such as markers, info windows, etc. */ }
+            <></>
+          </GoogleMap>
+        </LoadScript>
+      </>
+    );
+  }
 }
-
-const WrappedMap = withScriptjs(withGoogleMap(Map));
-
-function App() {
-  return (
-    <div style={{ width: '100%', height: '400px' }}>
-      <WrappedMap
-        googleMapURL={`https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places&key=${process.env.REACT_APP_GOOGLE_MAPS_API_KEY}`}
-        loadingElement={<div style={{ height: '100%' }} />}
-        containerElement={<div style={{ height: '100%' }} />}
-        mapElement={<div style={{ height: '100%' }} />}
-      />
-    </div>
-  );
-}
-
-export default App;
-
-
-// in the Wrapper I use '${process.env.REACT_APP_GOOGLE_MAPS_API_KEY}' --> to not show the google maps api key
-// that means I need to implement the process.env.REACT_APP_GOOGLE_MAPS_API_KEY file containing the key
