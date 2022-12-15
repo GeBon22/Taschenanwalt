@@ -11,10 +11,16 @@ export default function Map() {
   const [status, setStatus] = useState(null);
   const [center, setCenter] = useState(null);
   const [lawyers, setLawyers] = useState([]);
+  const [map, setMap] = useState(null);
   const ApiKey = process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY;
   const { isLoaded, loadError } = useLoadScript({
     googleMapsApiKey: ApiKey,
   });
+  
+  const onLoadMap = map => {
+    setMap(map);
+    loadLawyers();
+  };
 
   useEffect(() => {
     if (!navigator.geolocation) {
@@ -28,7 +34,7 @@ export default function Map() {
             lat: position.coords.latitude,
             lng: position.coords.longitude,
           });
-          loadLawyers(position.coords.latitude, position.coords.longitude);
+          setLawyers(position.coords.latitude, position.coords.longitude);
         },
         () => {
           setStatus("Locating failed");
@@ -38,9 +44,8 @@ export default function Map() {
   }, []);
 
   function loadLawyers(lat, lng) {
-    // Load the lawyers using the Google Maps Places function
     if (isLoaded && !loadError) {
-      const service = new window.google.maps.places.PlacesService(document.createElement('div'));
+      const service = new window.google.maps.places.PlacesService(map);
       const request = {
         location: new window.google.maps.LatLng(lat, lng),
         radius: 50000, // 50 km
@@ -57,7 +62,7 @@ export default function Map() {
       });
     }
   }
-
+  console.log(lawyers);
   if (status === "Locating failed") {
     return <h3>{status}</h3>;
   } else {
@@ -71,12 +76,13 @@ export default function Map() {
             mapContainerStyle={containerStyle}
             center={center}
             zoom={12}
+            onLoadMap={onLoadMap}
           >
             <Marker position={center} />
 
-            {lawyers.map(lawyer => (
+           {/*  {lawyers.map(lawyer => (
             <Marker key={lawyer.name} position={{ lat: lawyer.lat, lng: lawyer.lng }} />
-            ))}
+            ))} */}
 
 
 
