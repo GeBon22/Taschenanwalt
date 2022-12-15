@@ -23,7 +23,6 @@ export default function Map() {
     loadLawyers();
   };
 
-  
   const options = useMemo(
     () => ({
       mapId: "terrain",
@@ -96,7 +95,7 @@ export default function Map() {
           >
             <Marker position={center} />
 
-           {/*  {lawyers.map(lawyer => (
+   {/*          {lawyers.map(lawyer => (
             <Marker key={lawyer.name} position={{ lat: lawyer.lat, lng: lawyer.lng }} />
             ))} */}
 

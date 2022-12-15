@@ -6,7 +6,7 @@ export default function MapPage() {
   return (
     <div>
       <Body>
-        <h3>Rechtsanwälte in Deiner Nähe</h3>
+        <h3>Finde Rechtsanwälte in Deiner Nähe:</h3>
         <Map />
       </Body>
     </div>
