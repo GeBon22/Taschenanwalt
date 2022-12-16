@@ -16,7 +16,7 @@ export default function Map() {
   const ApiKey = process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY;
   const { isLoaded, loadError } = useLoadScript({
     googleMapsApiKey: ApiKey,
-  /*   libraries:['places'] */
+    libraries:['places']
   });
   
   const onLoadMap = map => {
@@ -60,7 +60,7 @@ export default function Map() {
       const service = new window.google.maps.places.PlacesService(map);
       const request = {
         location: new window.google.maps.LatLng(lat, lng),
-        radius: 50000, // 50 km
+        radius: 5000, // 5 km
         type: ['lawyer'],
       };
       service.nearbySearch(request, (results, status) => {
@@ -70,14 +70,18 @@ export default function Map() {
             lat: result.geometry.location.lat(),
             lng: result.geometry.location.lng(),
           })));
-          console.log('Results');
-          console.log(results);
         }
+        console.log('Results');
+        console.log(results);
       });
     }
   }
+
   console.log('Test');
-  console.log(lawyers);
+  console.log(center);
+  console.log(status);
+
+
   if (status === "Locating failed") {
     return <h3>{status}</h3>;
   } else {
@@ -96,9 +100,9 @@ export default function Map() {
           >
             <Marker position={center} />
 
-   {/*          {lawyers.map(lawyer => (
+            {lawyers.map(lawyer => (
             <Marker key={lawyer.name} position={{ lat: lawyer.lat, lng: lawyer.lng }} />
-            ))} */}
+            ))}
 
 
 
