@@ -60,13 +60,9 @@ export default function Map() {
       if (status === window.google.maps.places.PlacesServiceStatus.OK) {
         setLawyers(results);
       }
-      console.log("Results");
-      console.log(results);
     });
   }
-  console.log("Test");
-  console.log(center);
-  console.log(status);
+
   if (!isLoaded) return "Loading map";
   return (
     <>
