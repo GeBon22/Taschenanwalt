@@ -5,6 +5,7 @@ const containerStyle = {
   width: '75vw',
   height: '50vh',
   borderRadius: '10px',
+  border: '1px solid #572887'
 };
 
 export default function Map() {
