@@ -33,6 +33,7 @@ export default function Map() {
       setStatus(
         "It seems your browser does not support geolocation. Switch to another browser."
       );
+      status;
     } else {
       setStatus("Locating...");
       navigator.geolocation.getCurrentPosition(
