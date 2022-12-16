@@ -1,7 +1,6 @@
 import Body from "../../components/Body";
 import Map from "../../components/Map";
 
-
 export default function MapPage() {
   return (
     <div>
