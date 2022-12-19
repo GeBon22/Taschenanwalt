@@ -1,4 +1,9 @@
-import {GoogleMap, Marker, useLoadScript, InfoWindow} from "@react-google-maps/api";
+import {
+  GoogleMap,
+  Marker,
+  useLoadScript,
+  InfoWindow,
+} from "@react-google-maps/api";
 import {useEffect, useState, React, useMemo, Fragment} from "react";
 const containerStyle = {
   width: "75vw",
@@ -31,9 +36,9 @@ export default function Map() {
     []
   );
 
-  const handleMarkerClick = (id) => {
-    setClickedMarker(id)
-  }
+  const handleMarkerClick = id => {
+    setClickedMarker(id);
+  };
 
   const currLocationMarker = {
     url: "../assets/CurrentLocation.svg",
@@ -87,24 +92,38 @@ export default function Map() {
           onLoad={onLoadMap}
           animation={window.google.maps.Animation.DROP}
         >
-          <Marker position={center} icon={currLocationMarker}/>
+          <Marker position={center} icon={currLocationMarker} />
 
           {lawyers.length > 0 &&
             lawyers.map(lawyer => (
               <Marker
                 key={lawyer.place_id}
                 position={lawyer.geometry.location}
-                onClick={() => handleMarkerClick(bar.place_id)}
+                onClick={() => handleMarkerClick(lawyer.place_id)}
               />
             ))}
-
-{/*             {clickedMarker === lawyer.place_id && (
-              <InfoWindow position={lawyer.geometry.location}>
-                )}
- */}
-         
-            {/* )} */}
-
+          {clickedMarker &&
+            lawyers.map(lawyer => {
+              if (lawyer.place_id === clickedMarker) {
+                return (
+                  <InfoWindow
+                    position={lawyer.geometry.location}
+                    key={lawyer.place_id}
+                  >
+                    <div>
+                      <h3>{lawyer.name}</h3>
+                      <p>
+                        {lawyer.rating}⭐ Anzahl der Bewertungen ({lawyer.user_ratings_total})
+                      </p>
+                      <h3>Kontakt: {lawyer.vicinity}</h3>
+                      <p>
+                       Phone:<a href={`tel:${lawyer.formatted_phone_number}`}>{lawyer.formatted_phone_number}</a>
+                      </p>
+                    </div>
+                  </InfoWindow>
+                );
+              }
+            })}
         </GoogleMap>
       )}
     </>
