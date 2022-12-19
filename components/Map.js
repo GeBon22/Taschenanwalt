@@ -1,5 +1,5 @@
-import {GoogleMap, Marker, useLoadScript} from "@react-google-maps/api";
-import {useEffect, useState, React, useMemo} from "react";
+import {GoogleMap, Marker, useLoadScript, InfoWindow} from "@react-google-maps/api";
+import {useEffect, useState, React, useMemo, Fragment} from "react";
 const containerStyle = {
   width: "75vw",
   height: "50vh",
@@ -11,6 +11,7 @@ const libraries = ["places", "geometry"];
 export default function Map() {
   const [status, setStatus] = useState(null);
   const [center, setCenter] = useState(null);
+  const [clickedMarker, setClickedMarker] = useState(null);
   const [lawyers, setLawyers] = useState([]);
   const {isLoaded} = useLoadScript({
     googleMapsApiKey: process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY,
@@ -19,6 +20,7 @@ export default function Map() {
   const onLoadMap = map => {
     loadLawyers(center, map);
   };
+
   const options = useMemo(
     () => ({
       mapId: "terrain",
@@ -28,6 +30,15 @@ export default function Map() {
     }),
     []
   );
+
+  const handleMarkerClick = (id) => {
+    setClickedMarker(id)
+  }
+
+  const currLocationMarker = {
+    url: "../assets/CurrentLocation.svg",
+  };
+
   useEffect(() => {
     if (!navigator.geolocation) {
       setStatus(
@@ -74,16 +85,26 @@ export default function Map() {
           zoom={12}
           options={options}
           onLoad={onLoadMap}
+          animation={window.google.maps.Animation.DROP}
         >
-          <Marker position={center} />
+          <Marker position={center} icon={currLocationMarker}/>
+
           {lawyers.length > 0 &&
             lawyers.map(lawyer => (
               <Marker
                 key={lawyer.place_id}
                 position={lawyer.geometry.location}
+                onClick={() => handleMarkerClick(bar.place_id)}
               />
             ))}
-          {/* Child components, such as markers, info windows, etc. */}
+
+{/*             {clickedMarker === lawyer.place_id && (
+              <InfoWindow position={lawyer.geometry.location}>
+                )}
+ */}
+         
+            {/* )} */}
+
         </GoogleMap>
       )}
     </>
