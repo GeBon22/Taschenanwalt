@@ -31,6 +31,7 @@ export default function Map() {
       mapId: "terrain",
       disableDefaultUI: true,
       clickableIcons: false,
+      fullscreenControl: true,
       gestureHandling: "greedy",
     }),
     []
