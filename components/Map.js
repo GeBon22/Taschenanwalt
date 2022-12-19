@@ -88,7 +88,7 @@ export default function Map() {
         <GoogleMap
           mapContainerStyle={containerStyle}
           center={center}
-          zoom={12}
+          zoom={14}
           options={options}
           onLoad={onLoadMap}
           animation={window.google.maps.Animation.DROP}
