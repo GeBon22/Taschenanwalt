@@ -117,7 +117,7 @@ export default function Map() {
                       <p>
                         Rating: {lawyer.rating} ⭐ Anzahl der Bewertungen ({lawyer.user_ratings_total})
                       </p>
-                      <h3>Kontakt: {lawyer.vicinity}</h3>
+                      <h3>Kontakt: <br /> {lawyer.vicinity}</h3>
                       <p>
                        Phone:<a href={`tel:${lawyer.formatted_phone_number}`}>{lawyer.formatted_phone_number}</a>
                       </p>
