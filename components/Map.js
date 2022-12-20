@@ -115,11 +115,17 @@ export default function Map() {
                     <InfoBox>
                       <h3>{lawyer.name}</h3>
                       <p>
-                        Rating: {lawyer.rating} ⭐ Anzahl der Bewertungen ({lawyer.user_ratings_total})
+                        Rating: {lawyer.rating} ⭐ Anzahl der Bewertungen (
+                        {lawyer.user_ratings_total})
                       </p>
-                      <h3>Kontakt: <br /> {lawyer.vicinity}</h3>
+                      <h3>
+                        Kontakt: <br /> {lawyer.vicinity}
+                      </h3>
                       <p>
-                       Phone:<a href={`tel:${lawyer.formatted_phone_number}`}>{lawyer.formatted_phone_number}</a>
+                        Phone:
+                        <a href={`tel:${lawyer.formatted_phone_number}`}>
+                          {lawyer.formatted_phone_number}
+                        </a>
                       </p>
                     </InfoBox>
                   </InfoWindow>
@@ -132,11 +138,10 @@ export default function Map() {
   );
 }
 
-
 const InfoBox = styled.div`
-background-color: #f3e8e8;
-padding: 0.25em;
-text-align: center;
-font-weight: 300;
-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  background-color: #f3e8e8;
+  padding: 0.25em;
+  text-align: center;
+  font-weight: 300;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 `;
