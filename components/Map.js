@@ -1,5 +1,11 @@
-import {GoogleMap, Marker, useLoadScript} from "@react-google-maps/api";
-import {useEffect, useState, React, useMemo} from "react";
+import {
+  GoogleMap,
+  Marker,
+  useLoadScript,
+  InfoWindow,
+} from "@react-google-maps/api";
+import {useEffect, useState, React, useMemo, Fragment} from "react";
+import styled from "styled-components";
 const containerStyle = {
   width: "75vw",
   height: "50vh",
@@ -11,6 +17,7 @@ const libraries = ["places", "geometry"];
 export default function Map() {
   const [status, setStatus] = useState(null);
   const [center, setCenter] = useState(null);
+  const [clickedMarker, setClickedMarker] = useState(null);
   const [lawyers, setLawyers] = useState([]);
   const {isLoaded} = useLoadScript({
     googleMapsApiKey: process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY,
@@ -19,15 +26,26 @@ export default function Map() {
   const onLoadMap = map => {
     loadLawyers(center, map);
   };
+
   const options = useMemo(
     () => ({
       mapId: "terrain",
       disableDefaultUI: true,
       clickableIcons: false,
+      fullscreenControl: true,
       gestureHandling: "greedy",
     }),
     []
   );
+
+  const handleMarkerClick = id => {
+    setClickedMarker(id);
+  };
+
+  const currLocationMarker = {
+    url: "../assets/CurrentLocation.svg",
+  };
+
   useEffect(() => {
     if (!navigator.geolocation) {
       setStatus(
@@ -71,21 +89,59 @@ export default function Map() {
         <GoogleMap
           mapContainerStyle={containerStyle}
           center={center}
-          zoom={12}
+          zoom={14}
           options={options}
           onLoad={onLoadMap}
+          animation={window.google.maps.Animation.DROP}
         >
-          <Marker position={center} />
+          <Marker position={center} icon={currLocationMarker} />
+
           {lawyers.length > 0 &&
             lawyers.map(lawyer => (
               <Marker
                 key={lawyer.place_id}
                 position={lawyer.geometry.location}
+                onClick={() => handleMarkerClick(lawyer.place_id)}
               />
             ))}
-          {/* Child components, such as markers, info windows, etc. */}
+          {clickedMarker &&
+            lawyers.map(lawyer => {
+              if (lawyer.place_id === clickedMarker) {
+                return (
+                  <InfoWindow
+                    position={lawyer.geometry.location}
+                    key={lawyer.place_id}
+                  >
+                    <InfoBox>
+                      <h3>{lawyer.name}</h3>
+                      <p>
+                        Rating: {lawyer.rating} ⭐ Anzahl der Bewertungen (
+                        {lawyer.user_ratings_total})
+                      </p>
+                      <h3>
+                        Kontakt: <br /> {lawyer.vicinity}
+                      </h3>
+                      <p>
+                        Phone:
+                        <a href={`tel:${lawyer.formatted_phone_number}`}>
+                          {lawyer.formatted_phone_number}
+                        </a>
+                      </p>
+                    </InfoBox>
+                  </InfoWindow>
+                );
+              }
+            })}
         </GoogleMap>
       )}
     </>
   );
 }
+
+const InfoBox = styled.div`
+  background-color: #f3e8e8;
+  padding: 0.25em;
+  text-align: center;
+  font-weight: 300;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+`;
