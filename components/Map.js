@@ -5,6 +5,7 @@ import {
   InfoWindow,
 } from "@react-google-maps/api";
 import {useEffect, useState, React, useMemo, Fragment} from "react";
+import styled from "styled-components";
 const containerStyle = {
   width: "75vw",
   height: "50vh",
@@ -111,7 +112,7 @@ export default function Map() {
                     position={lawyer.geometry.location}
                     key={lawyer.place_id}
                   >
-                    <div>
+                    <InfoBox>
                       <h3>{lawyer.name}</h3>
                       <p>
                         Rating: {lawyer.rating} ⭐ Anzahl der Bewertungen ({lawyer.user_ratings_total})
@@ -120,7 +121,7 @@ export default function Map() {
                       <p>
                        Phone:<a href={`tel:${lawyer.formatted_phone_number}`}>{lawyer.formatted_phone_number}</a>
                       </p>
-                    </div>
+                    </InfoBox>
                   </InfoWindow>
                 );
               }
@@ -130,3 +131,12 @@ export default function Map() {
     </>
   );
 }
+
+
+const InfoBox = styled.div`
+background-color: #f3e8e8;
+padding: 0.25em;
+text-align: center;
+font-weight: 300;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+`;
