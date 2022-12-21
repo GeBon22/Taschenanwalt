@@ -2,14 +2,14 @@ import styled from "styled-components";
 import Link from "next/link";
 import Breadcrumb from "../../components/Breadcrumb";
 import ReturnButton from "../../components/ReturnButton";
-import Body from "../../components/Body";
+import PageContainer from "../../components/PageContainer";
 import DefaultButton from "../../components/DefaultButton";
 
 export default function BestellungPage() {
   const path = "/online bestellen und kaufen";
   return (
     <>
-      <Body>
+      <PageContainer>
         <Breadcrumb path={path} />
         <StyledLink href="/bestellung/verzug">
           <DefaultButton>
@@ -32,7 +32,7 @@ export default function BestellungPage() {
         <StyledLink href="/">
           <ReturnButton />
         </StyledLink>
-      </Body>
+      </PageContainer>
     </>
   );
 }

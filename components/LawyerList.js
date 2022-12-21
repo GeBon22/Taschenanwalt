@@ -6,7 +6,7 @@ export default function LawyerList() {
   const context = useContext(AppContext);
   return (
     <>
-      {context.center &&
+      {context.userLocation &&
         context.lawyers.length > 0 &&
         context.lawyers.map(lawyer => (
           <StyledUL key={lawyer.id}>
@@ -16,10 +16,6 @@ export default function LawyerList() {
               Anzahl der Bewertungen: {lawyer.user_ratings_total}
               <br />
               Adresse: {lawyer.vicinity} <br />
-              {/* Tel.:
-                            <a href={`tel:${lawyer.formatted_phone_number}`}>
-                            {lawyer.formatted_phone_number}
-                            </a> */}
             </li>
           </StyledUL>
         ))}
@@ -42,7 +38,8 @@ const StyledUL = styled.ul`
   font-style: normal;
   background-color: #e6ceee;
   border-radius: 10px;
-  border: 1px solid #e6ceee /* rgba(163, 134, 182, 0.5) */;
+  border: 1px solid rgba(163, 134, 182, 0.5);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   height: 20vh;
   width: 80vw;
   padding: 1rem;

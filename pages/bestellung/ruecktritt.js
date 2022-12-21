@@ -4,14 +4,14 @@ import StyledIcon from "../../components/BookmarkIcon";
 import {CopyToClipboard} from "react-copy-to-clipboard";
 import Breadcrumb from "../../components/Breadcrumb";
 import ReturnButton from "../../components/ReturnButton";
-import Body from "../../components/Body";
+import PageContainer from "../../components/PageContainer";
 import CopyButton from "../../components/CopyButton";
 import StyledArticle from "../../components/Article";
 
 export default function RuecktrittPage() {
   const path = "/online bestellen und kaufen/Rücktritt";
   return (
-    <Body>
+    <PageContainer>
       <StyledLink href="/bestellung">
         <Breadcrumb path={path} />
       </StyledLink>
@@ -45,7 +45,7 @@ Für weitere Infos dazu, klicke auf die jeweiligen Links weiter unten.
       <StyledLink href="/bestellung">
         <ReturnButton />
       </StyledLink>
-    </Body>
+    </PageContainer>
   );
 }
 

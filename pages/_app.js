@@ -15,7 +15,7 @@ const libraries = ["places", "geometry"];
 
 function MyApp({Component, pageProps}) {
   const [status, setStatus] = useState(null);
-  const [center, setCenter] = useState(null);
+  const [userLocation, setUserLocation] = useState(null);
   const [clickedMarker, setClickedMarker] = useState(null);
   const [lawyers, setLawyers] = useState([]);
   const {isLoaded} = useLoadScript({
@@ -28,8 +28,8 @@ function MyApp({Component, pageProps}) {
       value={{
         status,
         setStatus,
-        center,
-        setCenter,
+        userLocation,
+        setUserLocation,
         clickedMarker,
         setClickedMarker,
         lawyers,
@@ -37,14 +37,12 @@ function MyApp({Component, pageProps}) {
         isLoaded,
       }}
     >
-      <>
-        <main className={jost.className}>
-          <GlobalStyles />
-          <Header />
-          <Component {...pageProps} />
-          <Navigation />
-        </main>
-      </>
+      <main className={jost.className}>
+        <GlobalStyles />
+        <Header />
+        <Component {...pageProps} />
+        <Navigation />
+      </main>
     </AppContext.Provider>
   );
 }

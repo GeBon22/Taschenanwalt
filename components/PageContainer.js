@@ -1,10 +1,6 @@
 import styled from "styled-components";
 
-export default function Body(props) {
-  return <StyledBody>{props.children}</StyledBody>;
-}
-
-const StyledBody = styled.div`
+const PageContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -22,3 +18,5 @@ const StyledBody = styled.div`
   padding-top: 5rem;
   padding-bottom: 5rem;
 `;
+
+export default PageContainer;

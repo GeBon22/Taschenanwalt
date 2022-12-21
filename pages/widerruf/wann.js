@@ -2,14 +2,14 @@ import styled from "styled-components";
 import Link from "next/link";
 import Breadcrumb from "../../components/Breadcrumb";
 import ReturnButton from "../../components/ReturnButton";
-import Body from "../../components/Body";
+import PageContainer from "../../components/PageContainer";
 import StyledIcon from "../../components/BookmarkIcon";
 import StyledArticle from "../../components/Article";
 
 export default function WannWiderruf() {
   const path = "/Widerruf und Retoure/Wann kann ich widerrufen?";
   return (
-    <Body>
+    <PageContainer>
       <StyledLink href="/widerruf">
         <Breadcrumb path={path} />
       </StyledLink>
@@ -25,7 +25,7 @@ export default function WannWiderruf() {
       <StyledLink href="/widerruf">
         <ReturnButton />
       </StyledLink>
-    </Body>
+    </PageContainer>
   );
 }
 

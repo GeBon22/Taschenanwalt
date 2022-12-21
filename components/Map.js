@@ -13,7 +13,7 @@ export default function Map() {
   const context = useContext(AppContext);
 
   const onLoadMap = map => {
-    loadLawyers(context.center, map);
+    handleLoadLawyers(context.userLocation, map);
   };
 
   const options = useMemo(
@@ -46,7 +46,7 @@ export default function Map() {
       navigator.geolocation.getCurrentPosition(
         position => {
           context.setStatus(null);
-          context.setCenter({
+          context.setUserLocation({
             lat: position.coords.latitude,
             lng: position.coords.longitude,
           });
@@ -57,7 +57,7 @@ export default function Map() {
       );
     }
   }, []);
-  function loadLawyers(location, map) {
+  function handleLoadLawyers(location, map) {
     const service = new window.google.maps.places.PlacesService(map);
     const request = {
       location: location,
@@ -74,16 +74,16 @@ export default function Map() {
   if (!context.isLoaded) return "Loading map";
   return (
     <>
-      {context.center && (
+      {context.userLocation && (
         <GoogleMap
           mapContainerStyle={containerStyle}
-          center={context.center}
+          center={context.userLocation}
           zoom={14}
           options={options}
           onLoad={onLoadMap}
           animation={window.google.maps.Animation.DROP}
         >
-          <Marker position={context.center} icon={currLocationMarker} />
+          <Marker position={context.userLocation} icon={currLocationMarker} />
 
           {context.lawyers.length > 0 &&
             context.lawyers.map(lawyer => (
