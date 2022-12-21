@@ -8,21 +8,21 @@ import DefaultButton from "../../components/DefaultButton";
 export default function WiderrufPage() {
   const path = "/Widerruf und Retoure";
   return (
-      <PageContainer>
-        <Breadcrumb path={path} />
-        <StyledLink href="/widerruf/wann">
-          <DefaultButton>Wann kann ich widerrufen?</DefaultButton>
-        </StyledLink>
-        <StyledLink href="/widerruf/frist">
-          <DefaultButton>Wie lange kann ich widerrufen?</DefaultButton>
-        </StyledLink>
-        <StyledLink href="/widerruf/inhalt">
-          <DefaultButton>Was muss in meinem Widerruf stehen?</DefaultButton>
-        </StyledLink>
-        <StyledLink href="/">
-          <ZurueckButton />
-        </StyledLink>
-      </PageContainer>
+    <PageContainer>
+      <Breadcrumb path={path} />
+      <StyledLink href="/widerruf/wann">
+        <DefaultButton>Wann kann ich widerrufen?</DefaultButton>
+      </StyledLink>
+      <StyledLink href="/widerruf/frist">
+        <DefaultButton>Wie lange kann ich widerrufen?</DefaultButton>
+      </StyledLink>
+      <StyledLink href="/widerruf/inhalt">
+        <DefaultButton>Was muss in meinem Widerruf stehen?</DefaultButton>
+      </StyledLink>
+      <StyledLink href="/">
+        <ZurueckButton />
+      </StyledLink>
+    </PageContainer>
   );
 }
 
