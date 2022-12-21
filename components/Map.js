@@ -1,10 +1,6 @@
-import {
-  GoogleMap,
-  Marker,
-  useLoadScript,
-  InfoWindow,
-} from "@react-google-maps/api";
-import {useEffect, useState, React, useMemo, Fragment} from "react";
+import {GoogleMap, Marker, InfoWindow} from "@react-google-maps/api";
+import {useEffect, React, useMemo, useContext} from "react";
+import AppContext from "./AppContext";
 import styled from "styled-components";
 const containerStyle = {
   width: "75vw",
@@ -12,19 +8,12 @@ const containerStyle = {
   borderRadius: "10px",
   border: "1px solid #572887",
 };
-const libraries = ["places", "geometry"];
 
 export default function Map() {
-  const [status, setStatus] = useState(null);
-  const [center, setCenter] = useState(null);
-  const [clickedMarker, setClickedMarker] = useState(null);
-  const [lawyers, setLawyers] = useState([]);
-  const {isLoaded} = useLoadScript({
-    googleMapsApiKey: process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY,
-    libraries,
-  });
+  const context = useContext(AppContext);
+
   const onLoadMap = map => {
-    loadLawyers(center, map);
+    handleLoadLawyers(context.userLocation, map);
   };
 
   const options = useMemo(
@@ -39,7 +28,7 @@ export default function Map() {
   );
 
   const handleMarkerClick = id => {
-    setClickedMarker(id);
+    context.setClickedMarker(id);
   };
 
   const currLocationMarker = {
@@ -48,27 +37,27 @@ export default function Map() {
 
   useEffect(() => {
     if (!navigator.geolocation) {
-      setStatus(
+      context.setStatus(
         "It seems your browser does not support geolocation. Switch to another browser."
       );
       status;
     } else {
-      setStatus("Locating...");
+      context.setStatus("Locating...");
       navigator.geolocation.getCurrentPosition(
         position => {
-          setStatus(null);
-          setCenter({
+          context.setStatus(null);
+          context.setUserLocation({
             lat: position.coords.latitude,
             lng: position.coords.longitude,
           });
         },
         () => {
-          setStatus("Locating failed");
+          context.setStatus("Locating failed");
         }
       );
     }
   }, []);
-  function loadLawyers(location, map) {
+  function handleLoadLawyers(location, map) {
     const service = new window.google.maps.places.PlacesService(map);
     const request = {
       location: location,
@@ -77,36 +66,36 @@ export default function Map() {
     };
     service.nearbySearch(request, (results, status) => {
       if (status === window.google.maps.places.PlacesServiceStatus.OK) {
-        setLawyers(results);
+        context.setLawyers(results);
       }
     });
   }
 
-  if (!isLoaded) return "Loading map";
+  if (!context.isLoaded) return "Loading map";
   return (
     <>
-      {center && (
+      {context.userLocation && (
         <GoogleMap
           mapContainerStyle={containerStyle}
-          center={center}
+          center={context.userLocation}
           zoom={14}
           options={options}
           onLoad={onLoadMap}
           animation={window.google.maps.Animation.DROP}
         >
-          <Marker position={center} icon={currLocationMarker} />
+          <Marker position={context.userLocation} icon={currLocationMarker} />
 
-          {lawyers.length > 0 &&
-            lawyers.map(lawyer => (
+          {context.lawyers.length > 0 &&
+            context.lawyers.map(lawyer => (
               <Marker
                 key={lawyer.place_id}
                 position={lawyer.geometry.location}
                 onClick={() => handleMarkerClick(lawyer.place_id)}
               />
             ))}
-          {clickedMarker &&
-            lawyers.map(lawyer => {
-              if (lawyer.place_id === clickedMarker) {
+          {context.clickedMarker &&
+            context.lawyers.map(lawyer => {
+              if (lawyer.place_id === context.clickedMarker) {
                 return (
                   <InfoWindow
                     position={lawyer.geometry.location}
@@ -119,10 +108,10 @@ export default function Map() {
                         {lawyer.user_ratings_total})
                       </p>
                       <h3>
-                        Kontakt: <br /> {lawyer.vicinity}
+                        Adresse: <br /> {lawyer.vicinity}
                       </h3>
                       <p>
-                        Phone:
+                        Tel.:
                         <a href={`tel:${lawyer.formatted_phone_number}`}>
                           {lawyer.formatted_phone_number}
                         </a>

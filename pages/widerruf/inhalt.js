@@ -3,7 +3,7 @@ import Link from "next/link";
 import {CopyToClipboard} from "react-copy-to-clipboard";
 import Breadcrumb from "../../components/Breadcrumb";
 import ReturnButton from "../../components/ReturnButton";
-import Body from "../../components/Body";
+import PageContainer from "../../components/PageContainer";
 import StyledIcon from "../../components/BookmarkIcon";
 import CopyButton from "../../components/CopyButton";
 import StyledArticle from "../../components/Article";
@@ -11,7 +11,7 @@ import StyledArticle from "../../components/Article";
 export default function WannWiderruf() {
   const path = "/Widerruf und Retoure/Was muss im Widerruf stehen?";
   return (
-    <Body>
+    <PageContainer>
       <StyledLink href="/widerruf">
         <Breadcrumb path={path} />
       </StyledLink>
@@ -41,7 +41,7 @@ export default function WannWiderruf() {
       <StyledLink href="/widerruf">
         <ReturnButton />
       </StyledLink>
-    </Body>
+    </PageContainer>
   );
 }
 

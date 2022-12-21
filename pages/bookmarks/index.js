@@ -1,9 +1,9 @@
-import Body from "../../components/Body";
+import PageContainer from "../../components/PageContainer";
 
 export default function BookmarksPage() {
   return (
-    <Body>
+    <PageContainer>
       <h3>This is the bookmarks page</h3>
-    </Body>
+    </PageContainer>
   );
 }

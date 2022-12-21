@@ -3,13 +3,13 @@ import Link from "next/link";
 import StyledIcon from "../../components/BookmarkIcon";
 import Breadcrumb from "../../components/Breadcrumb";
 import ReturnButton from "../../components/ReturnButton";
-import Body from "../../components/Body";
+import PageContainer from "../../components/PageContainer";
 import StyledArticle from "../../components/Article";
 
 export default function SchadenPage() {
   const path = "/online bestellen und kaufen/Ware beschädigt";
   return (
-    <Body>
+    <PageContainer>
       <StyledLink href="/bestellung">
         <Breadcrumb path={path} />
       </StyledLink>
@@ -28,7 +28,7 @@ Entscheidest Du Dich für eine Reparatur, bist du seit 2022 nun auch ausdrückli
           <ReturnButton />
         </StyledLink>
       </StyledArticle>
-    </Body>
+    </PageContainer>
   );
 }
 
