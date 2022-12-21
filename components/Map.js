@@ -108,10 +108,10 @@ export default function Map() {
                         {lawyer.user_ratings_total})
                       </p>
                       <h3>
-                        Kontakt: <br /> {lawyer.vicinity}
+                        Adresse: <br /> {lawyer.vicinity}
                       </h3>
                       <p>
-                        Phone:
+                        Tel.:
                         <a href={`tel:${lawyer.formatted_phone_number}`}>
                           {lawyer.formatted_phone_number}
                         </a>

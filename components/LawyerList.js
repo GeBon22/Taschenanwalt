@@ -11,12 +11,12 @@ export default function LawyerList() {
         context.lawyers.map(lawyer => (
           <StyledUL key={lawyer.id}>
             <li>
-              {lawyer.name} <br />
-              Rating: {lawyer.rating}/5 <br />
+              <b>{lawyer.name}</b> <br />
+              Rating: {lawyer.rating}/5 ⭐<br />
               Anzahl der Bewertungen: {lawyer.user_ratings_total}
               <br />
-              Kontakt: {lawyer.vicinity} <br />
-              {/* Tel:
+              Adresse: {lawyer.vicinity} <br />
+              {/* Tel.:
                             <a href={`tel:${lawyer.formatted_phone_number}`}>
                             {lawyer.formatted_phone_number}
                             </a> */}
