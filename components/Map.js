@@ -107,14 +107,17 @@ export default function Map() {
                         Rating: {lawyer.rating} ⭐ Anzahl der Bewertungen (
                         {lawyer.user_ratings_total})
                       </p>
-                      <h3>
+                      <p>
                         Adresse: <br /> {lawyer.vicinity}
-                      </h3>
+                      </p>
                       <p>
                         Tel.:
                         <a href={`tel:${lawyer.formatted_phone_number}`}>
                           {lawyer.formatted_phone_number}
-                        </a>
+                        </a> <br/>
+                      </p>
+                      <p>
+                      Webseite: {lawyer.website}
                       </p>
                     </InfoBox>
                   </InfoWindow>
