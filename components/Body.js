@@ -15,6 +15,7 @@ const StyledBody = styled.div`
   border-radius: 10px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   width: 90vw;
+  min-height: 70vh;
   margin-top: 1rem;
   margin-bottom: 1rem;
   overflow: auto;
