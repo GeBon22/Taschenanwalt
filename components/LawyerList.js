@@ -15,11 +15,6 @@ export default function LawyerList() {
             Anzahl der Bewertungen: {lawyer.user_ratings_total}
             <br />
             Adresse: {lawyer.vicinity} <br />
-            Webseite: {lawyer.website} <br />
-            Tel.:
-            <a href={`tel:${lawyer.formatted_phone_number}`}>
-              {lawyer.formatted_phone_number}
-            </a>
           </StyledLi>
         ))}
     </>
@@ -43,7 +38,7 @@ const StyledLi = styled.li`
   border-radius: 10px;
   border: 1px solid rgba(163, 134, 182, 0.5);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  height: 27vh;
+  height: 25vh;
   width: 80vw;
   padding: 1rem;
   cursor: pointer;

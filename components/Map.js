@@ -110,15 +110,6 @@ export default function Map() {
                       <p>
                         Adresse: <br /> {lawyer.vicinity}
                       </p>
-                      <p>
-                        Tel.:
-                        <a href={`tel:${lawyer.formatted_phone_number}`}>
-                          {lawyer.formatted_phone_number}
-                        </a> <br/>
-                      </p>
-                      <p>
-                      Webseite: {lawyer.website}
-                      </p>
                     </InfoBox>
                   </InfoWindow>
                 );
