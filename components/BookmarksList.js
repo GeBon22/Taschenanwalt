@@ -10,8 +10,9 @@ export function BookmarksList() {
 
   const pageTitles = {
     "/home": "Home",
-    "/bestellung": "online bestellen und kaufen",
-    "/bestellung/irrtum": "Ich habe die falsche Ware/falsche Stückzahl bestellt"
+    "/bestellung": "Online bestellen und kaufen",
+    "/bestellung/irrtum": "Ich habe die falsche Ware/falsche Stückzahl bestellt",
+    
   };
 
   function handleDeleteButton(bookmark) {
@@ -27,15 +28,21 @@ export function BookmarksList() {
   return (
     <StyledListContainer>
       {bookmarks.map(bookmark => (
-        <StyledListItem key={bookmark}>
+        <>
+        <StyledItemContainer>
+        <StyledItem key={bookmark}>
           <StyledLink href={bookmark}>{pageTitles[bookmark]}</StyledLink>
-          <Icon
+        </StyledItem>
+        <Icon
             icon="charm:circle-cross"
             color="#572887"
+            width="1.2rem"
+            height="1.2rem"
             onClick={() => handleDeleteButton(bookmark)}
             cursor="pointer"
           />
-        </StyledListItem>
+          </StyledItemContainer>
+          </>
       ))}
     </StyledListContainer>
   );
@@ -44,12 +51,19 @@ export function BookmarksList() {
 const StyledListContainer = styled.ul`
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   gap: 2rem;
 `;
 
-const StyledListItem = styled.li`
+const StyledItemContainer = styled.div`
+display: flex;
+justify-content: flex-start;
+align-items: center;
+gap: .5rem;
+`;
+
+const StyledItem = styled.li`
   color: #572887;
   font-size: 1.2rem;
   font-weight: 300;
@@ -60,15 +74,21 @@ const StyledListItem = styled.li`
   border-radius: 10px;
   border: 1px solid rgba(163, 134, 182, 0.5);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  min-height: 8vh;
-  min-width: 70vw;
+/*   min-height: 8vh;
+  min-width: 70vw; */
   padding: 1rem;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
+  flex-wrap: wrap;
 `;
 
 const StyledLink = styled(Link)`
   text-decoration: none;
   list-style: none;
 `;
+
+/* const StyledIcon = styled(Icon)`
+width: 1.2rem;
+height: 1.2rem;
+`; */
