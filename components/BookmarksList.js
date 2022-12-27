@@ -1,9 +1,9 @@
 import Link from "next/link";
 import {Icon} from "@iconify/react";
 import {useState} from "react";
+import styled from "styled-components";
 
 export function BookmarksList() {
-  // Get the bookmarks from local storage and store them in the component's state using the useState hook
   const [bookmarks, setBookmarks] = useState(
     JSON.parse(localStorage.getItem("bookmarks") || "[]")
   );
@@ -19,18 +19,50 @@ export function BookmarksList() {
   }
 
   return (
-    <ul>
+    <StyledListContainer>
       {bookmarks.map(bookmark => (
-        <li key={bookmark}>
-          <Link href={bookmark}>{bookmark}</Link>
+        <StyledListItem key={bookmark}>
+          <SLink href={bookmark}>{bookmark}</SLink>
           <Icon
             icon="charm:circle-cross"
             color="#572887"
             onClick={() => handleDeleteButton(bookmark)}
             cursor="pointer"
           />
-        </li>
+        </StyledListItem>
       ))}
-    </ul>
+    </StyledListContainer>
   );
 }
+
+const StyledListContainer = styled.ul`
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+gap: 2rem;
+`;
+
+const StyledListItem = styled.li`
+  color: #572887;
+  font-size: 1.2rem;
+  font-weight: 300;
+  font-style: normal;
+  text-decoration: none;
+  list-style: none;
+  background-color: #e6ceee;
+  border-radius: 10px;
+  border: 1px solid rgba(163, 134, 182, 0.5);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  height: 8vh;
+  width: 70vw;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+`;
+
+const SLink = styled(Link)`
+text-decoration: none;
+list-style: none;
+`;
