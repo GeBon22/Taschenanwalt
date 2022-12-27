@@ -4,7 +4,7 @@ import PageContainer from "../../components/PageContainer";
 export default function BookmarksPage() {
   return (
     <PageContainer>
-      <h3>This is the bookmarks page</h3>
+      <h3>Meine Bookmarks</h3>
       <BookmarksList />
     </PageContainer>
   );
