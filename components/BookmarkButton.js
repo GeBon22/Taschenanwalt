@@ -1,17 +1,20 @@
-import { useRouter } from 'next/router';
+import {useRouter} from "next/router";
 
 function useSavePage() {
-  const { pathname } = useRouter();
+  const {pathname} = useRouter();
 
   function savePage() {
-    // Get the existing bookmarks from local storage
-    let bookmarks = JSON.parse(localStorage.getItem('bookmarks') || '[]');
+    let bookmarks = JSON.parse(localStorage.getItem("bookmarks") || "[]");
 
-    // Add the current page to the bookmarks array
-    bookmarks.push(pathname);
+    const isBookmarked = bookmarks.includes(pathname);
 
-    // Save the updated bookmarks array to local storage
-    localStorage.setItem('bookmarks', JSON.stringify(bookmarks));
+    if (isBookmarked) {
+      bookmarks = bookmarks.filter(bm => bm !== pathname);
+    } else {
+      bookmarks.push(pathname);
+    }
+
+    localStorage.setItem("bookmarks", JSON.stringify(bookmarks));
   }
 
   return savePage;
@@ -20,11 +23,7 @@ function useSavePage() {
 function Page() {
   const savePage = useSavePage();
 
-  return (
-
-      <button onClick={savePage}>Save Page</button>
-
-  );
+  return <button onClick={savePage}>Save Page</button>;
 }
 
 export default Page;

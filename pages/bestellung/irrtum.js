@@ -5,6 +5,7 @@ import Breadcrumb from "../../components/Breadcrumb";
 import ReturnButton from "../../components/ReturnButton";
 import PageContainer from "../../components/PageContainer";
 import StyledArticle from "../../components/Article";
+import Page from "../../components/BookmarkButton";
 
 export default function IrrtumPage() {
   const path = "/online bestellen und kaufen/falsche Ware o. Stückzahl";
@@ -14,6 +15,7 @@ export default function IrrtumPage() {
         <Breadcrumb path={path}></Breadcrumb>
       </StyledLink>
       <StyledIcon icon="mingcute:bookmark-fill" color="#572887" />
+      <Page />
       <StyledArticle>
         <p>
           {`Ich habe die falsche Ware oder Stückzahl bestellt.
