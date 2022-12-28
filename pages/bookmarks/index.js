@@ -1,11 +1,17 @@
 import { BookmarksList } from "../../components/BookmarksList";
 import PageContainer from "../../components/PageContainer";
+import styled from "styled-components";
 
 export default function BookmarksPage() {
   return (
     <PageContainer>
-      <h3>Meine Bookmarks</h3>
+      <StyledH3>Meine Bookmarks</StyledH3>
       <BookmarksList />
     </PageContainer>
   );
 }
+
+const StyledH3 = styled.h3`
+position: absolute;
+top: 10rem;
+`;

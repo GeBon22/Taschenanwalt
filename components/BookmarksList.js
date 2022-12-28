@@ -9,10 +9,15 @@ export function BookmarksList() {
   );
 
   const pageTitles = {
-    "/home": "Home",
     "/bestellung": "Online bestellen und kaufen",
     "/bestellung/irrtum": "Ich habe die falsche Ware/falsche Stückzahl bestellt",
-    
+    "/bestellung/verzug": "Meine Ware kommt nicht an",
+    "/bestellung/schaden": "Meine Bestellung ist beschädigt",
+    "/bestellung/ruecktritt": "Ich möchte vom Kaufvertrag zurück treten",
+    "/widerruf": "Widerruf und Retoure",
+    "/widerruf/wann": "Wann kann ich widerrufen?",
+    "/widerruf/frist": "Wie lange kann ich widerrufen?",
+    "/widerruf/inhalt": "Was muss in einem Widerruf stehen?"
   };
 
   function handleDeleteButton(bookmark) {
@@ -61,6 +66,7 @@ display: flex;
 justify-content: flex-start;
 align-items: center;
 gap: .5rem;
+padding-right: 1rem;
 `;
 
 const StyledItem = styled.li`
@@ -74,8 +80,7 @@ const StyledItem = styled.li`
   border-radius: 10px;
   border: 1px solid rgba(163, 134, 182, 0.5);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-/*   min-height: 8vh;
-  min-width: 70vw; */
+  width: 70vw;
   padding: 1rem;
   display: flex;
   justify-content: space-evenly;
