@@ -1,12 +1,10 @@
+import useLocalStorage from "./hooks/useLocalStorage";
 import Link from "next/link";
 import {Icon} from "@iconify/react";
-import {useState} from "react";
 import styled from "styled-components";
 
 export function BookmarksList() {
-  const [bookmarks, setBookmarks] = useState(
-    JSON.parse(localStorage.getItem("bookmarks") || "[]")
-  );
+  const [bookmarks, setBookmarks] = useLocalStorage("bookmarks", []);
 
   const pageTitles = {
     "/bestellung": "Online bestellen und kaufen",
@@ -22,12 +20,7 @@ export function BookmarksList() {
   };
 
   function handleDeleteButton(bookmark) {
-    let bookmarks = JSON.parse(localStorage.getItem("bookmarks") || "[]");
-
     const updatedBookmarks = bookmarks.filter(bm => bm !== bookmark);
-
-    localStorage.setItem("bookmarks", JSON.stringify(updatedBookmarks));
-
     setBookmarks(updatedBookmarks);
   }
 
