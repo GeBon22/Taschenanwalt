@@ -5,7 +5,7 @@ import styled from "styled-components";
 export default function BookmarksPage() {
   return (
     <PageContainer>
-      <StyledH3>Meine Bookmarks</StyledH3>
+      <StyledH3>Meine Lesezeichen</StyledH3>
       <BookmarksList />
     </PageContainer>
   );
