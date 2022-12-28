@@ -10,7 +10,7 @@ export default function FristWiderruf() {
   const path = "/Widerruf und Retoure/Wie lang kann ich widerrufen?";
   return (
     <>
-    <BookmarkIcon />
+      <BookmarkIcon />
       <PageContainer>
         <StyledLink href="/widerruf">
           <Breadcrumb path={path} />

@@ -10,14 +10,14 @@ export default function IrrtumPage() {
   const path = "/online bestellen und kaufen/falsche Ware o. Stückzahl";
   return (
     <>
-    <BookmarkIcon />
-    <PageContainer>
-      <StyledLink href="/bestellung">
-        <Breadcrumb path={path}></Breadcrumb>
-      </StyledLink>
-      <StyledArticle>
-        <p>
-          {`Ich habe die falsche Ware oder Stückzahl bestellt.
+      <BookmarkIcon />
+      <PageContainer>
+        <StyledLink href="/bestellung">
+          <Breadcrumb path={path}></Breadcrumb>
+        </StyledLink>
+        <StyledArticle>
+          <p>
+            {`Ich habe die falsche Ware oder Stückzahl bestellt.
           
           Solltest du die falsche Ware bestellt haben, kannst du innerhalb von 14 Tagen nach Erhalt der Ware den Vertrag widerrufen. 
 Nach dieser Frist ist es ratsam, den Verkäufer zu kontaktieren und die Situation zu schildern. 
@@ -29,12 +29,12 @@ Kontaktiere ggf. einen Rechtsanwalt, solltest Du Dir unsicher sein. Meistens sin
 Solltest Du mehr Waren erhalten haben, als Du bestellt hast, bist Du verpflichtet, die überschüssigen Waren dem Verkäufer herauszugeben, sobald er dies wünscht. 
 
 Solltest Du zu wenig Waren erhalten haben, hast Du natürlich immer die Möglichkeit, Waren nachzubestellen. `}
-        </p>
-        <StyledLink href="/bestellung">
-          <ReturnButton />
-        </StyledLink>
-      </StyledArticle>
-    </PageContainer>
+          </p>
+          <StyledLink href="/bestellung">
+            <ReturnButton />
+          </StyledLink>
+        </StyledArticle>
+      </PageContainer>
     </>
   );
 }

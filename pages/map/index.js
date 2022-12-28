@@ -16,6 +16,6 @@ export default function MapPage() {
 }
 
 const StyledH3 = styled.h3`
-padding-top: 0;
-margin: 0;
+  padding-top: 0;
+  margin: 0;
 `;

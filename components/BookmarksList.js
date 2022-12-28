@@ -10,14 +10,15 @@ export function BookmarksList() {
 
   const pageTitles = {
     "/bestellung": "Online bestellen und kaufen",
-    "/bestellung/irrtum": "Ich habe die falsche Ware/falsche Stückzahl bestellt",
+    "/bestellung/irrtum":
+      "Ich habe die falsche Ware/falsche Stückzahl bestellt",
     "/bestellung/verzug": "Meine Ware kommt nicht an",
     "/bestellung/schaden": "Meine Bestellung ist beschädigt",
     "/bestellung/ruecktritt": "Ich möchte vom Kaufvertrag zurück treten",
     "/widerruf": "Widerruf und Retoure",
     "/widerruf/wann": "Wann kann ich widerrufen?",
     "/widerruf/frist": "Wie lange kann ich widerrufen?",
-    "/widerruf/inhalt": "Was muss in einem Widerruf stehen?"
+    "/widerruf/inhalt": "Was muss in einem Widerruf stehen?",
   };
 
   function handleDeleteButton(bookmark) {
@@ -34,20 +35,20 @@ export function BookmarksList() {
     <StyledListContainer>
       {bookmarks.map(bookmark => (
         <>
-        <StyledItemContainer>
-        <StyledItem key={bookmark}>
-          <StyledLink href={bookmark}>{pageTitles[bookmark]}</StyledLink>
-        </StyledItem>
-        <Icon
-            icon="charm:circle-cross"
-            color="#572887"
-            width="1.2rem"
-            height="1.2rem"
-            onClick={() => handleDeleteButton(bookmark)}
-            cursor="pointer"
-          />
+          <StyledItemContainer>
+            <StyledItem key={bookmark}>
+              <StyledLink href={bookmark}>{pageTitles[bookmark]}</StyledLink>
+            </StyledItem>
+            <Icon
+              icon="charm:circle-cross"
+              color="#572887"
+              width="1.2rem"
+              height="1.2rem"
+              onClick={() => handleDeleteButton(bookmark)}
+              cursor="pointer"
+            />
           </StyledItemContainer>
-          </>
+        </>
       ))}
     </StyledListContainer>
   );
@@ -62,11 +63,11 @@ const StyledListContainer = styled.ul`
 `;
 
 const StyledItemContainer = styled.div`
-display: flex;
-justify-content: flex-start;
-align-items: center;
-gap: .5rem;
-padding-right: 1rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.5rem;
+  padding-right: 1rem;
 `;
 
 const StyledItem = styled.li`

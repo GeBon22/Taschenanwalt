@@ -12,14 +12,14 @@ export default function RuecktrittPage() {
   const path = "/online bestellen und kaufen/Rücktritt";
   return (
     <>
-    <BookmarkIcon />
-    <PageContainer>
-      <StyledLink href="/bestellung">
-        <Breadcrumb path={path} />
-      </StyledLink>
-      <StyledArticle>
-        <p>
-          {`Ich möchte vom Kaufvertrag zurück treten.
+      <BookmarkIcon />
+      <PageContainer>
+        <StyledLink href="/bestellung">
+          <Breadcrumb path={path} />
+        </StyledLink>
+        <StyledArticle>
+          <p>
+            {`Ich möchte vom Kaufvertrag zurück treten.
           
           Für den Rücktritt vom Kaufvertrag sind mehrere Bedingungen zu erfüllen. 
 Als Käufer musst Du dem Verkäufer zunächst eine angemessene Frist zur Nacherfüllung geben (zB. 7-10 Werktage). 
@@ -32,21 +32,21 @@ Ein  Rücktritt ist außerdem ausgeschlossen, wenn eine Teilleistung erfolgt ist
 Auch ausgeschlossen ist, wenn die Ware nur in einem unerheblichen Maß beschädigt war. 
 Für weitere Infos dazu, klicke auf die jeweiligen Links weiter unten.
 `}
-        </p>
-      </StyledArticle>
-      <CopyToClipboard
-        text="Sehr geehrte Damen und Herren. Hiermit trete/n ich/wir von dem abgeschlossenen Vertrag über den Kauf folgender Waren/Einbringung
+          </p>
+        </StyledArticle>
+        <CopyToClipboard
+          text="Sehr geehrte Damen und Herren. Hiermit trete/n ich/wir von dem abgeschlossenen Vertrag über den Kauf folgender Waren/Einbringung
      folgender Dienstleistungen:[] zurück. Bestellt am [] und erhalten am []. Grund dafür ist []. Die Voraussetzungen des Rücktritts liegen hier vor.
      Bitte bestätigen Sie mir den Erhalt des Schreibens. 
      [Name und Anschrift des Verbrauchers] [Datum] [Unterschrift]."
-        onCopy={() => alert("Anschreiben in die Zwischenablage kopiert!")}
-      >
-        <CopyButton>Anschreiben kopieren</CopyButton>
-      </CopyToClipboard>
-      <StyledLink href="/bestellung">
-        <ReturnButton />
-      </StyledLink>
-    </PageContainer>
+          onCopy={() => alert("Anschreiben in die Zwischenablage kopiert!")}
+        >
+          <CopyButton>Anschreiben kopieren</CopyButton>
+        </CopyToClipboard>
+        <StyledLink href="/bestellung">
+          <ReturnButton />
+        </StyledLink>
+      </PageContainer>
     </>
   );
 }

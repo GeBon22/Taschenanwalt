@@ -1,4 +1,4 @@
-import { BookmarksList } from "../../components/BookmarksList";
+import {BookmarksList} from "../../components/BookmarksList";
 import PageContainer from "../../components/PageContainer";
 import styled from "styled-components";
 
@@ -12,6 +12,6 @@ export default function BookmarksPage() {
 }
 
 const StyledH3 = styled.h3`
-position: absolute;
-top: 10rem;
+  position: absolute;
+  top: 10rem;
 `;

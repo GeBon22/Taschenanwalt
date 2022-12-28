@@ -10,23 +10,23 @@ export default function WannWiderruf() {
   const path = "/Widerruf und Retoure/Wann kann ich widerrufen?";
   return (
     <>
-    <BookmarkIcon />
-    <PageContainer>
-      <StyledLink href="/widerruf">
-        <Breadcrumb path={path} />
-      </StyledLink>
-      <StyledArticle>
-        <p>
-          {`Wann kann ich widerrufen?
+      <BookmarkIcon />
+      <PageContainer>
+        <StyledLink href="/widerruf">
+          <Breadcrumb path={path} />
+        </StyledLink>
+        <StyledArticle>
+          <p>
+            {`Wann kann ich widerrufen?
 
           Jeder Verbraucher kann sich auf das Widerrufsrecht berufen. Einem
           Unternehmer steht dagegen kein Widerrufsrecht zu.`}
-        </p>
-      </StyledArticle>
-      <StyledLink href="/widerruf">
-        <ReturnButton />
-      </StyledLink>
-    </PageContainer>
+          </p>
+        </StyledArticle>
+        <StyledLink href="/widerruf">
+          <ReturnButton />
+        </StyledLink>
+      </PageContainer>
     </>
   );
 }
