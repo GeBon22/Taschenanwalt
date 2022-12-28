@@ -1,20 +1,21 @@
 import styled from "styled-components";
 import Link from "next/link";
-import StyledIcon from "../../components/BookmarkIcon";
 import Breadcrumb from "../../components/Breadcrumb";
 import ReturnButton from "../../components/ReturnButton";
 import PageContainer from "../../components/PageContainer";
 import StyledArticle from "../../components/Article";
+import BookmarkIcon from "../../components/BookmarkIcon";
 
 export default function VerzugPage() {
   const path = "/online bestellen und kaufen/Ware o. Paket verloren";
   return (
+    <>
+    <BookmarkIcon />
     <PageContainer>
       <StyledLink href="/bestellung">
         <Breadcrumb path={path} />
       </StyledLink>
       <StyledArticle>
-        <StyledIcon icon="mingcute:bookmark-fill" color="#572887" />
         <p>
           {`Meine Ware kommt nicht an!
           
@@ -28,6 +29,7 @@ export default function VerzugPage() {
         </StyledLink>
       </StyledArticle>
     </PageContainer>
+    </>
   );
 }
 

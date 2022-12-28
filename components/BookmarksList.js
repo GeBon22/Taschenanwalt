@@ -92,8 +92,3 @@ const StyledLink = styled(Link)`
   text-decoration: none;
   list-style: none;
 `;
-
-/* const StyledIcon = styled(Icon)`
-width: 1.2rem;
-height: 1.2rem;
-`; */

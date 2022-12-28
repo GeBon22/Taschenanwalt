@@ -4,19 +4,20 @@ import {CopyToClipboard} from "react-copy-to-clipboard";
 import Breadcrumb from "../../components/Breadcrumb";
 import ReturnButton from "../../components/ReturnButton";
 import PageContainer from "../../components/PageContainer";
-import StyledIcon from "../../components/BookmarkIcon";
 import CopyButton from "../../components/CopyButton";
 import StyledArticle from "../../components/Article";
+import BookmarkIcon from "../../components/BookmarkIcon";
 
 export default function WannWiderruf() {
   const path = "/Widerruf und Retoure/Was muss im Widerruf stehen?";
   return (
+    <>
+    <BookmarkIcon />
     <PageContainer>
       <StyledLink href="/widerruf">
         <Breadcrumb path={path} />
       </StyledLink>
       <StyledArticle>
-        <StyledIcon icon="mingcute:bookmark-fill" color="#572887" />
         <p>
           {`Was muss in einem Widerruf stehen?
 
@@ -42,6 +43,7 @@ export default function WannWiderruf() {
         <ReturnButton />
       </StyledLink>
     </PageContainer>
+    </>
   );
 }
 

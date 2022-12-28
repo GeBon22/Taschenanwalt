@@ -1,21 +1,20 @@
 import styled from "styled-components";
 import Link from "next/link";
-import StyledIcon from "../../components/BookmarkIcon";
 import Breadcrumb from "../../components/Breadcrumb";
 import ReturnButton from "../../components/ReturnButton";
 import PageContainer from "../../components/PageContainer";
 import StyledArticle from "../../components/Article";
-import Page from "../../components/BookmarkButton";
+import BookmarkIcon from "../../components/BookmarkIcon";
 
 export default function IrrtumPage() {
   const path = "/online bestellen und kaufen/falsche Ware o. Stückzahl";
   return (
+    <>
+    <BookmarkIcon />
     <PageContainer>
       <StyledLink href="/bestellung">
         <Breadcrumb path={path}></Breadcrumb>
       </StyledLink>
-      <StyledIcon icon="mingcute:bookmark-fill" color="#572887" />
-      <Page />
       <StyledArticle>
         <p>
           {`Ich habe die falsche Ware oder Stückzahl bestellt.
@@ -36,6 +35,7 @@ Solltest Du zu wenig Waren erhalten haben, hast Du natürlich immer die Möglich
         </StyledLink>
       </StyledArticle>
     </PageContainer>
+    </>
   );
 }
 

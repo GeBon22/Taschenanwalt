@@ -1,19 +1,20 @@
 import styled from "styled-components";
 import Link from "next/link";
-import StyledIcon from "../../components/BookmarkIcon";
 import Breadcrumb from "../../components/Breadcrumb";
 import ReturnButton from "../../components/ReturnButton";
 import PageContainer from "../../components/PageContainer";
 import StyledArticle from "../../components/Article";
+import BookmarkIcon from "../../components/BookmarkIcon";
 
 export default function SchadenPage() {
   const path = "/online bestellen und kaufen/Ware beschädigt";
   return (
+    <>
+    <BookmarkIcon />
     <PageContainer>
       <StyledLink href="/bestellung">
         <Breadcrumb path={path} />
       </StyledLink>
-      <StyledIcon icon="mingcute:bookmark-fill" color="#572887" />
       <StyledArticle>
         <p>
           {`Meine Bestellung ist beschädigt.
@@ -29,6 +30,7 @@ Entscheidest Du Dich für eine Reparatur, bist du seit 2022 nun auch ausdrückli
         </StyledLink>
       </StyledArticle>
     </PageContainer>
+    </>
   );
 }
 

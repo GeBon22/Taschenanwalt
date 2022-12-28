@@ -3,18 +3,19 @@ import Link from "next/link";
 import Breadcrumb from "../../components/Breadcrumb";
 import ReturnButton from "../../components/ReturnButton";
 import PageContainer from "../../components/PageContainer";
-import StyledIcon from "../../components/BookmarkIcon";
 import StyledArticle from "../../components/Article";
+import BookmarkIcon from "../../components/BookmarkIcon";
 
 export default function WannWiderruf() {
   const path = "/Widerruf und Retoure/Wann kann ich widerrufen?";
   return (
+    <>
+    <BookmarkIcon />
     <PageContainer>
       <StyledLink href="/widerruf">
         <Breadcrumb path={path} />
       </StyledLink>
       <StyledArticle>
-        <StyledIcon icon="mingcute:bookmark-fill" color="#572887" />
         <p>
           {`Wann kann ich widerrufen?
 
@@ -26,6 +27,7 @@ export default function WannWiderruf() {
         <ReturnButton />
       </StyledLink>
     </PageContainer>
+    </>
   );
 }
 

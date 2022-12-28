@@ -4,7 +4,6 @@ import Breadcrumb from "../../components/Breadcrumb";
 import ReturnButton from "../../components/ReturnButton";
 import PageContainer from "../../components/PageContainer";
 import DefaultButton from "../../components/DefaultButton";
-import BookmarkButton from "../../components/BookmarkButton";
 
 export default function BestellungPage() {
   const path = "/online bestellen und kaufen";
@@ -12,11 +11,6 @@ export default function BestellungPage() {
     <>
       <PageContainer>
         <Breadcrumb path={path} />
-        
-
-        <BookmarkButton />
-
-
         <StyledLink href="/bestellung/verzug">
           <DefaultButton>
             Meine Ware kommt nicht an / Mein Paket ist verloren gegangen
