@@ -13,16 +13,16 @@ export default function RuecktrittPage() {
   const path = "/online bestellen und kaufen/Rücktritt";
 
   const notify = () =>
-  toast.success("Anschreiben gespeichert!", {
-    position: "top-right",
-    autoClose: 2500,
-    hideProgressBar: false,
-    closeOnClick: true,
-    pauseOnHover: true,
-    draggable: true,
-    progress: undefined,
-    theme: "light",
-  });
+    toast.success("Anschreiben gespeichert!", {
+      position: "top-right",
+      autoClose: 2500,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "light",
+    });
 
   return (
     <>
