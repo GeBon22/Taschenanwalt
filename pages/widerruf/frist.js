@@ -3,20 +3,19 @@ import Link from "next/link";
 import Breadcrumb from "../../components/Breadcrumb";
 import ReturnButton from "../../components/ReturnButton";
 import PageContainer from "../../components/PageContainer";
-import StyledIcon from "../../components/BookmarkIcon";
 import StyledArticle from "../../components/Article";
+import BookmarkIcon from "../../components/BookmarkIcon";
 
 export default function FristWiderruf() {
   const path = "/Widerruf und Retoure/Wie lang kann ich widerrufen?";
   return (
     <>
+      <BookmarkIcon />
       <PageContainer>
         <StyledLink href="/widerruf">
           <Breadcrumb path={path} />
         </StyledLink>
-        /Wie
         <StyledArticle>
-          <StyledIcon icon="mingcute:bookmark-fill" color="#572887" />
           <p>
             {`Wie lange kann ich widerrufen?
 

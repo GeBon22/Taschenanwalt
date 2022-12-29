@@ -9,21 +9,19 @@ export default function LawyerList() {
       {context.userLocation &&
         context.lawyers.length > 0 &&
         context.lawyers.map(lawyer => (
-          <StyledUL key={lawyer.id}>
-            <li>
-              <b>{lawyer.name}</b> <br />
-              Rating: {lawyer.rating}/5 ⭐<br />
-              Anzahl der Bewertungen: {lawyer.user_ratings_total}
-              <br />
-              Adresse: {lawyer.vicinity} <br />
-            </li>
-          </StyledUL>
+          <StyledLi key={lawyer.id}>
+            <b>{lawyer.name}</b> <br />
+            Rating: {lawyer.rating}/5 ⭐<br />
+            Anzahl der Bewertungen: {lawyer.user_ratings_total}
+            <br />
+            Adresse: {lawyer.vicinity} <br />
+          </StyledLi>
         ))}
     </>
   );
 }
 
-const StyledUL = styled.ul`
+const StyledLi = styled.li`
   text-decoration: none;
   list-style: none;
   position: relative;
@@ -40,7 +38,7 @@ const StyledUL = styled.ul`
   border-radius: 10px;
   border: 1px solid rgba(163, 134, 182, 0.5);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  height: 20vh;
+  height: 25vh;
   width: 80vw;
   padding: 1rem;
   cursor: pointer;

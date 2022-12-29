@@ -15,8 +15,8 @@ const PageContainer = styled.div`
   margin-top: 1rem;
   margin-bottom: 1rem;
   overflow: auto;
-  padding-top: 5rem;
-  padding-bottom: 5rem;
+  padding-top: 1.2rem;
+  padding-bottom: 1.2rem;
 `;
 
 export default PageContainer;
