@@ -15,7 +15,7 @@ export default function Header() {
       animationData: require("/public/HeaderAnimation.json"),
     });
     return () => lottie.destroy();
-  }, []);
+  });
 
   return (
     <StyledLink href="/">
@@ -49,6 +49,7 @@ const StyledHeader = styled.div`
 
 const Styledh3 = styled.h3`
   text-decoration: none;
+  font-size: 1.5rem;
 `;
 
 const StyledLink = styled(Link)`

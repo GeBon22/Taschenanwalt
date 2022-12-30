@@ -25,10 +25,10 @@ Beachte: Du hast als Käufer ein Wahlrecht, ob die Ware repariert oder Dir eine 
 Entscheidest Du Dich für eine Reparatur, bist du seit 2022 nun auch ausdrücklich gesetzlich verpflichtet, die Ware dem Verkäufer zum Zweck der Reparatur zur Verfügung zu stellen – also zurück zu senden oder den Zugang bei Dir zu ermöglichen.
 `}
           </p>
-          <StyledLink href="/bestellung">
-            <ReturnButton />
-          </StyledLink>
         </StyledArticle>
+        <StyledLink href="/bestellung">
+          <ReturnButton />
+        </StyledLink>
       </PageContainer>
     </>
   );

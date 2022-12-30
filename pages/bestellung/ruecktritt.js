@@ -4,12 +4,26 @@ import {CopyToClipboard} from "react-copy-to-clipboard";
 import Breadcrumb from "../../components/Breadcrumb";
 import ReturnButton from "../../components/ReturnButton";
 import PageContainer from "../../components/PageContainer";
-import CopyButton from "../../components/CopyButton";
 import StyledArticle from "../../components/Article";
 import BookmarkIcon from "../../components/BookmarkIcon";
+import {ToastContainer, toast} from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 export default function RuecktrittPage() {
   const path = "/online bestellen und kaufen/Rücktritt";
+
+  const notify = () =>
+    toast.success("Anschreiben gespeichert!", {
+      position: "top-right",
+      autoClose: 2500,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "light",
+    });
+
   return (
     <>
       <BookmarkIcon />
@@ -39,7 +53,7 @@ Für weitere Infos dazu, klicke auf die jeweiligen Links weiter unten.
      folgender Dienstleistungen:[] zurück. Bestellt am [] und erhalten am []. Grund dafür ist []. Die Voraussetzungen des Rücktritts liegen hier vor.
      Bitte bestätigen Sie mir den Erhalt des Schreibens. 
      [Name und Anschrift des Verbrauchers] [Datum] [Unterschrift]."
-          onCopy={() => alert("Anschreiben in die Zwischenablage kopiert!")}
+          onCopy={notify}
         >
           <CopyButton>Anschreiben kopieren</CopyButton>
         </CopyToClipboard>
@@ -47,10 +61,27 @@ Für weitere Infos dazu, klicke auf die jeweiligen Links weiter unten.
           <ReturnButton />
         </StyledLink>
       </PageContainer>
+      <ToastContainer />
     </>
   );
 }
 
 const StyledLink = styled(Link)`
   text-decoration: none;
+`;
+
+const CopyButton = styled.button`
+  color: #572887;
+  font-size: 1.2rem;
+  font-weight: 300;
+  font-style: normal;
+  text-decoration: none;
+  background-color: #e6ceee;
+  border-radius: 10px;
+  border: 1px solid rgba(163, 134, 182, 0.5);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  height: 10vh;
+  width: 40vw;
+  position: relative;
+  cursor: pointer;
 `;

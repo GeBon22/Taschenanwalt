@@ -25,25 +25,33 @@ export function BookmarksList() {
   }
 
   return (
-    <StyledListContainer>
-      {bookmarks.map(bookmark => (
-        <>
-          <StyledItemContainer>
-            <StyledItem key={bookmark}>
-              <StyledLink href={bookmark}>{pageTitles[bookmark]}</StyledLink>
-            </StyledItem>
-            <Icon
-              icon="charm:circle-cross"
-              color="#572887"
-              width="1.2rem"
-              height="1.2rem"
-              onClick={() => handleDeleteButton(bookmark)}
-              cursor="pointer"
-            />
-          </StyledItemContainer>
-        </>
-      ))}
-    </StyledListContainer>
+    <>
+      {bookmarks.length > 0 ? (
+        bookmarks.map(bookmark => (
+          <>
+            <StyledListContainer>
+              <StyledItemContainer>
+                <StyledItem key={bookmark}>
+                  <StyledLink href={bookmark}>
+                    {pageTitles[bookmark]}
+                  </StyledLink>
+                </StyledItem>
+                <Icon
+                  icon="charm:circle-cross"
+                  color="#572887"
+                  width="1.2rem"
+                  height="1.2rem"
+                  onClick={() => handleDeleteButton(bookmark)}
+                  cursor="pointer"
+                />
+              </StyledItemContainer>
+            </StyledListContainer>
+          </>
+        ))
+      ) : (
+        <h3>Keine Lesezeichen gespeichert!</h3>
+      )}
+    </>
   );
 }
 
