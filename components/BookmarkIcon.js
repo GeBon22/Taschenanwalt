@@ -3,9 +3,38 @@ import styled from "styled-components";
 import {useRouter} from "next/router";
 import {ToastContainer, toast} from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import {useState, useEffect} from "react";
 
-function useSavePage() {
+export default function BookmarkIcon() {
   const {pathname} = useRouter();
+  const [markedPage, setMarkedPage] = useState();
+  const icon = markedPage ? "mingcute:bookmark-fill" : "mingcute:bookmark-line";
+
+  useEffect(() => {
+    const bookmarks = JSON.parse(localStorage.getItem("bookmarks") || "[]");
+    setMarkedPage(bookmarks.includes(pathname));
+  }, [pathname]);
+
+  useEffect(() => {}, [markedPage]);
+
+  const savePage = () => {
+    let bookmarks = JSON.parse(localStorage.getItem("bookmarks") || "[]");
+
+    const isBookmarked = bookmarks.includes(pathname);
+
+    if (isBookmarked) {
+      bookmarks = bookmarks.filter(bm => bm !== pathname);
+      setMarkedPage(true);
+    } else {
+      bookmarks.push(pathname);
+      setMarkedPage(false);
+    }
+
+    localStorage.setItem("bookmarks", JSON.stringify(bookmarks));
+    setMarkedPage(bookmarks.includes(pathname));
+    notify();
+  };
+
   const notify = () =>
     toast.success("gespeichert!", {
       position: "top-right",
@@ -18,40 +47,13 @@ function useSavePage() {
       theme: "light",
     });
 
-  function savePage() {
-    let bookmarks = JSON.parse(localStorage.getItem("bookmarks") || "[]");
-
-    const isBookmarked = bookmarks.includes(pathname);
-
-    if (isBookmarked) {
-      bookmarks = bookmarks.filter(bm => bm !== pathname);
-    } else {
-      bookmarks.push(pathname);
-    }
-
-    localStorage.setItem("bookmarks", JSON.stringify(bookmarks));
-    notify();
-  }
-
-  return savePage;
-}
-
-function BookmarkIcon() {
-  const savePage = useSavePage();
-
   return (
     <>
-      <StyledIcon
-        icon="mingcute:bookmark-fill"
-        color="#572887"
-        onClick={savePage}
-      />
+      <StyledIcon icon={icon} color="#572887" onClick={savePage} key={pathname} />
       <ToastContainer />
     </>
   );
 }
-
-export default BookmarkIcon;
 
 const StyledIcon = styled(Icon)`
   width: 40px;
