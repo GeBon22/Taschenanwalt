@@ -15,7 +15,7 @@ export default function Header() {
       animationData: require("/public/HeaderAnimation.json"),
     });
     return () => lottie.destroy();
-  }, []);
+  });
 
   return (
     <StyledLink href="/">

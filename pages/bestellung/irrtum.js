@@ -30,10 +30,10 @@ Solltest Du mehr Waren erhalten haben, als Du bestellt hast, bist Du verpflichte
 
 Solltest Du zu wenig Waren erhalten haben, hast Du natürlich immer die Möglichkeit, Waren nachzubestellen. `}
           </p>
-          <StyledLink href="/bestellung">
-            <ReturnButton />
-          </StyledLink>
         </StyledArticle>
+        <StyledLink href="/bestellung">
+          <ReturnButton />
+        </StyledLink>
       </PageContainer>
     </>
   );

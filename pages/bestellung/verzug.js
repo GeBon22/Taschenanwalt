@@ -24,10 +24,10 @@ export default function VerzugPage() {
       Kontaktiere den Verkäufer und mache ihn auf den Schaden aufmerksam. 
       Auch hier ist es ratsam, eine angemessene Frist (zB. 7-10 Werktage) zu setzen, um dem Verkäufer ausreichend Zeit zu geben, eine Lösung anzubieten und seiner Pflicht aus dem Vertrag nachzukommen.`}{" "}
           </p>
-          <StyledLink href="/bestellung">
-            <ReturnButton />
-          </StyledLink>
         </StyledArticle>
+        <StyledLink href="/bestellung">
+          <ReturnButton />
+        </StyledLink>
       </PageContainer>
     </>
   );
