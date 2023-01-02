@@ -49,7 +49,12 @@ export default function BookmarkIcon() {
 
   return (
     <>
-      <StyledIcon icon={icon} color="#572887" onClick={savePage} key={pathname} />
+      <StyledIcon
+        icon={icon}
+        color="#572887"
+        onClick={savePage}
+        key={pathname}
+      />
       <ToastContainer />
     </>
   );

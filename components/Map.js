@@ -126,5 +126,5 @@ const InfoBox = styled.div`
   padding: 0.25em;
   text-align: center;
   font-weight: 300;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  box-shadow: var(--box-shadow);
 `;

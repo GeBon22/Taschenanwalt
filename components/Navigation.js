@@ -33,11 +33,11 @@ const StyledNav = styled.nav`
   display: flex;
   justify-content: space-around;
   align-items: center;
-  border: solid #572887 2px;
+  border: solid var(--secondary-color) 2px;
   padding: 10px;
-  border-radius: 10px;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  background-color: #f3e8e8;
+  border-radius: var(--default-border-radius);
+  box-shadow: var(--box-shadow);
+  background-color: var(--primary-color);
   margin-top: 5px;
   position: sticky;
   bottom: 5px;

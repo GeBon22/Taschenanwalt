@@ -49,7 +49,7 @@ export function BookmarksList() {
           </>
         ))
       ) : (
-        <h3>Keine Lesezeichen gespeichert!</h3>
+        <h3>Noch keine Lesezeichen gespeichert!</h3>
       )}
     </>
   );

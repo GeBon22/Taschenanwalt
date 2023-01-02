@@ -6,10 +6,10 @@ const PageContainer = styled.div`
   align-items: center;
   flex-direction: column;
   gap: 25px;
-  background-color: #f3e8e8;
-  color: #572887;
-  border-radius: 10px;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  border-radius: var(--default-border-radius);
+  box-shadow: var(--box-shadow);
   width: 90vw;
   min-height: 70vh;
   margin-top: 1rem;
@@ -17,6 +17,7 @@ const PageContainer = styled.div`
   overflow: auto;
   padding-top: 1.2rem;
   padding-bottom: 1.2rem;
+  scroll-behavior: smooth;
 `;
 
 export default PageContainer;

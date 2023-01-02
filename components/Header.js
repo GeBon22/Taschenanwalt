@@ -37,13 +37,13 @@ const StyledHeader = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  border: solid #572887 2px;
+  border: solid var(--secondary-color) 2px;
   padding: 5px;
-  border-radius: 10px;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  background-color: #f3e8e8;
+  border-radius: var(--default-border-radius);
+  box-shadow: var(--box-shadow);
+  background-color: var(--primary-color);
   margin: 5px;
-  color: #572887;
+  color: var(--secondary-color);
   text-decoration: none;
 `;
 
