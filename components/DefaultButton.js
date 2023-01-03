@@ -16,4 +16,5 @@ const StyledButton = styled.button`
   height: 10vh;
   width: 80vw;
   cursor: pointer;
+  padding: 5px;
 `;

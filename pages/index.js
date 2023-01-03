@@ -17,7 +17,7 @@ export default function HomePage() {
       animationData: require("/public/BestellungAnimation.json"),
     });
     return () => lottie.destroy();
-  }, []);
+  });
 
   useEffect(() => {
     lottie.loadAnimation({
@@ -28,12 +28,12 @@ export default function HomePage() {
       animationData: require("/public/WiderrufAnimation.json"),
     });
     return () => lottie.destroy();
-  }, []);
+  });
 
   return (
     <>
       <PageContainer>
-        <h3>Wo drückt der Schuh?</h3>
+        <h3>Wo können wir helfen?</h3>
 
         <StyledLink href="/bestellung">
           <StyledBestellungButton>
@@ -61,9 +61,9 @@ const StyledBestellungButton = styled.button`
   text-decoration: none;
   background-color: var(--primary-background-color);
   border-radius: 10px;
-  border: 1px solid var(--primary-color);
+  border: 1px solid var(--secondary-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  height: 20vh;
+  height: 30vh;
   width: 80vw;
   display: flex;
   flex-direction: row;
@@ -79,9 +79,9 @@ const StyledWiderufButton = styled.button`
   text-decoration: none;
   background-color: var(--primary-background-color);
   border-radius: 10px;
-  border: 1px solid var(--primary-color);
+  border: 1px solid var(--secondary-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  height: 20vh;
+  height: 30vh;
   width: 80vw;
   display: flex;
   flex-direction: row-reverse;

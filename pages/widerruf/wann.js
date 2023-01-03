@@ -16,12 +16,11 @@ export default function WannWiderruf() {
           <Breadcrumb path={path} />
         </StyledLink>
         <StyledArticle>
+          <h3>Wann kann ich widerrufen?</h3>
           <p>
-            {`Wann kann ich widerrufen?
-
-          Jeder Verbraucher kann sich auf das Widerrufsrecht berufen. Einem
+            {`Jeder Verbraucher kann sich auf das Widerrufsrecht berufen. Einem
           Unternehmer steht dagegen kein Widerrufsrecht zu.`}
-          </p>
+          </p> 
         </StyledArticle>
         <StyledLink href="/widerruf">
           <ReturnButton />
@@ -30,6 +29,8 @@ export default function WannWiderruf() {
     </>
   );
 }
+
+//TODO: mehr Inhalt
 
 const StyledLink = styled(Link)`
   text-decoration: none;

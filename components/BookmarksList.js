@@ -49,7 +49,7 @@ export function BookmarksList() {
           </>
         ))
       ) : (
-        <h3>Noch keine Lesezeichen gespeichert!</h3>
+        <h3>Du hast noch nichts gespeichert!</h3>
       )}
     </>
   );
@@ -60,7 +60,7 @@ const StyledListContainer = styled.ul`
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  gap: 1.5rem;
+  gap: 1rem;
 `;
 
 const StyledItemContainer = styled.div`
@@ -88,15 +88,15 @@ const StyledItem = styled.li`
   justify-content: space-evenly;
   align-items: center;
   flex-wrap: wrap;
-  
+
   &:hover {
-      color: var(--secondary-color);
-      border: 1px solid var(--secondary-color);
-    }
+    color: var(--secondary-color);
+    border: 1px solid var(--secondary-color);
+  }
 `;
 
 const StyledLink = styled(Link)`
   text-decoration: none;
   list-style: none;
-  color: var(--primary-color)
+  color: var(--primary-color);
 `;

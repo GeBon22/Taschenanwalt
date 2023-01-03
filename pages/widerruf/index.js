@@ -8,7 +8,7 @@ import DefaultButton from "../../components/DefaultButton";
 export default function WiderrufPage() {
   const path = "/Widerruf und Retoure";
   return (
-    <PageContainer>
+    <StyledPageContainer>
       <Breadcrumb path={path} />
       <StyledLink href="/widerruf/wann">
         <DefaultButton>Wann kann ich widerrufen?</DefaultButton>
@@ -22,10 +22,14 @@ export default function WiderrufPage() {
       <StyledLink href="/">
         <ZurueckButton />
       </StyledLink>
-    </PageContainer>
+    </StyledPageContainer>
   );
 }
 
 const StyledLink = styled(Link)`
   text-decoration: none;
+`;
+
+const StyledPageContainer = styled(PageContainer)`
+padding-top: 5rem;
 `;

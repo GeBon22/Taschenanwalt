@@ -12,6 +12,6 @@ const Article = styled.article`
   font-weight: 300;
   font-style: normal;
   text-decoration: none;
-  padding: 1rem;
+  padding: 2rem;
   white-space: pre-line;
 `;

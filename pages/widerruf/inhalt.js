@@ -32,13 +32,9 @@ export default function WannWiderruf() {
           <Breadcrumb path={path} />
         </StyledLink>
         <StyledArticle>
+          <h3>Was muss in einem Widerruf stehen?</h3>
           <p>
-            {`Was muss in einem Widerruf stehen?
-
-          In einem Widerruf muss nicht ausdrücklich das Wort Widerruf verwendet
-        werden. Es empfiehlt sicher aber, klar zu machen, dass man
-        vom Vertrag Abstand nehmen möchte und den Kaufpreis zurück erstattet
-        verlangt.
+            {`In einem Widerruf muss nicht ausdrücklich das Wort Widerruf verwendet werden. Es empfiehlt sicher aber, klar zu machen, dass man vom Vertrag Abstand nehmen möchte und den Kaufpreis zurück erstattet verlangt.
         Es muss außerdem kein Grund für den Widerruf angegeben werden.
         
         Möchtest Du ein vorgefertigtes Anschreiben verwenden, drücke den Button und Fülle die eckigen Klammern mit dem zutreffenden Inhalt aus.`}

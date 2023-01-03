@@ -50,12 +50,7 @@ export default function BookmarkIcon() {
 
   return (
     <>
-      <StyledIcon
-        icon={icon}
-        color={color}
-        onClick={savePage}
-        key={pathname}
-      />
+      <StyledIcon icon={icon} color={color} onClick={savePage} key={pathname} />
       <ToastContainer />
     </>
   );
@@ -68,3 +63,5 @@ const StyledIcon = styled(Icon)`
   top: 6.5rem;
   right: 1.5rem;
 `;
+
+//TODO: Position all icons to the right spot
