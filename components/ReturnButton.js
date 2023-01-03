@@ -10,9 +10,9 @@ const StyledZurueckButton = styled.button`
   font-weight: 300;
   font-style: normal;
   text-decoration: none;
-  background-color: var(--button-background);
+  background-color: var(--primary-background-color);
   border-radius: var(--default-border-radius);
-  border: 1px solid rgba(163, 134, 182, 0.5);
+  border: 1px solid var(--secondary-color);
   box-shadow: var(--button-shadow);
   height: 5vh;
   width: 30vw;

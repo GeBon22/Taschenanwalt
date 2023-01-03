@@ -8,7 +8,8 @@ import {useState, useEffect} from "react";
 export default function BookmarkIcon() {
   const {pathname} = useRouter();
   const [markedPage, setMarkedPage] = useState();
-  const icon = markedPage ? "mingcute:bookmark-fill" : "mingcute:bookmark-line";
+  const icon = "mingcute:bookmark-fill";
+  const color = markedPage ? "#E49100" : "#FFFFFF";
 
   useEffect(() => {
     const bookmarks = JSON.parse(localStorage.getItem("bookmarks") || "[]");
@@ -51,7 +52,7 @@ export default function BookmarkIcon() {
     <>
       <StyledIcon
         icon={icon}
-        color="#572887"
+        color={color}
         onClick={savePage}
         key={pathname}
       />

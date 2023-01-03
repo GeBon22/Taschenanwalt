@@ -37,14 +37,12 @@ const StyledHeader = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  border: solid var(--secondary-color) 2px;
   padding: 5px;
-  border-radius: var(--default-border-radius);
   box-shadow: var(--box-shadow);
-  background-color: var(--primary-color);
-  margin: 5px;
-  color: var(--secondary-color);
+  background-color: var(--primary-background-color);
+  color: var(--primary-color);
   text-decoration: none;
+  border-bottom: 1px solid var(--primary-color);
 `;
 
 const Styledh3 = styled.h3`

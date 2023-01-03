@@ -30,13 +30,13 @@ const StyledLi = styled.li`
   align-items: center;
   flex-direction: column;
   text-align: center;
-  color: var(--secondary-color);
+  color: var(--primary-color);
   font-size: 1rem;
   font-weight: 400;
   font-style: normal;
-  background-color: var(--button-background);
+  background-color: var(--primary-background-color);
   border-radius: 10px;
-  border: 1px solid rgba(163, 134, 182, 0.5);
+  border: 1px solid var(--primary-color);
   box-shadow: var(--box-shadow);
   height: 25vh;
   width: 80vw;

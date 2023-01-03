@@ -5,7 +5,7 @@ export default function Breadcrumb(props) {
 }
 
 const StyledBreadcrumb = styled.h3`
-  color: var(--secondary-color);
+  color: var(--primary-color);
   font-size: 1rem;
   font-weight: 400;
   position: absolute;

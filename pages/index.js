@@ -54,14 +54,14 @@ export default function HomePage() {
 }
 
 const StyledBestellungButton = styled.button`
-  color: #572887;
+  color: var(--primary-color);
   font-size: 1.2rem;
   font-weight: 300;
   font-style: normal;
   text-decoration: none;
-  background-color: #e6ceee;
+  background-color: var(--primary-background-color);
   border-radius: 10px;
-  border: 1px solid rgba(163, 134, 182, 0.5);
+  border: 1px solid var(--primary-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   height: 20vh;
   width: 80vw;
@@ -72,14 +72,14 @@ const StyledBestellungButton = styled.button`
 `;
 
 const StyledWiderufButton = styled.button`
-  color: #572887;
+  color: var(--primary-color);
   font-size: 1.2rem;
   font-weight: 300;
   font-style: normal;
   text-decoration: none;
-  background-color: #e6ceee;
+  background-color: var(--primary-background-color);
   border-radius: 10px;
-  border: 1px solid rgba(163, 134, 182, 0.5);
+  border: 1px solid var(--primary-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   height: 20vh;
   width: 80vw;

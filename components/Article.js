@@ -7,7 +7,7 @@ export default function StyledArticle(props) {
 const Article = styled.article`
   text-align: justify;
   text-align-last: none;
-  color: var(--secondary-color);
+  color: var(--primary-color);
   font-size: 1.2rem;
   font-weight: 300;
   font-style: normal;

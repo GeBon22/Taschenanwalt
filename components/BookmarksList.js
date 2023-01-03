@@ -38,7 +38,7 @@ export function BookmarksList() {
                 </StyledItem>
                 <Icon
                   icon="charm:circle-cross"
-                  color="#572887"
+                  color="#E49100"
                   width="1.2rem"
                   height="1.2rem"
                   onClick={() => handleDeleteButton(bookmark)}
@@ -60,7 +60,7 @@ const StyledListContainer = styled.ul`
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  gap: 2rem;
+  gap: 1.5rem;
 `;
 
 const StyledItemContainer = styled.div`
@@ -72,15 +72,15 @@ const StyledItemContainer = styled.div`
 `;
 
 const StyledItem = styled.li`
-  color: #572887;
+  color: var(--primary-color);
   font-size: 1.2rem;
   font-weight: 300;
   font-style: normal;
   text-decoration: none;
   list-style: none;
-  background-color: #e6ceee;
+  background-color: var(--primary-background-color);
   border-radius: 10px;
-  border: 1px solid rgba(163, 134, 182, 0.5);
+  border: 1px solid var(--primary-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   width: 70vw;
   padding: 1rem;
@@ -88,9 +88,15 @@ const StyledItem = styled.li`
   justify-content: space-evenly;
   align-items: center;
   flex-wrap: wrap;
+  
+  &:hover {
+      color: var(--secondary-color);
+      border: 1px solid var(--secondary-color);
+    }
 `;
 
 const StyledLink = styled(Link)`
   text-decoration: none;
   list-style: none;
+  color: var(--primary-color)
 `;
