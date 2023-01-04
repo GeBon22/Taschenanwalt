@@ -38,7 +38,8 @@ const StyledLi = styled.li`
   border-radius: 10px;
   border: 1px solid var(--primary-color);
   box-shadow: var(--box-shadow);
-  height: 25vh;
+  min-height: 25vh;
+  max-height: 30vh;
   width: 80vw;
   padding: 1rem;
   cursor: pointer;
