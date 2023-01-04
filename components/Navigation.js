@@ -33,7 +33,7 @@ const StyledNav = styled.nav`
   display: flex;
   justify-content: space-around;
   align-items: center;
-  padding: 20px;
+  padding: 0.8rem;
   box-shadow: var(--box-shadow);
   background-color: var(--primary-color);
   position: sticky;
