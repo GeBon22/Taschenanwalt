@@ -13,7 +13,7 @@ export default function RuecktrittPage() {
   const path = "/online bestellen und kaufen/Rücktritt";
 
   const notify = () =>
-    toast.success("Anschreiben gespeichert!", {
+    toast.success("Anschreiben kopiert!", {
       position: "top-right",
       autoClose: 2500,
       hideProgressBar: false,
@@ -79,7 +79,7 @@ const CopyButton = styled.button`
   border-radius: 10px;
   border: 1px solid var(--primary-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  height: 10vh;
+  height: 12vh;
   width: 40vw;
   position: relative;
   cursor: pointer;
