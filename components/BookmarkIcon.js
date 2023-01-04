@@ -63,5 +63,3 @@ const StyledIcon = styled(Icon)`
   top: 6rem;
   right: 0.8rem;
 `;
-
-//TODO: Position all icons to the right spot
