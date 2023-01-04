@@ -20,7 +20,7 @@ export default function WannWiderruf() {
           <p>
             {`Jeder Verbraucher kann sich auf das Widerrufsrecht berufen. Einem
           Unternehmer steht dagegen kein Widerrufsrecht zu.`}
-          </p> 
+          </p>
         </StyledArticle>
         <StyledLink href="/widerruf">
           <ReturnButton />

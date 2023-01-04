@@ -12,7 +12,7 @@ export default function FristWiderruf() {
     <>
       <BookmarkIcon />
       <PageContainer>
-      <StyledBreadcrumbLink href="/widerruf">
+        <StyledBreadcrumbLink href="/widerruf">
           <Breadcrumb path={path} />
         </StyledBreadcrumbLink>
         <StyledArticle>

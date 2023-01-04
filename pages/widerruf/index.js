@@ -31,5 +31,5 @@ const StyledLink = styled(Link)`
 `;
 
 const StyledPageContainer = styled(PageContainer)`
-padding-top: 5rem;
+  padding-top: 5rem;
 `;
