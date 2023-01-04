@@ -60,8 +60,8 @@ const StyledIcon = styled(Icon)`
   width: 40px;
   height: 50px;
   position: absolute;
-  top: 6.5rem;
-  right: 1.5rem;
+  top: 6rem;
+  right: 0.8rem;
 `;
 
 //TODO: Position all icons to the right spot
