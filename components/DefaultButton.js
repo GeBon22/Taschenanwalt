@@ -13,7 +13,7 @@ const StyledButton = styled.button`
   background-color: var(--primary-background-color);
   border-radius: 10px;
   border: 1px solid var(--primary-color);
-  height: 10vh;
+  height: 12vh;
   width: 80vw;
   cursor: pointer;
   padding: 5px;
