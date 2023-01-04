@@ -29,7 +29,7 @@ export function BookmarksList() {
       {bookmarks.length > 0 ? (
         bookmarks.map(bookmark => (
           <>
-            <StyledListContainer>
+            <ul>
               <StyledItemContainer>
                 <StyledItem key={bookmark}>
                   <StyledLink href={bookmark}>
@@ -45,7 +45,7 @@ export function BookmarksList() {
                   cursor="pointer"
                 />
               </StyledItemContainer>
-            </StyledListContainer>
+            </ul>
           </>
         ))
       ) : (
@@ -54,14 +54,6 @@ export function BookmarksList() {
     </>
   );
 }
-
-const StyledListContainer = styled.ul`
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  gap: 1rem;
-`;
 
 const StyledItemContainer = styled.div`
   display: flex;
