@@ -9,7 +9,7 @@ export default function BestellungPage() {
   const path = "/online bestellen und kaufen";
   return (
     <>
-      <PageContainer>
+      <StyledPageContainer>
         <Breadcrumb path={path} />
         <StyledLink href="/bestellung/verzug">
           <DefaultButton>
@@ -32,11 +32,15 @@ export default function BestellungPage() {
         <StyledLink href="/">
           <ReturnButton />
         </StyledLink>
-      </PageContainer>
+      </StyledPageContainer>
     </>
   );
 }
 
 const StyledLink = styled(Link)`
   text-decoration: none;
+`;
+
+const StyledPageContainer = styled(PageContainer)`
+padding-top: 5rem;
 `;

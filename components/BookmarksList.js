@@ -88,11 +88,6 @@ const StyledItem = styled.li`
   justify-content: space-evenly;
   align-items: center;
   flex-wrap: wrap;
-
-  &:hover {
-    color: var(--secondary-color);
-    border: 1px solid var(--secondary-color);
-  }
 `;
 
 const StyledLink = styled(Link)`

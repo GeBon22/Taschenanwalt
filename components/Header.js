@@ -9,7 +9,7 @@ export default function Header() {
   return (
     <StyledLink href="/">
       <StyledHeader>
-      <Image src={Logo} alt="Taschenanwalt" width={270} height={90} />
+      <Image src={Logo} alt="Taschenanwalt" width={280} height={90} />
       </StyledHeader>
     </StyledLink>
   );
