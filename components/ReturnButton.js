@@ -14,7 +14,7 @@ const StyledZurueckButton = styled.button`
   border-radius: var(--default-border-radius);
   border: 1px solid var(--secondary-color);
   box-shadow: var(--button-shadow);
-  height: 5vh;
+  height: 7vh;
   width: 30vw;
   cursor: pointer;
   margin-bottom: 2rem;
