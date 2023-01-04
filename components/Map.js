@@ -6,7 +6,7 @@ const containerStyle = {
   width: "75vw",
   height: "50vh",
   borderRadius: "10px",
-  border: "1px solid #572887",
+  border: "1px solid white",
 };
 
 export default function Map() {
@@ -122,9 +122,9 @@ export default function Map() {
 }
 
 const InfoBox = styled.div`
-  background-color: #f3e8e8;
+  background-color: var(--primary-background-color);
   padding: 0.25em;
   text-align: center;
   font-weight: 300;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  box-shadow: var(--box-shadow);
 `;

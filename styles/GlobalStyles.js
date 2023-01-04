@@ -15,10 +15,12 @@ const GlobalStyles = createGlobalStyle`
 
     
 :root {
-    --primary-color: #4C6A28;
-    --color: #572887;
+    --primary-color: white;
+    --secondary-color: #E49100;
+    --primary-background-color: #303649;
     --default-border-radius: 10px;
     --button-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    --box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
     h1,

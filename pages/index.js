@@ -17,7 +17,7 @@ export default function HomePage() {
       animationData: require("/public/BestellungAnimation.json"),
     });
     return () => lottie.destroy();
-  }, []);
+  });
 
   useEffect(() => {
     lottie.loadAnimation({
@@ -28,12 +28,12 @@ export default function HomePage() {
       animationData: require("/public/WiderrufAnimation.json"),
     });
     return () => lottie.destroy();
-  }, []);
+  });
 
   return (
     <>
       <PageContainer>
-        <h3>Wo drückt der Schuh?</h3>
+        <h3>Wie kann ich Dir helfen?</h3>
 
         <StyledLink href="/bestellung">
           <StyledBestellungButton>
@@ -54,16 +54,16 @@ export default function HomePage() {
 }
 
 const StyledBestellungButton = styled.button`
-  color: #572887;
+  color: var(--primary-color);
   font-size: 1.2rem;
   font-weight: 300;
   font-style: normal;
   text-decoration: none;
-  background-color: #e6ceee;
+  background-color: var(--primary-background-color);
   border-radius: 10px;
-  border: 1px solid rgba(163, 134, 182, 0.5);
+  border: 1px solid var(--secondary-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  height: 20vh;
+  height: 30vh;
   width: 80vw;
   display: flex;
   flex-direction: row;
@@ -72,16 +72,16 @@ const StyledBestellungButton = styled.button`
 `;
 
 const StyledWiderufButton = styled.button`
-  color: #572887;
+  color: var(--primary-color);
   font-size: 1.2rem;
   font-weight: 300;
   font-style: normal;
   text-decoration: none;
-  background-color: #e6ceee;
+  background-color: var(--primary-background-color);
   border-radius: 10px;
-  border: 1px solid rgba(163, 134, 182, 0.5);
+  border: 1px solid var(--secondary-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  height: 20vh;
+  height: 30vh;
   width: 80vw;
   display: flex;
   flex-direction: row-reverse;

@@ -5,15 +5,16 @@ export default function DefaultButton(props) {
 }
 
 const StyledButton = styled.button`
-  color: #572887;
+  color: var(--primary-color);
   font-size: 1.2rem;
   font-weight: 300;
   font-style: normal;
   text-decoration: none;
-  background-color: #e6ceee;
+  background-color: var(--primary-background-color);
   border-radius: 10px;
-  border: 1px solid #e6ceee;
+  border: 1px solid var(--primary-color);
   height: 10vh;
   width: 80vw;
   cursor: pointer;
+  padding: 5px;
 `;

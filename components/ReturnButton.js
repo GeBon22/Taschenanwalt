@@ -5,15 +5,15 @@ export default function ReturnButton() {
 }
 
 const StyledZurueckButton = styled.button`
-  color: #572887;
+  color: var(--secondary-color);
   font-size: 1.2rem;
   font-weight: 300;
   font-style: normal;
   text-decoration: none;
-  background-color: #e6ceee;
-  border-radius: 10px;
-  border: 1px solid rgba(163, 134, 182, 0.5);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  background-color: var(--primary-background-color);
+  border-radius: var(--default-border-radius);
+  border: 1px solid var(--secondary-color);
+  box-shadow: var(--button-shadow);
   height: 5vh;
   width: 30vw;
   cursor: pointer;

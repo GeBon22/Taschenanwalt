@@ -10,7 +10,7 @@ import {ToastContainer, toast} from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 export default function WannWiderruf() {
-  const path = "/Widerruf und Retoure/Was muss im Widerruf stehen?";
+  const path = "/Widerruf und Retoure / Was muss im ...";
 
   const notify = () =>
     toast.success("Anschreiben gespeichert!", {
@@ -32,13 +32,9 @@ export default function WannWiderruf() {
           <Breadcrumb path={path} />
         </StyledLink>
         <StyledArticle>
+          <h3>Was muss in einem Widerruf stehen?</h3>
           <p>
-            {`Was muss in einem Widerruf stehen?
-
-          In einem Widerruf muss nicht ausdrücklich das Wort Widerruf verwendet
-        werden. Es empfiehlt sicher aber, klar zu machen, dass man
-        vom Vertrag Abstand nehmen möchte und den Kaufpreis zurück erstattet
-        verlangt.
+            {`In einem Widerruf muss nicht ausdrücklich das Wort Widerruf verwendet werden. Es empfiehlt sicher aber, klar zu machen, dass man vom Vertrag Abstand nehmen möchte und den Kaufpreis zurück erstattet verlangt.
         Es muss außerdem kein Grund für den Widerruf angegeben werden.
         
         Möchtest Du ein vorgefertigtes Anschreiben verwenden, drücke den Button und Fülle die eckigen Klammern mit dem zutreffenden Inhalt aus.`}
@@ -67,14 +63,14 @@ const StyledLink = styled(Link)`
 `;
 
 const CopyButton = styled.button`
-  color: #572887;
+  color: var(--primary-color);
   font-size: 1.2rem;
   font-weight: 300;
   font-style: normal;
   text-decoration: none;
-  background-color: #e6ceee;
+  background-color: var(--primary-background-color);
   border-radius: 10px;
-  border: 1px solid rgba(163, 134, 182, 0.5);
+  border: 1px solid var(--primary-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   height: 10vh;
   width: 40vw;

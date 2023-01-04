@@ -7,7 +7,7 @@ import StyledArticle from "../../components/Article";
 import BookmarkIcon from "../../components/BookmarkIcon";
 
 export default function WannWiderruf() {
-  const path = "/Widerruf und Retoure/Wann kann ich widerrufen?";
+  const path = "/Widerruf und Retoure / Wann kann ich ...";
   return (
     <>
       <BookmarkIcon />
@@ -16,10 +16,9 @@ export default function WannWiderruf() {
           <Breadcrumb path={path} />
         </StyledLink>
         <StyledArticle>
+          <h3>Wann kann ich widerrufen?</h3>
           <p>
-            {`Wann kann ich widerrufen?
-
-          Jeder Verbraucher kann sich auf das Widerrufsrecht berufen. Einem
+            {`Jeder Verbraucher kann sich auf das Widerrufsrecht berufen. Einem
           Unternehmer steht dagegen kein Widerrufsrecht zu.`}
           </p>
         </StyledArticle>
@@ -30,6 +29,8 @@ export default function WannWiderruf() {
     </>
   );
 }
+
+//TODO: mehr Inhalt
 
 const StyledLink = styled(Link)`
   text-decoration: none;
