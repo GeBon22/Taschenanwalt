@@ -32,15 +32,14 @@ export default function RuecktrittPage() {
           <Breadcrumb path={path} />
         </StyledLink>
         <StyledArticle>
+          <h3>Ich möchte vom Kaufvertrag zurück treten.</h3>
           <p>
-            {`Ich möchte vom Kaufvertrag zurück treten.
-          
-          Für den Rücktritt vom Kaufvertrag sind mehrere Bedingungen zu erfüllen. 
+            {`Für den Rücktritt vom Kaufvertrag sind mehrere Bedingungen zu erfüllen. 
 Als Käufer musst Du dem Verkäufer zunächst eine angemessene Frist zur Nacherfüllung geben (zB. 7-10 Werktage). 
 
 Die Frist ist entbehrlich, wenn der Verkäufer die Nacherfüllung endgültig verweigert, die Nacherfüllung bis zu einer gesetzten Frist nicht erfolgt ist, oder besondere Umstände vorliegen, die im beiderseitigen Interesse einen Rücktritt rechtfertigen.
 
-Des Weiteren muss ein Rücktrittsgrund vorliegen. Das kann das fehlende Liefern der Ware oder einer beschädigten Ware sein – aber nur, wenn der Verkäufer seine Frist zur Nachbesserung/Neulieferung hat verstreichen lassen oder er eine Nacherfüllung vollständig verweigert.
+Des Weiteren muss ein Rücktrittsgrund vorliegen. Das kann das fehlende Liefern der Ware oder einer beschädigten Ware sein – aber nur, wenn der Verkäufer seine Frist zur Nachbesserung bzw. Neulieferung hat verstreichen lassen oder er eine Nacherfüllung vollständig verweigert.
 
 Ein  Rücktritt ist außerdem ausgeschlossen, wenn eine Teilleistung erfolgt ist und Du nicht nachweisen kannst, dass Du kein Interesse an der teilweisen Leistungserbringung hast.
 Auch ausgeschlossen ist, wenn die Ware nur in einem unerheblichen Maß beschädigt war. 

@@ -7,7 +7,7 @@ import StyledArticle from "../../components/Article";
 import BookmarkIcon from "../../components/BookmarkIcon";
 
 export default function WannWiderruf() {
-  const path = "/Widerruf und Retoure/Wann kann ich widerrufen?";
+  const path = "/Widerruf und Retoure / Wann kann ich ...";
   return (
     <>
       <BookmarkIcon />

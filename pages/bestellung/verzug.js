@@ -7,7 +7,7 @@ import StyledArticle from "../../components/Article";
 import BookmarkIcon from "../../components/BookmarkIcon";
 
 export default function VerzugPage() {
-  const path = "/online bestellen und kaufen/Ware o. Paket verloren";
+  const path = "/online bestellen und kaufen / Ware verloren";
   return (
     <>
       <BookmarkIcon />
@@ -16,10 +16,9 @@ export default function VerzugPage() {
           <Breadcrumb path={path} />
         </StyledLink>
         <StyledArticle>
+          <h3>Meine Ware kommt nicht an!</h3>
           <p>
-            {`Meine Ware kommt nicht an!
-          
-          Für den Verlust der Ware – also bis sie bei Dir ankommt - trägt der Verkäufer das Risiko. 
+            {`Für den Verlust der Ware – also bis sie bei Dir ankommt - trägt der Verkäufer das Risiko. 
           Geht das Paket verloren oder gibt es über den Verbleib der Ware keine Informationen, liegt die Verantwortung beim Verkäufer. 
       Kontaktiere den Verkäufer und mache ihn auf den Schaden aufmerksam. 
       Auch hier ist es ratsam, eine angemessene Frist (zB. 7-10 Werktage) zu setzen, um dem Verkäufer ausreichend Zeit zu geben, eine Lösung anzubieten und seiner Pflicht aus dem Vertrag nachzukommen.`}{" "}

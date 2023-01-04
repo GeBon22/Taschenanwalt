@@ -10,7 +10,7 @@ import {ToastContainer, toast} from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 export default function WannWiderruf() {
-  const path = "/Widerruf und Retoure/Was muss im Widerruf stehen?";
+  const path = "/Widerruf und Retoure / Was muss im ...";
 
   const notify = () =>
     toast.success("Anschreiben gespeichert!", {

@@ -33,7 +33,7 @@ export default function HomePage() {
   return (
     <>
       <PageContainer>
-        <h3>Wo können wir helfen?</h3>
+        <h3>Wie kann ich Dir helfen?</h3>
 
         <StyledLink href="/bestellung">
           <StyledBestellungButton>

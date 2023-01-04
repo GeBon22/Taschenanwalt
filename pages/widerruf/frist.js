@@ -7,23 +7,20 @@ import StyledArticle from "../../components/Article";
 import BookmarkIcon from "../../components/BookmarkIcon";
 
 export default function FristWiderruf() {
-  const path = "/Widerruf und Retoure/Wie lang kann ich widerrufen?";
+  const path = "/Widerruf und Retoure / Wie lange kann ...";
   return (
     <>
       <BookmarkIcon />
-      <StyledPageContainer>
-        <StyledLink href="/widerruf">
+      <PageContainer>
+      <StyledBreadcrumbLink href="/widerruf">
           <Breadcrumb path={path} />
-        </StyledLink>
+        </StyledBreadcrumbLink>
         <StyledArticle>
           <h3>Wie lange kann ich widerrufen?</h3>
           <p>
             {`Der Widerruf muss binnen 14 Tagen nach Erhalt der Ware erklärt werden. Das bedeutet nicht, dass binnen dieser Zeit auch die Ware zurück an den Verkäufer gesendet werden muss. Die Ware muss innerhalb weiterer 14 Tage ab Erklärung des Widerrufs versendet werden. 
     Achte auf die Widerrufsregelungen im Shop des Verkäufers. Dort ist meist der Zeitraum für die Rücksendung der Ware explizit geregelt.
     Meistens liegt dieser bei 30 Tagen.
-
-    TLDR: binnen 14 Tagen erklären, je nach Widerrufsregelung des
-    Verkäufers zwischen 14 und 30 Tagen ab Erklärung zurück senden
       `}
           </p>
         </StyledArticle>
@@ -45,7 +42,7 @@ export default function FristWiderruf() {
         <StyledLink href="/widerruf">
           <ReturnButton />
         </StyledLink>
-      </StyledPageContainer>
+      </PageContainer>
     </>
   );
 }
@@ -81,12 +78,15 @@ const StyledUL = styled.ul`
 
 const StyledListItem = styled.li`
   text-align: center;
+  text-decoration: none;
+  list-style: none;
 `;
 
 const StyledP = styled.p`
   color: var(--primary-color);
 `;
 
-const StyledPageContainer = styled(PageContainer)`
-padding-top: 2rem;
+const StyledBreadcrumbLink = styled(Link)`
+  text-decoration: none;
+  color: var(--primary-color);
 `;

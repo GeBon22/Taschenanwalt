@@ -12,5 +12,4 @@ const StyledBreadcrumb = styled.h3`
   top: 125px;
   left: 37px;
   display: flex;
-  flex-wrap: wrap;
 `;

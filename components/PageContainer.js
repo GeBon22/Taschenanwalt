@@ -12,7 +12,6 @@ const PageContainer = styled.div`
   min-width: 100vw;
   min-height: 100vh;
   overflow: auto;
-  padding-top: 2rem;
   padding-bottom: 1.2rem;
   scroll-behavior: smooth;
 `;
