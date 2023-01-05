@@ -12,5 +12,5 @@ export default function BookmarksPage() {
 }
 
 const StyledPageContainer = styled(PageContainer)`
-gap: 0.5rem;
+  gap: 0.5rem;
 `;
